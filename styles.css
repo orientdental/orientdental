@@ -109,6 +109,7 @@ a {
 }
 
 /* Hero Section */
+/* Hero Section */
 .hero {
   background: url('images/homepic.jpg') no-repeat center center / cover;
   position: relative;
@@ -146,23 +147,40 @@ a {
   font-size: 2.8rem;
   margin-bottom: 20px;
 }
+
 .hero p {
   font-size: 1.2rem;
   margin-bottom: 30px;
 }
+
+/* ✅ Updated Button Container */
+.hero-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+}
+
+/* ✅ Updated Buttons */
 .hero-buttons .btn {
-  margin: 0 10px;
-  padding: 10px 20px;
+  margin: 0;
+  padding: 12px 24px;
   border-radius: 25px;
   font-weight: 500;
   color: white;
   background: #90e0ef;
   border: none;
   transition: background 0.3s;
+  white-space: nowrap;       /* ✅ Prevents Android line breaks */
+  max-width: 100%;           /* ✅ Prevents overflow */
+  text-align: center;
 }
+
 .hero-buttons .btn:hover {
   background: #5ec8db;
 }
+
+/* Divider */
 .hero-divider {
   position: absolute;
   bottom: 0;
@@ -179,8 +197,6 @@ a {
   width: 100%;
   height: 100px;
 }
-
-
 
 /* Sections */
 .section {
@@ -752,8 +768,21 @@ a {
   .hero h1 {
     font-size: 2rem;
   }
+
   .hero p {
     font-size: 1rem;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-buttons .btn {
+    width: 100%;
+    max-width: 280px;
+    font-size: 0.95rem;
+    padding: 10px 20px;
   }
   .top-navbar .search-container input {
     width: 120px;
