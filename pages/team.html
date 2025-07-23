@@ -1,0 +1,318 @@
+<!-- PART 1: HEAD AND NAVBAR -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dental Clinic</title>
+  <link rel="stylesheet" href="../styles.css" />
+  <script defer src="../script.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<body>
+
+<!-- Top Navbar -->
+<header class="top-navbar" style="margin-bottom: 0;">
+  <div class="social-icons">
+    <a href="#"><i class="fab fa-facebook-f"></i></a>
+    <a href="#"><i class="fab fa-instagram"></i></a>
+  </div>
+  <div class="search-container">
+    <input type="text" id="searchInput" placeholder="Search..." />
+  </div>
+  <div class="language-select">
+    <select id="language">
+      <option value="en">EN</option>
+      <option value="de">DE</option>
+      <option value="it">IT</option>
+      <option value="al">AL</option>
+    </select>
+  </div>
+</header>
+<nav class="dentozen-navbar" style="margin-top: 0;">
+  <div class="nav-content">
+    <div class="logo">
+  <a href="../index.html">
+    <img src="../images/logodent.png" alt="Orient Dental Logo" />
+  </a>
+</div>
+
+    <div class="hamburger" onclick="toggleMobileNav()">
+      <i class="fas fa-bars"></i>
+    </div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="../pages/aboutus.html">About Us</a></li>
+      <li><a href="../pages/treatments.html">Treatments</a></li>
+      <li><a href="../pages/pricing.html">Pricing</a></li>
+      <li><a href="../pages/team.html">Team</a></li>
+      <li><a href="../pages/testimonials.html">Testimonials</a></li>
+      <li><a href="../pages/contacts.html">Contact</a></li>
+    </ul>
+    <a class="appointment-btn" href="../pages/contacts.html#contact-form">Book Appointment</a>
+  </div>
+</nav>
+<!-- Info Section -->
+<section class="section beige" id="aboutus">
+  <h2 class="section-title" data-i18n="modern_dentistry">Modern Dentistry & Aesthetic Treatment</h2>
+
+  <div class="infoimg">
+    <img src="../images/modern-dentistry1.jpg" alt="Modern Dentistry">
+    <img src="../images/modern-dentistry2.jpg" alt="Modern Dentistry">
+    <img src="../images/modern-dentistry3.jpg" alt="Modern Dentistry">
+  </div>
+
+  <div class="info-text" data-i18n="modern_text">
+    <p>
+      Our modern Enfield clinic combines advanced dental care with professional aesthetic treatments. 
+      Led by Principal Dentist <strong>Dr. Neha Patel</strong>, our experienced team delivers comprehensive care using the latest techniques and technology.
+    </p>
+
+    <p>
+      We provide complete dental services from routine care to cosmetic procedures, along with selected aesthetic treatments – 
+      all in a comfortable, professional environment. Every aspect of our practice is designed to ensure quality care and patient comfort.
+    </p>
+
+    <p class="highlight">
+      ⭐ <strong>Rated 4.9/5</strong> from over 200 Google reviews.<br />
+      📍 Open daily 9am–5pm near Bush Hill Park station.<br />
+      📞 Book now: <a href="tel:02036952400">0203 695 2400</a>
+    </p>
+  </div>
+</section>
+
+
+<section class="reviews-section">
+  <div class="section-divider top-divider">
+    <svg viewBox="0 0 1440 100" preserveAspectRatio="none">
+      <path fill="#fdf7f1" d="M0,96L1440,0L1440,0L0,0Z"></path>
+    </svg>
+  </div>
+
+  <div class="section reviews-inner">
+    <h2 class="section-title" data-i18n="patient_reviews">Patient Reviews</h2>
+    <div class="review-list">
+
+      <div class="review">
+        <div class="review-header">
+          <div class="avatar">E</div>
+          <div><strong>Elira Tafa</strong><br /><span class="stars">★★★★★</span></div>
+        </div>
+        <p>Shërbimi ishte i mrekullueshëm, stafi shumë i sjellshëm dhe ambienti i pastër.</p>
+      </div>
+
+      <div class="review">
+        <div class="review-header">
+          <div class="avatar">J</div>
+          <div><strong>Johannes Müller</strong><br /><span class="stars">★★★★★</span></div>
+        </div>
+        <p>Sehr freundliches Personal und moderne Ausstattung. Ich habe mich sehr wohl gefühlt!</p>
+      </div>
+
+      <div class="review">
+      <div class="review-header">
+        <div class="avatar">C</div>
+        <div>
+          <strong>Chiara Bianchi</strong><br />
+          <span class="stars">★★★★★</span>
+        </div>
+      </div>
+      <p>Mi sono trovata benissimo! Servizio eccellente e grande professionalità. Grazie mille!</p>
+    </div>
+
+    <div class="review">
+      <div class="review-header">
+        <div class="avatar">J</div>
+        <div>
+          <strong>John Smith</strong><br />
+          <span class="stars">★★★★★</span>
+        </div>
+      </div>
+      <p>Amazing experience from start to finish. Very professional and friendly team. Highly recommend!</p>
+    </div>
+
+    <div class="review">
+      <div class="review-header">
+        <div class="avatar">A</div>
+        <div>
+          <strong>Ardit Krasniqi</strong><br />
+          <span class="stars">★★★★★</span>
+        </div>
+      </div>
+      <p>Stafi ishte shumë profesional dhe kujdesi ndaj pacientit ishte në nivel shumë të lartë.</p>
+    </div>
+
+    <div class="review">
+      <div class="review-header">
+        <div class="avatar">S</div>
+        <div>
+          <strong>Sophia Klein</strong><br />
+          <span class="stars">★★★★★</span>
+        </div>
+      </div>
+      <p>Ich bin sehr zufrieden mit der Behandlung. Alles war perfekt organisiert!</p>
+    </div>
+
+    <div class="review">
+      <div class="review-header">
+        <div class="avatar">L</div>
+        <div>
+          <strong>Luca Romano</strong><br />
+          <span class="stars">★★★★★</span>
+        </div>
+      </div>
+      <p>Servizio eccellente! Sono molto felice con il risultato del mio trattamento dentale.</p>
+    </div>
+
+    <div class="review">
+      <div class="review-header">
+        <div class="avatar">A</div>
+        <div>
+          <strong>Anna White</strong><br />
+          <span class="stars">★★★★★</span>
+        </div>
+      </div>
+      <p>Very clean, modern and welcoming clinic. The staff made me feel comfortable the entire time.</p>
+    </div>
+
+    <div class="review">
+      <div class="review-header">
+        <div class="avatar">R</div>
+        <div>
+          <strong>Renis Dervishi</strong><br />
+          <span class="stars">★★★★★</span>
+        </div>
+      </div>
+      <p>Ambienti ishte shumë modern dhe komod. Faleminderit për shërbimin e shkëlqyer!</p>
+    </div>
+
+    <div class="review">
+      <div class="review-header">
+        <div class="avatar">M</div>
+        <div>
+          <strong>Maria Schwarz</strong><br />
+          <span class="stars">★★★★★</span>
+        </div>
+      </div>
+      <p>Sehr empfehlenswert! Ich habe mich von Anfang an in guten Händen gefühlt.</p>
+    </div>
+
+    </div>
+  </div>
+
+  <div class="section-divider bottom-divider">
+    <svg viewBox="0 0 1440 100" preserveAspectRatio="none">
+      <path fill="#fdf7f1" d="M0,0L1440,96L1440,100L0,100Z"></path>
+    </svg>
+  </div>
+</section>
+
+<!-- Services -->
+<section class="section beige">
+  <h2 class="section-title" data-i18n="our_services">Our Services</h2>
+  <div class="services-grid">
+    <div class="service-card">
+      <img src="../images/dental-aligners.jpg" alt="Clear Aligners" />
+      <h3>Clear Aligners</h3>
+      <p>Professional teeth straightening using invisible aligners. Effective treatment for crowded or spaced teeth.</p>
+      <a href="../pages/contacts.html#contact-form" class="btn outline">Learn More</a>
+    </div>
+    <div class="service-card">
+      <img src="../images/composite-bonding.jpg" alt="Composite Bonding" />
+      <h3>Composite Bonding</h3>
+      <p>Fast, effective smile enhancement using tooth-colored materials that match your natural teeth.</p>
+      <a href="../pages/contacts.html#contact-form" class="btn outline">Learn More</a>
+    </div>
+    <div class="service-card">
+      <img src="../images/composite-fillings.jpg" alt="Composite Fillings" />
+      <h3>Composite Fillings</h3>
+      <p>Strong, natural-looking fillings that blend seamlessly with your teeth.</p>
+      <a href="../pages/contacts.html#contact-form" class="btn outline">Learn More</a>
+    </div>
+    <div class="service-card">
+      <img src="../images/dental-aligners.jpg" alt="Clear Aligners" />
+      <h3>Clear Aligners</h3>
+      <p>Professional teeth straightening using invisible aligners. Effective treatment for crowded or spaced teeth.</p>
+      <a href="../pages/contacts.html#contact-form" class="btn outline">Learn More</a>
+    </div>
+    <div class="service-card">
+      <img src="../images/dental-bridge.jpg" alt="Dental Bridge" />
+      <h3>Dental Bridges</h3>
+      <p>High quality bridges with the top materials for durability and aesthetics.</p>
+      <a href="../pages/contacts.html#contact-form" class="btn outline">Learn More</a>
+    </div>
+    <div class="service-card">
+      <img src="../images/dental-crown.jpeg" alt="Dental Crown" />
+      <h3>Dental Crowns</h3>
+      <p>Strong, natural-looking crowns that blend seamlessly with your teeth.</p>
+      <a href="../pages/contacts.html#contact-form" class="btn outline">Learn More</a>
+    </div>
+  </div>
+</section>
+<div class="section-divider wave-up">
+  <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+    <path d="M0,120 C600,20 600,100 1200,120 L1200,0 L0,0 Z" fill="#fdf7f1"></path>
+  </svg>
+</div>
+
+<!-- Contact -->
+<section class="section contact" id="contact">
+  <h2 class="section-title" data-i18n="contact_us">How Can You Find Us?</h2>
+  <p><strong>Location:</strong> Rruga Him Kolli, Tirana, Albania</p>
+  <p><strong>Phone:</strong> +355 123 4567</p>
+  <iframe
+    src="https://www.google.com/maps?q=Tirana&output=embed"
+    width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy">
+  </iframe>
+  <a href="../pages/contacts.html" class="btn primary" data-i18n="book">Book Appointment</a>
+</section>
+
+<!-- Questions Section -->
+<div class="section-divider wave-down">
+  <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+    <path d="M0,0 C600,100 600,20 1200,0 L1200,120 L0,120 Z" fill="#fdf7f1"></path>
+  </svg>
+</div>
+<section class="section beige">
+  <h2 class="section-title" data-i18n="questions">Questions about your treatment?</h2>
+  <p data-i18n="email_or_book">Feel free to email us or book an appointment now.</p>
+  <div class="hero-buttons" style="margin-top: 20px;">
+    <a href="mailto:clinic@example.com" class="btn secondary">Message Us</a>
+    <a href="../pages/contacts.html#contact-form" class="btn primary">Book Now</a>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="footer-grid">
+    <div>
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="../pages/treatments.html">Treatments</a></li>
+        <li><a href="../pages/pricing.html">Pricing</a></li>
+        <li><a href="../pages/team.html">Team</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Disclaimer</h4>
+      <p>This website provides general dental information. Information taken from this site is not a substitute for professional dental advice. Always consult your dentist before treatment.</p>
+    </div>
+    <div class="contactfootercontent">
+  <h4>Contact</h4>
+  <p>Rruga Him Kolli, Tirana<br>Phone: +355 69 204 0130<br>Email: klinikaorient@gmail.com</p>
+  <div class="social-icons">
+    <a href="#"><i class="fab fa-facebook-f"></i></a>
+    <a href="#"><i class="fab fa-instagram"></i></a>
+    <a href="#"><i class="fab fa-twitter"></i></a>
+  </div>
+</div>
+
+</div>
+
+  </div>
+  <div class="copyright">
+    © 2025 Orient Dental Clinic. All Rights Reserved.
+  </div>
+</footer>
+
+</body>
+</html>
