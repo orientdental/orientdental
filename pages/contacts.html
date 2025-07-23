@@ -19,21 +19,41 @@
       display: flex;
       flex-direction: column;
       align-items: center;
+      text-align: center;
     }
 
-    .contact-section h1 {
-      font-size: 2.5rem;
+    .section-header {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      margin-bottom: 30px;
+    }
+
+    .section-header h2 {
+      font-size: 2.2rem;
       color: #333;
-      margin-bottom: 20px;
+      margin: 0;
+    }
+
+    .section-header .line {
+      height: 1px;
+      background-color: #ccc;
+      flex: 1;
+      max-width: 100px;
+    }
+
+    .section-header.no-lines .line {
+    display: none;
     }
 
     .contact-container {
       background-color: #ffffff;
-      border-radius: 12px;
-      padding: 40px;
+      border-radius: 16px;
+      padding: 50px 30px;
       max-width: 800px;
       width: 100%;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.06);
     }
 
     .contact-form {
@@ -43,19 +63,19 @@
     }
 
     .contact-form input,
-    .contact-form textarea,
-    .contact-form button {
+    .contact-form textarea {
       width: 100%;
-      padding: 12px;
+      padding: 14px;
       border: 1px solid #d1e4ec;
-      border-radius: 8px;
+      border-radius: 10px;
       font-size: 1rem;
       box-sizing: border-box;
+      background: #fafafa;
     }
 
     .contact-form textarea {
       resize: vertical;
-      min-height: 100px;
+      min-height: 120px;
     }
 
     .contact-form button {
@@ -64,27 +84,45 @@
       border: none;
       font-weight: bold;
       cursor: pointer;
+      padding: 14px;
+      border-radius: 30px;
       transition: 0.3s;
+      font-size: 1rem;
     }
 
     .contact-form button:hover {
-      background-color: #48cae4;
+      background-color: #90e0ef;
     }
 
     .map-section {
-      margin-top: 40px;
+      margin-top: 60px;
       width: 100%;
       background-color: #ffffff;
-      padding: 30px;
-      border-radius: 12px;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+      padding: 40px 20px;
+      border-radius: 16px;
+      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.06);
     }
 
-    .map-section h2 {
-      text-align: center;
-      margin-bottom: 20px;
-      font-size: 1.8rem;
-      color: #333;
+    .clinic-info {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 14px;
+      margin: 25px 0 30px;
+      font-size: 1.05rem;
+      color: #444;
+    }
+
+    .clinic-info .info-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 500;
+    }
+
+    .clinic-info i {
+      color: #90e0ef;
+      font-size: 1.2rem;
     }
 
     .map-embed {
@@ -94,10 +132,14 @@
       border: none;
     }
 
-    /* Hamburger fix */
+    /* Responsive */
     @media (max-width: 768px) {
       .nav-links {
         background-color: white !important;
+      }
+
+      .section-header {
+        flex-direction: column;
       }
     }
   </style>
@@ -122,6 +164,8 @@
     </select>
   </div>
 </header>
+
+<!-- Dentozen-style Navbar -->
 <nav class="dentozen-navbar" style="margin-top: 0;">
   <div class="nav-content">
     <div class="logo">
@@ -129,25 +173,29 @@
         <img src="../images/logodent.png" alt="Orient Dental Logo" />
       </a>
     </div>
-
     <div class="hamburger" onclick="toggleMobileNav()">
       <i class="fas fa-bars"></i>
     </div>
     <ul class="nav-links" id="navLinks">
       <li><a href="../pages/aboutus.html">About Us</a></li>
-      <li><a href="../pages/treatments.html">Treatments</a></li>
+      <li><a href="../pages/testimonials.html">Reviews</a></li>
+      <li><a href="../pages/treatments.html">Services</a></li>
       <li><a href="../pages/pricing.html">Pricing</a></li>
       <li><a href="../pages/team.html">Team</a></li>
-      <li><a href="../pages/testimonials.html">Testimonials</a></li>
       <li><a href="../pages/contacts.html">Contact</a></li>
     </ul>
     <a class="appointment-btn" href="../pages/contacts.html#contact-form">Book Appointment</a>
   </div>
 </nav>
 
-<!-- Contact Content -->
+<!-- Contact Form Section -->
 <section class="contact-section" id="contact-form">
-  <h1>Get in Touch</h1>
+  <div class="section-header">
+    <div class="line"></div>
+    <h2>Get in Touch</h2>
+    <div class="line"></div>
+  </div>
+
   <div class="contact-container">
     <form class="contact-form" action="https://formspree.io/f/mgvzadvg" method="POST">
       <input type="text" name="name" placeholder="Your Name" required />
@@ -158,8 +206,25 @@
     </form>
   </div>
 
+  <!-- Visit Clinic Section -->
   <div class="map-section">
-    <h2>Visit Our Clinic</h2>
+    <div class="section-header no-lines">
+      <div class="line"></div>
+      <h2>Visit Our Clinic</h2>
+      <div class="line"></div>
+    </div>
+
+    <div class="clinic-info">
+      <div class="info-item">
+        <i class="fas fa-map-marker-alt"></i>
+        <span>Rruga Him Kolli, Tirana, Albania</span>
+      </div>
+      <div class="info-item">
+        <i class="fas fa-phone-alt"></i>
+        <span>+355 69 204 0130</span>
+      </div>
+    </div>
+
     <iframe class="map-embed" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2990.7989040537996!2d19.81485331542124!3d41.326120607642846!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x13503172e8cab76f%3A0x704934284304e7f0!2sMeto%20Dent!5e0!3m2!1sen!2s!4v1721670000000!5m2!1sen!2s" allowfullscreen="" loading="lazy"></iframe>
   </div>
 </section>
@@ -170,18 +235,18 @@
     <div>
       <h4>Quick Links</h4>
       <ul>
-        <li><a href="../pages/treatments.html">Treatments</a></li>
+        <li><a href="../pages/treatments.html">Services</a></li>
         <li><a href="../pages/pricing.html">Pricing</a></li>
         <li><a href="../pages/team.html">Team</a></li>
       </ul>
     </div>
     <div>
       <h4>Disclaimer</h4>
-      <p>This website provides general dental information. Always consult your dentist before treatment.</p>
+      <p>This website provides general dental information. Information taken from this site is not a substitute for professional dental advice. Always consult your dentist before treatment.</p>
     </div>
     <div class="contactfootercontent">
       <h4>Contact</h4>
-      <p>Rruga e Durrësit, Tirana<br>Phone: +355 69 204 0130<br>Email: orientdental7@gmail.com</p>
+      <p>Rruga e Him Kolli, Tirana<br>Phone: +355 69 204 0130<br>Email: orientdental7@gmail.com</p>
       <div class="social-icons">
         <a href="#"><i class="fab fa-facebook-f"></i></a>
         <a href="#"><i class="fab fa-instagram"></i></a>
