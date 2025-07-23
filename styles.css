@@ -728,7 +728,7 @@ a {
 
 
 /* Responsive */
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 850px) {
   .desktop-only {
     display: none;
   }
@@ -795,4 +795,5 @@ a {
   .footer .contactfootercontent {
     text-align: center;
   }
+  
 }
