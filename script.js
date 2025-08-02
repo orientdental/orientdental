@@ -1,23 +1,41 @@
 document.addEventListener('DOMContentLoaded', () => {
-  // Toggle mobile nav
   const hamburger = document.querySelector('.hamburger');
+  const closeMenu = document.querySelector('.close-menu');
   const navLinks = document.getElementById('navLinks');
 
-  hamburger.addEventListener('click', () => {
+  // Mobile nav toggle
+  function toggleMobileNav() {
     navLinks.classList.toggle('active');
+  }
+
+  hamburger.addEventListener('click', toggleMobileNav);
+  if (closeMenu) {
+    closeMenu.addEventListener('click', toggleMobileNav);
+  }
+
+  // Close mobile nav if clicking outside of navLinks and hamburger
+  document.addEventListener('click', (event) => {
+    const isClickInsideNav = navLinks.contains(event.target);
+    const isClickOnHamburger = hamburger.contains(event.target);
+
+    if (!isClickInsideNav && !isClickOnHamburger) {
+      navLinks.classList.remove('active');
+    }
   });
 
   // SEARCH FUNCTION - highlights and scrolls to first match
   const searchInput = document.getElementById('searchInput');
 
-  searchInput.addEventListener('input', function () {
-    removeHighlights();
+  if (searchInput) {
+    searchInput.addEventListener('input', function () {
+      removeHighlights();
 
-    const searchTerm = this.value.trim();
-    if (!searchTerm) return;
+      const searchTerm = this.value.trim();
+      if (!searchTerm) return;
 
-    highlightText(document.body, searchTerm);
-  });
+      highlightText(document.body, searchTerm);
+    });
+  }
 
   function highlightText(element, term) {
     const regex = new RegExp(`(${escapeRegExp(term)})`, 'gi');
@@ -67,15 +85,26 @@ document.addEventListener('DOMContentLoaded', () => {
       const text = document.createTextNode(mark.textContent);
       const parent = mark.parentNode;
       parent.replaceChild(text, mark);
-      parent.normalize(); // Merge adjacent text nodes
+      parent.normalize();
     });
   }
 
   function escapeRegExp(string) {
     return string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
   }
+  
+const scrollBtn = document.getElementById('scrollToTopBtn');
+
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 100) {
+    scrollBtn.classList.add('show');
+  } else {
+    scrollBtn.classList.remove('show');
+  }
 });
-function toggleMobileNav() {
-  const navLinks = document.getElementById("navLinks");
-  navLinks.classList.toggle("show");
-}
+
+scrollBtn.addEventListener('click', () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+
+});
