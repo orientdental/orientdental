@@ -223,44 +223,7 @@ a {
   margin: 10px auto;
 }
 
-.review-list {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  max-width: 800px;
-  margin: auto;
-  padding: 20px;
-}
-.review {
-  background: white;
-  border-radius: 16px;
-  padding: 20px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-}
-.review-header {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  margin-bottom: 10px;
-}
-.review .avatar {
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
-  background-color: #48cae4;
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: bold;
-  font-size: 18px;
-  text-transform: uppercase;
-}
-.stars {
-  color: #fbbf24;
-  font-size: 1rem;
-  display: block;
-}
+
 
 /* Services Grid */
 .services-grid {
@@ -410,18 +373,21 @@ a {
   position: relative;
   padding: 0;
 }
+
 .reviews-inner {
   padding: 80px 20px;
   max-width: 1000px;
   margin: auto;
   text-align: center;
 }
+
 .section-divider svg {
   display: block;
   width: 100%;
   height: 100px;
   position: relative;
 }
+
 .section-divider svg path {
   transition: all 0.4s ease-in-out;
 }
@@ -429,9 +395,12 @@ a {
 .top-divider svg {
   margin-top: -1px;
 }
+
 .bottom-divider svg {
   margin-bottom: -1px;
 }
+
+/* Review container styles */
 .review-list {
   display: flex;
   flex-direction: column;
@@ -441,6 +410,7 @@ a {
   margin: auto;
 }
 
+/* Review card styles */
 .review {
   background: white;
   border-radius: 16px;
@@ -454,6 +424,7 @@ a {
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
+/* Review header (avatar + name) */
 .review-header {
   display: flex;
   align-items: center;
@@ -461,6 +432,7 @@ a {
   margin-bottom: 10px;
 }
 
+/* Avatar bubble */
 .review .avatar {
   width: 48px;
   height: 48px;
@@ -475,11 +447,14 @@ a {
   text-transform: uppercase;
 }
 
+/* Star rating */
 .stars {
   color: #fbbf24;
   font-size: 1rem;
   display: block;
 }
+
+
 
 /* Section Wave Transitions */
 .section-divider {
@@ -726,7 +701,88 @@ a {
   text-decoration: underline;
 }
 
+/* Why choose us */
+.why-choose-us {
+  background-color: #fdf7f1;
+  padding: 60px 20px;
+  text-align: center;
+}
 
+.why-choose-us .section-title {
+  font-size: 36px;
+  margin-bottom: 10px;
+  color: #222;
+}
+
+.why-choose-us .section-subtitle {
+  font-size: 18px;
+  color: #666;
+  max-width: 700px;
+  margin: 0 auto 40px;
+}
+
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 48px;
+  max-width: 1200px;
+  margin: auto;
+  padding: 40px 0;
+}
+
+.why-item {
+  background: white;
+  padding: 30px 20px;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.why-item:hover {
+  transform: translateY(-5px);
+}
+
+.why-item img {
+  max-width: 115px;
+  margin-bottom: 5px;
+}
+
+.why-item h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.why-item p {
+  font-size: 16px;
+  color: #555;
+}
+#scrollToTopBtn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 45px;
+  height: 45px;
+  font-size: 28px;
+  border: none;
+  border-radius: 50%;
+  background-color: #b28756; /* your theme color */
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#scrollToTopBtn.show {
+  opacity: 1;
+  visibility: visible;
+}
 /* Responsive */
 @media screen and (max-width: 850px) {
   .desktop-only {
@@ -739,17 +795,35 @@ a {
   .dentozen-navbar .nav-links {
     display: none;
     flex-direction: column;
-    background: rgba(255, 255, 255, 0.95);
-    position: absolute;
-    top: 60px;
-    right: 10px;
-    width: 220px;
-    padding: 15px;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 60px; /* height of the navbar */
+    right: 0;
+    left: 0;
+    background: #fff; /* no transparency */
+    padding: 40px 30px; /* increased vertical padding for bigger height */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    max-height: calc(100vh - 60px);
+    overflow-y: auto;
+    transition: all 0.3s ease;
+    z-index: 9999;
+    align-items: center; /* center horizontally */
   }
   .dentozen-navbar .nav-links.active {
     display: flex;
+  }
+
+  .dentozen-navbar .nav-links a {
+    padding: 15px 0;
+    font-size: 1.2rem;
+    color: #333;
+    text-align: center; /* center text */
+    width: 100%; /* make clickable area full width */
+    border-bottom: 1px solid #ddd;
+  }
+  .dentozen-navbar .nav-links a:last-child {
+    border-bottom: none;
   }
 
   .dentozen-navbar .appointment-btn {
@@ -795,5 +869,10 @@ a {
   .footer .contactfootercontent {
     text-align: center;
   }
-  
+  .why-boxes {
+    grid-template-columns: 1fr;
+  }
+  .why-choose-us .why-grid {
+    grid-template-columns: 1fr;
+  }
 }
