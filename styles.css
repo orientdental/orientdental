@@ -88,6 +88,9 @@ a {
   font-weight: 500;
   transition: background 0.2s;
   color: #222;
+    white-space: nowrap; 
+  flex-shrink: 1;      
+  min-width: 0;  
 }
 .dentozen-navbar .nav-links li a:hover {
   background: #eee;
@@ -100,6 +103,7 @@ a {
   border: 1px solid #333;
   color: #333;
   display: inline-block;
+  text-align: center;
 }
 .dentozen-navbar .hamburger {
   display: none;
@@ -189,7 +193,7 @@ a {
   border-radius: 30px;
   font-weight: 600;
   font-size: 1rem;
-  color: #1a1a1a;
+  color: white;
   background: #90e0ef;
   border: none;
   cursor: pointer;
