@@ -1,13 +1,135 @@
-<!-- PART 1: HEAD AND NAVBAR -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dental Clinic</title>
+  <title>Orient Dental Clinic</title>
   <link rel="stylesheet" href="../styles.css" />
   <script defer src="../script.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="icon" type="image/png" href="../images/logoqr1.png">
+  <style>
+    /* === Removed fade-in animation styles === */
+
+    /* === Unified section title style === */
+    .section-title {
+      font-family: "Segoe UI", Roboto, system-ui, -apple-system, "Helvetica Neue", Arial;
+      font-size: 1.95rem;
+      font-weight: 700;
+      color: #222;
+      text-align: center;
+      margin: 0 0 18px;
+      padding-bottom: 8px;
+      position: relative;
+      line-height: 1.15;
+    }
+
+    /* subtle subtitle / intro text */
+    .intro-text {
+      color: #4b4b4b;
+      text-align: center;
+      font-size: 1.05rem;
+      margin-bottom: 18px;
+    }
+
+    /* checklist style */
+    .checklist {
+      list-style: none;
+      padding: 0;
+      margin: 0 auto;
+      max-width: 760px;
+    }
+    .checklist li {
+      position: relative;
+      padding-left: 28px;
+      margin-bottom: 10px;
+      color: #444;
+    }
+    .checklist li::before {
+      content: "\f00c";
+      font-family: "Font Awesome 6 Free";
+      font-weight: 900;
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: #b28756;
+      font-size: 0.9rem;
+    }
+
+    /* ========== Procedure images (2x2) ========== */
+    .procedure-images {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+      max-width: 640px;
+      margin: 20px auto 0;
+      align-items: start;
+      padding: 0 12px;
+    }
+
+    .proc-step {
+      position: relative;
+      overflow: hidden;
+      border-radius: 12px;
+      background: #fff;
+      box-shadow: 0 8px 22px rgba(13,13,13,0.06);
+    }
+
+    .proc-step img {
+      width: 100%;
+      height: 170px;          /* modest fixed height for consistency */
+      max-height: 200px;
+      object-fit: cover;
+      display: block;
+      transition: transform 220ms ease;
+      border-radius: 12px;
+    }
+
+    .proc-step:hover img {
+      transform: scale(1.03);
+    }
+
+    .step-number {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      width: 36px;
+      height: 36px;
+      line-height: 36px;
+      text-align: center;
+      border-radius: 50%;
+      background: #b28756;
+      color: #fff;
+      font-weight: 700;
+      box-shadow: 0 6px 14px rgba(178,135,86,0.18);
+      z-index: 2;
+      font-size: 16px;
+    }
+
+    /* responsive stacking for small screens */
+    @media (max-width: 600px) {
+      .procedure-images { grid-template-columns: 1fr; max-width: 420px; gap: 12px; }
+      .proc-step img { height: 150px; }
+      .section-title { font-size: 1.6rem; }
+    }
+
+    /* section container spacing consistency (if your styles.css has different values override here) */
+    .section { padding: 44px 20px; }
+    .section.beige { background: #fdf7f1; }
+    .container.narrow { max-width: 900px; margin: 0 auto; padding: 0 18px; }
+
+    /* svg divider utility (full width wave-like dividers) */
+    .section-divider {
+      display: block;
+      width: 100%;
+      height: 60px;
+    }
+    .section-divider svg { width: 100%; height: 100%; display: block; }
+
+    /* CTA tweaks (small) */
+    .cta-section { background: #b28756; color: #fff; text-align: center; padding: 36px 18px; }
+    .cta-section .btn { margin: 8px 6px; }
+  </style>
 </head>
 <body>
 
@@ -29,14 +151,14 @@
     </select>
   </div>
 </header>
+
 <nav class="dentozen-navbar" style="margin-top: 0;">
   <div class="nav-content">
     <div class="logo">
-  <a href="../index.html">
-    <img src="../images/logodent.png" alt="Orient Dental Logo" />
-  </a>
-</div>
-
+      <a href="../index.html">
+        <img src="../images/logodent.png" alt="Orient Dental Logo" />
+      </a>
+    </div>
     <div class="hamburger" onclick="toggleMobileNav()">
       <i class="fas fa-bars"></i>
     </div>
@@ -51,136 +173,166 @@
     <a class="appointment-btn" href="../pages/contacts.html#contact-form">Book Appointment</a>
   </div>
 </nav>
-<!-- Info Section -->
-<section class="section beige" id="implants">
-  <h2 class="section-title" data-i18n="dental_implants">Dental Prosthetics</h2>
 
-  <div class="infoimg">
-    <img src="../images/dental-prosthesis.jpg" alt="dental-prosthesis" />
-  </div>
-
-  <div class="info-text" data-i18n="modern_text">
-    <p style="font-weight: bold; font-size: 20px; text-align: center;">
-      Dentistry is more than restoring teeth — it's about giving patients their smile back, their voice, and the freedom to live and eat without hesitation.
+<!-- Service Overview -->
+<section class="section beige">
+  <div class="container narrow">
+    <h2 class="section-title">Missing a Tooth is not the end, it's the Start of a New Smile!</h2>
+    <p class="intro-text">
+      Dental implants are the ideal solution for replacing missing teeth — providing long-lasting, natural results while protecting your oral health.
     </p>
-
-    <p>
-      1. Why are Dental Prosthetics?    
-    </p>
-
-    <p class="highlight">
-        Dental prosthetics are devices used to restore missing or damaged teeth. They improve both function and aesthetics. Patients choose prosthetics to regain chewing ability, restore confidence, and improve speech.
-    </p>
-  </div>
-
-  <div class="info-text" data-i18n="modern_text">
-    <p>
-      2. Types of Dental Prosthetics
-    </p>
-
-    <p class="highlight" style="text-align: start;">
-    Fixed Prosthetics:<br>
-        • Crowns (Zirconia, Porcelain, E-max) <br>
-        • Bridges (3-unit, full-arch) <br>
-    Removable Prosthetics:<br>
-        • Full Dentures <br>
-        • Partial Dentures <br>
-        • Flexible Dentures <br>
-        • Implant-supported Dentures
-
-    </p>
-  </div>
-
-  <div class="info-text" data-i18n="modern_text">
-    <p>
-      3. Common materials
-    </p>
-
-    <p class="highlight" style="text-align: start;">
-        • Zirconia – highly aesthetic and strong <br>
-        • Porcelain fused to metal (PFM) – reliable and affordable <br>
-        • Acrylic – used for temporary solutions <br>
-        • Titanium – used in implant-supported bars
-
-    </p>
-
-      <div class="info-text" data-i18n="modern_text">
-    <p>
-      3. Common materials
-    </p>
-
-    <p class="highlight" style="text-align: start;">
-    🦷 Step 1: Consultation & Impressions – The dentist examines the case and takes dental impressions. <br>
-    🧪 Step 2: Tooth Preparation – If needed, teeth are reshaped to accommodate crowns or bridges. <br>
-    🏭 Step 3: Lab Fabrication – The prosthetic is crafted in the lab. This takes 3–7 days depending on the material. <br>
-    🧩 Step 4: Fitting & Adjustments – The dentist fits the prosthesis and checks bite, comfort, and aesthetics. <br>
-    📋 Step 5: Aftercare Instructions – Patients receive guidance on maintenance and hygiene.
-    </p>
-
-    <p>
-      <p style="font-weight: bold; font-size: 25px; text-align: center;">FAQ</p>
-      <p style="font-weight: bold; font-size: 20px;">How long do crowns or bridges last?</p>
-      <p>With proper care, dental crowns and bridges can last 10 to 15 years or longer. Materials like zirconia are especially durable and resistant to wear.</p><br>
-
-      <p style="font-weight: bold; font-size: 20px;">Is zirconia better than porcelain?</p>
-      <p>Yes. Zirconia is stronger, more aesthetic (closer to natural teeth), and more biocompatible. It’s often the preferred choice for front and back teeth, especially in long-term restorations.</p><br>
-
-      <p style="font-weight: bold; font-size: 20px;">How long does the procedure take?</p>
-      <p>Yes. Our prosthetics are custom-designed to fit comfortably, match your bite, and restore natural chewing function. After a short adjustment period, most patients don’t feel any difference.</p><br>
-
-      <p style="font-weight: bold; font-size: 20px;">Will it feel natural?</p>
-      <p>Patients with uncontrolled diabetes or severe bone issues should consult for further evaluation.</p><br>
-
-      <p style="font-weight: bold; font-size: 20px;">Can I eat normally with crowns or dentures?</p>
-      <p>Absolutely. With crowns and bridges, patients can eat all types of food after a short adaptation period. Removable dentures may take a few days to get used to, but eating becomes comfortable with practice.</p><br>
-      
-      <p style="font-weight: bold; font-size: 20px;">What warranty do you offer?</p>
-      <p>We provide a 2 to 5-year warranty (depending on the type of prosthetic and materials used). Our prosthetics are made with certified European materials, ensuring both safety and longevity.</p><br>
-    </p>
-    <p data-i18n="email_or_book" style="text-align: center; font-weight: bold;">Contact us for a free consult today!</p>
-  <div class="hero-buttons" style="margin-top: 20px;">
-        <a href="../pages/contacts.html#contact-form" class="btn primary" data-i18n="book">Book Appointment</a>
-        <a href="tel:+355692040130" class="btn secondary" data-i18n="call">Call Reception</a>
-  </div>
+    <div class="image-center">
+      <img src="../images/dental-implants.png" alt="Dental Implant" class="service-image" />
+    </div>  
   </div>
   
 </section>
 
-<div class="section-divider wave-up">
-  <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
-    <path d="M0,120 C600,20 600,100 1200,120 L1200,0 L0,0 Z" fill="#fdf7f1"></path>
+<!-- SVG divider: beige -> white -->
+<div class="section-divider">
+  <svg viewBox="0 0 1440 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0,80 C360,0 1080,160 1440,40 L1440,80 L0,80 Z" fill="#ffffff"/>
   </svg>
 </div>
 
-<!-- Contact -->
-<section class="section contact" id="contact">
-  <h2 class="section-title" data-i18n="contact_us">How Can You Find Us?</h2>
-  <p><strong>Location:</strong> Rruga Him Kolli, Tirana, Albania</p>
-  <p><strong>Phone:</strong> +355 69 204 0130</p>
-  <iframe
-    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2990.7989040537996!2d19.81485331542124!3d41.326120607642846!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x13503172e8cab76f%3A0x704934284304e7f0!2sMeto%20Dent!5e0!3m2!1sen!2s!4v1721670000000!5m2!1sen!2s"
-    width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy">
-  </iframe>
-  <a href="../pages/contacts.html" class="btn primary" data-i18n="book">Book Appointment</a>
+<!-- Why Implants -->
+<section class="section">
+  <div class="container narrow">
+    <h2 class="section-title">Why Choose Dental Implants?</h2>
+    <ul class="checklist">
+      <li>Permanent and long-lasting solution</li>
+      <li>Helps preserve jawbone structure</li>
+      <li>Improved chewing function and aesthetics</li>
+      <li>No damage to neighboring teeth (unlike traditional bridges)</li>
+    </ul>
+  </div>
 </section>
 
-<!-- Questions Section -->
+<!-- Procedure Steps -->
+<section class="section beige">
+  <div class="container narrow">
+    <h2 class="section-title">How the Implant Procedure Works</h2>
+    <ol class="procedure-list">
+      <li><strong>Initial consultation:</strong> Detailed assessment by doctors with 30+ years of experience</li>
+      <li><strong>Implant placement:</strong> Precise, painless, and with maximum comfort</li>
+      <li><strong>Healing & osseointegration:</strong> 3–6 months for the implant to fuse with bone</li>
+      <li><strong>Final restoration:</strong> Abutment and permanent crown placement</li>
+    </ol>
+
+    <!-- 2x2 image grid showing the process (numbers indicate order) -->
+    <div class="procedure-images" aria-hidden="false">
+      <div class="proc-step">
+        <span class="step-number" aria-hidden="true">1</span>
+        <img src="../images/implantimg1.jpeg" alt="Step 1 - Initial evaluation">
+      </div>
+
+      <div class="proc-step">
+        <span class="step-number" aria-hidden="true">2</span>
+        <img src="../images/implantimg2.jpeg" alt="Step 2 - Implant placement">
+      </div>
+
+      <div class="proc-step">
+        <span class="step-number" aria-hidden="true">3</span>
+        <img src="../images/implantimg3.jpeg" alt="Step 3 - Healing / osseointegration">
+      </div>
+
+      <div class="proc-step">
+        <span class="step-number" aria-hidden="true">4</span>
+        <img src="../images/implantimg4.jpeg" alt="Step 4 - Abutment & final crown">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SVG divider: beige -> white -->
+<div class="section-divider">
+  <svg viewBox="0 0 1440 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0,80 C360,0 1080,160 1440,40 L1440,80 L0,80 Z" fill="#ffffff"/>
+  </svg>
+</div>
+
+<!-- Why Trust Us -->
+<section class="section">
+  <div class="container narrow">
+    <h2 class="section-title">Why Trust Us With Your Smile?</h2>
+    <ul class="checklist">
+      <li>30+ years of implantology experience</li>
+      <li>Certified Italian implants</li>
+      <li>Competitive, transparent pricing from the start</li>
+      <li>Modern technology & top-tier dental labs in Tirana</li>
+    </ul>
+  </div>
+</section>
+
+<!-- SVG divider: white -> beige (wave down) -->
 <div class="section-divider wave-down">
-  <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+  <svg viewBox="0 0 1200 120" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
     <path d="M0,0 C600,100 600,20 1200,0 L1200,120 L0,120 Z" fill="#fdf7f1"></path>
   </svg>
 </div>
+
+<!-- FAQ -->
 <section class="section beige">
-  <h2 class="section-title" data-i18n="questions">Questions about your treatment?</h2>
-  <p data-i18n="email_or_book">Feel free to email us or book an appointment now.</p>
-  <div class="hero-buttons" style="margin-top: 20px;">
-    <a href="mailto: orientdental7@gmail.com" class="btn secondary">Message Us</a>
-    <a href="../pages/contacts.html#contact-form" class="btn primary">Book Now</a>
+  <div class="container narrow">
+    <h2 class="section-title">Frequently Asked Questions</h2>
+    <div class="faq">
+      <h3>Is there an age limit?</h3>
+      <p>No — even patients over 70 can receive implants if their bone structure is healthy.</p>
+      <h3>Is the procedure painful?</h3>
+      <p>No! With modern local anesthesia and our expertise, you will not feel pain during placement.</p>
+      <h3>How long does it take?</h3>
+      <p>The placement of a single implant can be done in under 20 minutes. Healing takes 3–6 months.</p>
+      <h3>Are there contraindications?</h3>
+      <p>Patients with uncontrolled diabetes or severe bone issues should undergo further evaluation first.</p>
+      <h3>How long does an implant last?</h3>
+      <p>With proper care, a dental implant can last 20 years or more.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Call to Action -->
+<section class="cta-section fade-in">
+  <div class="container narrow center">
+    <h2 class="section-title" style="color: #fff; margin-bottom: 10px;">Book Your Free Consultation Today!</h2>
+    <p style="color: #fff; margin-bottom: 14px;">Let us restore your smile with the most advanced dental implant solutions.</p>
+    <a href="../contact.html" class="btn primary">Reserve Now</a>
+  </div>
+</section>
+
+<!-- Contact -->
+<section class="section contact fade-in" id="contact">
+  <div class="container narrow">
+    <h2 class="section-title">How Can You Find Us?</h2>
+    <p><strong>Location:</strong> Rruga Him Kolli, Tirana, Albania</p>
+    <p><strong>Phone:</strong> +355 69 204 0130</p>
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2990.7989040537996!2d19.81485331542124!3d41.326120607642846!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x13503172e8cab76f%3A0x704934284304e7f0!2sMeto%20Dent!5e0!3m2!1sen!2s!4v1721670000000!5m2!1sen!2s"
+      width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    <a href="../pages/contacts.html" class="btn primary" data-i18n="book">Book Appointment</a>
+  </div>
+</section>
+
+<!-- SVG divider: contact -> questions -->
+<div class="section-divider wave-down">
+  <svg viewBox="0 0 1200 120" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0,0 C600,100 600,20 1200,0 L1200,120 L0,120 Z" fill="#fdf7f1"></path>
+  </svg>
+</div>
+
+<!-- Questions Section -->
+<section class="section beige fade-in">
+  <div class="container narrow">
+    <h2 class="section-title">Questions about your treatment?</h2>
+    <p>Feel free to email us or book an appointment now.</p>
+    <div class="hero-buttons" style="margin-top: 20px;">
+      <a href="mailto:orientdental7@gmail.com" class="btn secondary">Message Us</a>
+      <a href="../pages/contacts.html#contact-form" class="btn primary">Book Now</a>
+    </div>
   </div>
 </section>
 
 <!-- Footer -->
-<footer class="footer">
+<footer class="footer fade-in">
   <div class="footer-grid">
     <div>
       <h4>Quick Links</h4>
@@ -195,22 +347,20 @@
       <p>This website provides general dental information. Information taken from this site is not a substitute for professional dental advice. Always consult your dentist before treatment.</p>
     </div>
     <div class="contactfootercontent">
-  <h4>Contact</h4>
-  <p>Rruga Him Kolli, Tirana<br>Phone: +355 69 204 0130<br>Email: klinikaorient@gmail.com</p>
-  <div class="social-icons">
-    <a href="#"><i class="fab fa-facebook-f"></i></a>
-    <a href="#"><i class="fab fa-instagram"></i></a>
-    <a href="#"><i class="fab fa-whatsapp"></i></a>
-  </div>
-</div>
-
-</div>
-
+      <h4>Contact</h4>
+      <p>Rruga Him Kolli, Tirana<br>Phone: +355 69 204 0130<br>Email: orientdental7@gmail.com</p>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-whatsapp"></i></a>
+      </div>
+    </div>
   </div>
   <div class="copyright">
     © 2025 Orient Dental Clinic. All Rights Reserved.
   </div>
 </footer>
+
 <button id="scrollToTopBtn"><i class="fas fa-chevron-up"></i></button>
 </body>
 </html>
