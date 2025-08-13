@@ -9,7 +9,6 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <link rel="icon" type="image/png" href="../images/logoqr1.png">
   <style>
-    /* === Removed fade-in animation styles === */
 
     /* === Unified section title style === */
     .section-title {
@@ -177,89 +176,100 @@
 <!-- Service Overview -->
 <section class="section beige">
   <div class="container narrow">
-    <h2 class="section-title">Missing a Tooth is not the end, it's the Start of a New Smile!</h2>
-    <p class="intro-text">
-      Dental implants are the ideal solution for replacing missing teeth — providing long-lasting, natural results while protecting your oral health.
+    <h2 class="section-title" data-i18n="general.title">
+      At the heart of every healthy smile is prevention, precision, and patient care — general dentistry is where confident smiles begin.
+    </h2>
+    <p class="intro-text" data-i18n="general.intro">
+      General dentistry focuses on the prevention, diagnosis, and treatment of common dental problems. It forms the foundation of overall oral health, addressing everything from cavities and gum disease to emergency care.
     </p>
     <div class="image-center">
-      <img src="../images/dental-implants.png" alt="Dental Implant" class="service-image" />
+      <img src="../images/composite-fillings.jpg" alt="General Dentistry" class="service-image" />
     </div>  
   </div>
-  
 </section>
 
-<!-- SVG divider: beige -> white -->
-<div class="section-divider">
-  <svg viewBox="0 0 1440 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M0,80 C360,0 1080,160 1440,40 L1440,80 L0,80 Z" fill="#ffffff"/>
+<!-- SVG divider: beige -> white (wave up) -->
+<div class="section-divider wave-up">
+  <svg viewBox="0 0 1200 120" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0,120 C600,20 600,100 1200,120 L1200,0 L0,0 Z" fill="#fdf7f1"></path>
   </svg>
 </div>
 
-<!-- Why Implants -->
+<!-- Why General Dentistry -->
 <section class="section">
   <div class="container narrow">
-    <h2 class="section-title">Why Choose Dental Implants?</h2>
+    <h2 class="section-title" data-i18n="general.why_title">Common Treatments</h2>
     <ul class="checklist">
-      <li>Permanent and long-lasting solution</li>
-      <li>Helps preserve jawbone structure</li>
-      <li>Improved chewing function and aesthetics</li>
-      <li>No damage to neighboring teeth (unlike traditional bridges)</li>
+      <li data-i18n="general.treatments.fillings">Fillings (Composite or Amalgam) – For treating cavities</li>
+      <li data-i18n="general.treatments.extractions">Tooth Extractions – For severely decayed or damaged teeth</li>
+      <li data-i18n="general.treatments.root_canal">Root Canal Treatment – To save infected teeth</li>
+      <li data-i18n="general.treatments.cleaning">Dental Cleaning (Scaling & Polishing) – To prevent gum disease</li>
+      <li data-i18n="general.treatments.emergency">Emergency Dental Care – For sudden pain, broken teeth, or infections</li>
     </ul>
   </div>
 </section>
 
+<!-- SVG divider: white -> beige (wave down) -->
+<div class="section-divider wave-down">
+  <svg viewBox="0 0 1200 120" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0,0 C600,100 600,20 1200,0 L1200,120 L0,120 Z" fill="#fdf7f1"></path>
+  </svg>
+</div>
+
 <!-- Procedure Steps -->
 <section class="section beige">
   <div class="container narrow">
-    <h2 class="section-title">How the Implant Procedure Works</h2>
-    <ol class="procedure-list">
-      <li><strong>Initial consultation:</strong> Detailed assessment by doctors with 30+ years of experience</li>
-      <li><strong>Implant placement:</strong> Precise, painless, and with maximum comfort</li>
-      <li><strong>Healing & osseointegration:</strong> 3–6 months for the implant to fuse with bone</li>
-      <li><strong>Final restoration:</strong> Abutment and permanent crown placement</li>
-    </ol>
-
-    <!-- 2x2 image grid showing the process (numbers indicate order) -->
-    <div class="procedure-images" aria-hidden="false">
-      <div class="proc-step">
-        <span class="step-number" aria-hidden="true">1</span>
-        <img src="../images/implantimg1.jpeg" alt="Step 1 - Initial evaluation">
+    <h2 class="section-title" data-i18n="general.procedure_title">How the General Dentistry Procedure Works</h2>
+    <div class="procedure-steps">
+      <div class="procedure-step">
+        <div class="step-text" data-i18n="general.procedure.step1"><strong>Consultation & Diagnosis:</strong> Includes oral exam, X-rays, and patient history.</div>
+        <div class="step-image">
+          <span class="step-number">1</span>
+          <img src="../images/general-step1.jpeg" alt="Step 1 - Consultation & Diagnosis">
+        </div>
       </div>
-
-      <div class="proc-step">
-        <span class="step-number" aria-hidden="true">2</span>
-        <img src="../images/implantimg2.jpeg" alt="Step 2 - Implant placement">
+      <div class="procedure-step">
+        <div class="step-text" data-i18n="general.procedure.step2"><strong>Treatment Plan:</strong> Dentist explains options and recommends the best approach.</div>
+        <div class="step-image">
+          <span class="step-number">2</span>
+          <img src="../images/general-step2.jpeg" alt="Step 2 - Treatment Plan">
+        </div>
       </div>
-
-      <div class="proc-step">
-        <span class="step-number" aria-hidden="true">3</span>
-        <img src="../images/implantimg3.jpeg" alt="Step 3 - Healing / osseointegration">
+      <div class="procedure-step">
+        <div class="step-text" data-i18n="general.procedure.step3"><strong>Procedure:</strong> Performed with anesthesia if necessary (e.g., filling, extraction).</div>
+        <div class="step-image">
+          <span class="step-number">3</span>
+          <img src="../images/general-step3.jpeg" alt="Step 3 - Procedure">
+        </div>
       </div>
-
-      <div class="proc-step">
-        <span class="step-number" aria-hidden="true">4</span>
-        <img src="../images/implantimg4.jpeg" alt="Step 4 - Abutment & final crown">
+      <div class="procedure-step">
+        <div class="step-text" data-i18n="general.procedure.step4"><strong>Aftercare & Instructions:</strong> Patient is advised on recovery and hygiene.</div>
+        <div class="step-image">
+          <span class="step-number">4</span>
+          <img src="../images/general-step4.jpeg" alt="Step 4 - Aftercare & Instructions">
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- SVG divider: beige -> white -->
-<div class="section-divider">
-  <svg viewBox="0 0 1440 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M0,80 C360,0 1080,160 1440,40 L1440,80 L0,80 Z" fill="#ffffff"/>
+<!-- SVG divider: beige -> white (wave up) -->
+<div class="section-divider wave-up">
+  <svg viewBox="0 0 1200 120" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0,120 C600,20 600,100 1200,120 L1200,0 L0,0 Z" fill="#fdf7f1"></path>
   </svg>
 </div>
 
 <!-- Why Trust Us -->
 <section class="section">
   <div class="container narrow">
-    <h2 class="section-title">Why Trust Us With Your Smile?</h2>
+    <h2 class="section-title" data-i18n="general.sales_title">Why Trust Our General Dentistry?</h2>
     <ul class="checklist">
-      <li>30+ years of implantology experience</li>
-      <li>Certified Italian implants</li>
-      <li>Competitive, transparent pricing from the start</li>
-      <li>Modern technology & top-tier dental labs in Tirana</li>
+      <li data-i18n="general.sales.tip1">Emphasize pain-free treatments and advanced tools</li>
+      <li data-i18n="general.sales.tip2">Reassure patients about safety, hygiene, and anesthesia</li>
+      <li data-i18n="general.sales.tip3">Highlight early treatment benefits and cost savings</li>
+      <li data-i18n="general.sales.tip4">Offer same-day or emergency care as a unique advantage</li>
+      <li data-i18n="general.sales.tip5">Promote trust in experienced dental professionals</li>
     </ul>
   </div>
 </section>
@@ -274,18 +284,22 @@
 <!-- FAQ -->
 <section class="section beige">
   <div class="container narrow">
-    <h2 class="section-title">Frequently Asked Questions</h2>
+    <h2 class="section-title" data-i18n="general.faq_title">Frequently Asked Questions</h2>
     <div class="faq">
-      <h3>Is there an age limit?</h3>
-      <p>No — even patients over 70 can receive implants if their bone structure is healthy.</p>
-      <h3>Is the procedure painful?</h3>
-      <p>No! With modern local anesthesia and our expertise, you will not feel pain during placement.</p>
-      <h3>How long does it take?</h3>
-      <p>The placement of a single implant can be done in under 20 minutes. Healing takes 3–6 months.</p>
-      <h3>Are there contraindications?</h3>
-      <p>Patients with uncontrolled diabetes or severe bone issues should undergo further evaluation first.</p>
-      <h3>How long does an implant last?</h3>
-      <p>With proper care, a dental implant can last 20 years or more.</p>
+      <h3 data-i18n="general.faq.q1">Is a dental filling painful?</h3>
+      <p data-i18n="general.faq.a1">No. Fillings are done under local anesthesia and are usually pain-free. Some sensitivity may occur afterward.</p>
+      
+      <h3 data-i18n="general.faq.q2">How do I know if I need a root canal?</h3>
+      <p data-i18n="general.faq.a2">Common signs include pain when chewing, prolonged sensitivity to hot or cold, and swelling near the tooth.</p>
+      
+      <h3 data-i18n="general.faq.q3">Is tooth extraction safe?</h3>
+      <p data-i18n="general.faq.a3">Yes, when performed by a professional. Most extractions are simple and heal quickly with proper care.</p>
+      
+      <h3 data-i18n="general.faq.q4">How often should I get a dental cleaning?</h3>
+      <p data-i18n="general.faq.a4">Most dentists recommend cleanings every 6 months to prevent plaque buildup and gum disease.</p>
+      
+      <h3 data-i18n="general.faq.q5">What should I do during a dental emergency?</h3>
+      <p data-i18n="general.faq.a5">Call the clinic immediately. If it involves swelling, pain, or a broken tooth, prompt treatment is crucial.</p>
     </div>
   </div>
 </section>
@@ -295,7 +309,7 @@
   <div class="container narrow center">
     <h2 class="section-title" style="color: #fff; margin-bottom: 10px;">Book Your Free Consultation Today!</h2>
     <p style="color: #fff; margin-bottom: 14px;">Let us restore your smile with the most advanced dental implant solutions.</p>
-    <a href="../contact.html" class="btn primary">Reserve Now</a>
+    <a href="../pages/contacts.html" class="btn primary">Reserve Now</a>
   </div>
 </section>
 
@@ -308,7 +322,9 @@
     <iframe
       src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2990.7989040537996!2d19.81485331542124!3d41.326120607642846!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x13503172e8cab76f%3A0x704934284304e7f0!2sMeto%20Dent!5e0!3m2!1sen!2s!4v1721670000000!5m2!1sen!2s"
       width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-    <a href="../pages/contacts.html" class="btn primary" data-i18n="book">Book Appointment</a>
+  <div class="hero-buttons">
+    <a href="pages/contacts.html#contact-form" class="btn primary" data-i18n="book">Book Appointment</a>
+  </div>
   </div>
 </section>
 
@@ -362,5 +378,92 @@
 </footer>
 
 <button id="scrollToTopBtn"><i class="fas fa-chevron-up"></i></button>
+<script>
+const translations = {
+  general: {
+    al: {
+      title: "Në zemër të çdo buzëqeshjeje të shëndetshme është parandalimi, precizioni dhe kujdesi ndaj pacientit — stomatologjia e përgjithshme është vendi ku fillojnë buzëqeshjet me besim.",
+      intro: "Stomatologjia e përgjithshme fokusohet në parandalimin, diagnostikimin dhe trajtimin e problemeve të zakonshme dentare. Ajo formon bazën e shëndetit oral, duke trajtuar gjithçka nga kavitete deri tek sëmundjet e mishrave dhe kujdesi emergjent.",
+      why_title: "Trajtimet e zakonshme",
+      treatments: {
+        fillings: "Mbushje (kompozit ose amalgam) – për trajtimin e kaviteteve",
+        extractions: "Nxjerrje dhëmbësh – për dhëmbë të kalbur ose të dëmtuar rëndë",
+        root_canal: "Trajtim i kanalit të rrënjës – për të shpëtuar dhëmbët e infektuar",
+        cleaning: "Pastrimi dentar (shkallëzim & lustër) – për të parandaluar sëmundjet e mishrave",
+        emergency: "Kujdes dentar emergjent – për dhimbje të papritura, dhëmbë të thyer ose infeksione"
+      },
+      procedure_title: "Si funksionon procedura e stomatologjisë së përgjithshme",
+      procedure: {
+        step1: "Konsultim & Diagnostikim: Përfshin ekzaminim oral, radiografi dhe historik të pacientit.",
+        step2: "Plani i trajtimit: Dentisti shpjegon opsionet dhe rekomandon qasjen më të mirë.",
+        step3: "Procedura: Kryhet me anestezi nëse është e nevojshme (p.sh., mbushje, nxjerrje).",
+        step4: "Kujdesi pas trajtimit & udhëzime: Pacienti këshillohet për rikuperimin dhe higjienën."
+      },
+      faq_title: "Pyetje të shpeshta",
+      faq: {
+        q1: "A është e dhimbshme një mbushje dentare?",
+        a1: "Jo. Mbushjet bëhen nën anestezi lokale dhe zakonisht janë pa dhimbje. Mund të ketë ndjeshmëri të lehtë pas trajtimit.",
+        q2: "Si e di nëse më duhet një trajtim kanali?",
+        a2: "Shenjat e zakonshme përfshijnë dhimbje gjatë përtypjes, ndjeshmëri të zgjatur ndaj të nxehtit ose të ftohtit dhe ënjtje pranë dhëmbit.",
+        q3: "A është e sigurt nxjerrja e dhëmbit?",
+        a3: "Po, kur kryhet nga profesionistë. Shumica e nxjerrjeve shërohen shpejt me kujdes të duhur.",
+        q4: "Sa shpesh duhet të bëj pastrim dentar?",
+        a4: "Shumica e dentistëve rekomandojnë pastrim çdo 6 muaj për të parandaluar grumbullimin e pllakës dhe sëmundjen e mishrave.",
+        q5: "Çfarë duhet të bëj gjatë një emergjence dentare?",
+        a5: "Telefononi menjëherë klinikën. Nëse ka ënjtje, dhimbje ose dhëmb të thyer, trajtimi i shpejtë është vendimtar."
+      },
+      sales_title: "Pse të na besoni ne?",
+      sales: {
+        tip1: "Trajtime pa dhimbje dhe mjete moderne",
+        tip2: "Siguri, higjienë dhe anestezi e garantuar",
+        tip3: "Përfitime nga trajtimi i hershëm dhe kursime në kosto",
+        tip4: "Kujdes emergjent dhe në të njëjtën ditë",
+        tip5: "Dentistë me eksperiencë të gjerë"
+      }
+    },
+    it: {
+      title: "Al centro di ogni sorriso sano c'è prevenzione, precisione e cura del paziente — l'odontoiatria generale è dove iniziano i sorrisi sicuri.",
+      intro: "L'odontoiatria generale si concentra sulla prevenzione, diagnosi e trattamento dei problemi dentali comuni. Forma la base della salute orale, trattando tutto dalle carie alle malattie gengivali e cure di emergenza.",
+      why_title: "Trattamenti comuni",
+      treatments: {
+        fillings: "Otturazioni (composito o amalgama) – per trattare le carie",
+        extractions: "Estrazioni dentali – per denti gravemente cariati o danneggiati",
+        root_canal: "Trattamento canalare – per salvare denti infetti",
+        cleaning: "Pulizia dentale (scaling e lucidatura) – per prevenire le malattie gengivali",
+        emergency: "Cura dentale d'urgenza – per dolore improvviso, denti rotti o infezioni"
+      },
+      procedure_title: "Come funziona il trattamento di odontoiatria generale",
+      procedure: {
+        step1: "Consulto & Diagnosi: Include esame orale, radiografie e anamnesi.",
+        step2: "Piano di trattamento: Il dentista spiega le opzioni e raccomanda il miglior approccio.",
+        step3: "Procedura: Eseguita con anestesia se necessario (es. otturazione, estrazione).",
+        step4: "Cura post-trattamento & istruzioni: Il paziente riceve consigli per il recupero e l'igiene."
+      },
+      faq_title: "Domande frequenti",
+      faq: {
+        q1: "L'otturazione è dolorosa?",
+        a1: "No. Le otturazioni vengono fatte in anestesia locale e sono generalmente indolori. Può verificarsi una leggera sensibilità dopo.",
+        q2: "Come faccio a sapere se ho bisogno di un trattamento canalare?",
+        a2: "Segnali comuni includono dolore durante la masticazione, sensibilità prolungata al caldo o al freddo e gonfiore vicino al dente.",
+        q3: "L'estrazione dentale è sicura?",
+        a3: "Sì, se eseguita da un professionista. La maggior parte delle estrazioni guarisce rapidamente con la cura adeguata.",
+        q4: "Ogni quanto devo fare una pulizia dentale?",
+        a4: "La maggior parte dei dentisti consiglia pulizie ogni 6 mesi per prevenire placca e malattie gengivali.",
+        q5: "Cosa devo fare in caso di emergenza dentale?",
+        a5: "Chiama immediatamente la clinica. Se c'è gonfiore, dolore o un dente rotto, il trattamento tempestivo è fondamentale."
+      },
+      sales_title: "Perché fidarsi di noi?",
+      sales: {
+        tip1: "Trattamenti indolori e strumenti moderni",
+        tip2: "Sicurezza, igiene e anestesia garantite",
+        tip3: "Vantaggi del trattamento precoce e risparmio sui costi",
+        tip4: "Cure urgenti e nello stesso giorno",
+        tip5: "Dentisti con ampia esperienza"
+      }
+    }
+  }
+};
+</script>
+
 </body>
 </html>
