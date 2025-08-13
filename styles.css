@@ -1181,6 +1181,17 @@ a {
   pointer-events: none;
 }
 
+/* Wave that trims the hero bottom and blends into #fdf7f1 */
+.hero .hero-wave{
+  position:absolute;
+  left:0;
+  bottom:-1px;       /* hide any 1px seam */
+  width:100%;
+  height:100px;
+  display:block;
+  z-index:3;         /* ABOVE the .hero::before overlay (z-index:1) and content (2) */
+  pointer-events:none;
+}
 
 
 @media screen and (max-width: 900px) {
