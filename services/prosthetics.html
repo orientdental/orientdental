@@ -9,9 +9,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <link rel="icon" type="image/png" href="../images/logoqr1.png">
   <style>
-    /* === Removed fade-in animation styles === */
 
-    /* === Unified section title style === */
     .section-title {
       font-family: "Segoe UI", Roboto, system-ui, -apple-system, "Helvetica Neue", Arial;
       font-size: 1.95rem;
@@ -177,89 +175,122 @@
 <!-- Service Overview -->
 <section class="section beige">
   <div class="container narrow">
-    <h2 class="section-title">Missing a Tooth is not the end, it's the Start of a New Smile!</h2>
-    <p class="intro-text">
-      Dental implants are the ideal solution for replacing missing teeth — providing long-lasting, natural results while protecting your oral health.
+    <h2 class="section-title" data-i18n="prosthetics.title">
+      Dentistry is more than restoring teeth — it's about giving patients their smile back, their voice, and the freedom to live and eat without hesitation.
+    </h2>
+    <p class="intro-text" data-i18n="prosthetics.intro">
+      Dental prosthetics are devices used to restore missing or damaged teeth. They improve both function and aesthetics. Patients choose prosthetics to regain chewing ability, restore confidence, and improve speech.
     </p>
     <div class="image-center">
-      <img src="../images/dental-implants.png" alt="Dental Implant" class="service-image" />
+      <img src="../images/dental-prosthesis.jpg" alt="Dental Prosthetics" class="service-image" />
     </div>  
   </div>
-  
 </section>
 
-<!-- SVG divider: beige -> white -->
-<div class="section-divider">
-  <svg viewBox="0 0 1440 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M0,80 C360,0 1080,160 1440,40 L1440,80 L0,80 Z" fill="#ffffff"/>
+<!-- SVG divider: beige -> white (wave up) -->
+<div class="section-divider wave-up">
+  <svg viewBox="0 0 1200 120" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0,120 C600,20 600,100 1200,120 L1200,0 L0,0 Z" fill="#fdf7f1"></path>
   </svg>
 </div>
 
-<!-- Why Implants -->
+<!-- Types of Prosthetics -->
 <section class="section">
   <div class="container narrow">
-    <h2 class="section-title">Why Choose Dental Implants?</h2>
+    <h2 class="section-title" data-i18n="prosthetics.types_title">Types of Dental Prosthetics</h2>
     <ul class="checklist">
-      <li>Permanent and long-lasting solution</li>
-      <li>Helps preserve jawbone structure</li>
-      <li>Improved chewing function and aesthetics</li>
-      <li>No damage to neighboring teeth (unlike traditional bridges)</li>
+      <li data-i18n="prosthetics.types.fixed.crowns">Crowns (Zirconia, Porcelain, E-max)</li>
+      <li data-i18n="prosthetics.types.fixed.bridges">Bridges (3-unit, full-arch)</li>
+      <li data-i18n="prosthetics.types.removable.full_dentures">Full Dentures</li>
+      <li data-i18n="prosthetics.types.removable.partial_dentures">Partial Dentures</li>
+      <li data-i18n="prosthetics.types.removable.flexible_dentures">Flexible Dentures</li>
+      <li data-i18n="prosthetics.types.removable.implant_supported">Implant-supported Dentures</li>
     </ul>
   </div>
 </section>
 
+<!-- Common Materials -->
+<section class="section">
+  <div class="container narrow">
+    <h2 class="section-title" data-i18n="prosthetics.materials_title">Common Materials</h2>
+    <ul class="checklist">
+      <li data-i18n="prosthetics.materials.zirconia">Zirconia – highly aesthetic and strong</li>
+      <li data-i18n="prosthetics.materials.pfm">Porcelain fused to metal (PFM) – reliable and affordable</li>
+      <li data-i18n="prosthetics.materials.acrylic">Acrylic – used for temporary solutions</li>
+      <li data-i18n="prosthetics.materials.titanium">Titanium – used in implant-supported bars</li>
+    </ul>
+  </div>
+</section>
+
+<!-- SVG divider: white -> beige (wave down) -->
+<div class="section-divider wave-down">
+  <svg viewBox="0 0 1200 120" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0,0 C600,100 600,20 1200,0 L1200,120 L0,120 Z" fill="#fdf7f1"></path>
+  </svg>
+</div>
+
 <!-- Procedure Steps -->
 <section class="section beige">
   <div class="container narrow">
-    <h2 class="section-title">How the Implant Procedure Works</h2>
-    <ol class="procedure-list">
-      <li><strong>Initial consultation:</strong> Detailed assessment by doctors with 30+ years of experience</li>
-      <li><strong>Implant placement:</strong> Precise, painless, and with maximum comfort</li>
-      <li><strong>Healing & osseointegration:</strong> 3–6 months for the implant to fuse with bone</li>
-      <li><strong>Final restoration:</strong> Abutment and permanent crown placement</li>
-    </ol>
-
-    <!-- 2x2 image grid showing the process (numbers indicate order) -->
-    <div class="procedure-images" aria-hidden="false">
-      <div class="proc-step">
-        <span class="step-number" aria-hidden="true">1</span>
-        <img src="../images/implantimg1.jpeg" alt="Step 1 - Initial evaluation">
+    <h2 class="section-title" data-i18n="prosthetics.procedure_title">How the Prosthetic Procedure Works</h2>
+    <div class="procedure-steps">
+      <div class="procedure-step">
+        <div class="step-text" data-i18n="prosthetics.procedure.step1"><strong>Consultation & Impressions:</strong> The dentist examines the case and takes dental impressions.</div>
+        <div class="step-image">
+          <span class="step-number">1</span>
+          <img src="../images/prosthetics-step1.jpeg" alt="Step 1 - Consultation & Impressions">
+        </div>
       </div>
-
-      <div class="proc-step">
-        <span class="step-number" aria-hidden="true">2</span>
-        <img src="../images/implantimg2.jpeg" alt="Step 2 - Implant placement">
+      <div class="procedure-step">
+        <div class="step-text" data-i18n="prosthetics.procedure.step2"><strong>Tooth Preparation:</strong> If needed, teeth are reshaped to accommodate crowns or bridges.</div>
+        <div class="step-image">
+          <span class="step-number">2</span>
+          <img src="../images/prosthetics-step2.jpeg" alt="Step 2 - Tooth Preparation">
+        </div>
       </div>
-
-      <div class="proc-step">
-        <span class="step-number" aria-hidden="true">3</span>
-        <img src="../images/implantimg3.jpeg" alt="Step 3 - Healing / osseointegration">
+      <div class="procedure-step">
+        <div class="step-text" data-i18n="prosthetics.procedure.step3"><strong>Lab Fabrication:</strong> The prosthetic is crafted in the lab. This takes 3–7 days depending on the material.</div>
+        <div class="step-image">
+          <span class="step-number">3</span>
+          <img src="../images/prosthetics-step3.jpeg" alt="Step 3 - Lab Fabrication">
+        </div>
       </div>
-
-      <div class="proc-step">
-        <span class="step-number" aria-hidden="true">4</span>
-        <img src="../images/implantimg4.jpeg" alt="Step 4 - Abutment & final crown">
+      <div class="procedure-step">
+        <div class="step-text" data-i18n="prosthetics.procedure.step4"><strong>Fitting & Adjustments:</strong> The dentist fits the prosthesis and checks bite, comfort, and aesthetics.</div>
+        <div class="step-image">
+          <span class="step-number">4</span>
+          <img src="../images/prosthetics-step4.jpeg" alt="Step 4 - Fitting & Adjustments">
+        </div>
+      </div>
+      <div class="procedure-step">
+        <div class="step-text" data-i18n="prosthetics.procedure.step5"><strong>Aftercare Instructions:</strong> Patients receive guidance on maintenance and hygiene.</div>
+        <div class="step-image">
+          <span class="step-number">5</span>
+          <img src="../images/prosthetics-step5.jpeg" alt="Step 5 - Aftercare Instructions">
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- SVG divider: beige -> white -->
-<div class="section-divider">
-  <svg viewBox="0 0 1440 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M0,80 C360,0 1080,160 1440,40 L1440,80 L0,80 Z" fill="#ffffff"/>
+<!-- SVG divider: beige -> white (wave up) -->
+<div class="section-divider wave-up">
+  <svg viewBox="0 0 1200 120" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0,120 C600,20 600,100 1200,120 L1200,0 L0,0 Z" fill="#fdf7f1"></path>
   </svg>
 </div>
+
 
 <!-- Why Trust Us -->
 <section class="section">
   <div class="container narrow">
-    <h2 class="section-title">Why Trust Us With Your Smile?</h2>
+    <h2 class="section-title" data-i18n="prosthetics.sales_title">Why Trust Us With Your Prosthetic Needs?</h2>
     <ul class="checklist">
-      <li>30+ years of implantology experience</li>
-      <li>Certified Italian implants</li>
-      <li>Competitive, transparent pricing from the start</li>
-      <li>Modern technology & top-tier dental labs in Tirana</li>
+      <li data-i18n="prosthetics.sales.tip1">Emphasize the beauty and function of zirconia crowns</li>
+      <li data-i18n="prosthetics.sales.tip2">Mention certified European materials</li>
+      <li data-i18n="prosthetics.sales.tip3">Share before/after results</li>
+      <li data-i18n="prosthetics.sales.tip4">Highlight price savings vs. other countries</li>
+      <li data-i18n="prosthetics.sales.tip5">Promote doctor experience & guarantees</li>
     </ul>
   </div>
 </section>
@@ -274,28 +305,33 @@
 <!-- FAQ -->
 <section class="section beige">
   <div class="container narrow">
-    <h2 class="section-title">Frequently Asked Questions</h2>
+    <h2 class="section-title" data-i18n="prosthetics.faq_title">Frequently Asked Questions</h2>
     <div class="faq">
-      <h3>Is there an age limit?</h3>
-      <p>No — even patients over 70 can receive implants if their bone structure is healthy.</p>
-      <h3>Is the procedure painful?</h3>
-      <p>No! With modern local anesthesia and our expertise, you will not feel pain during placement.</p>
-      <h3>How long does it take?</h3>
-      <p>The placement of a single implant can be done in under 20 minutes. Healing takes 3–6 months.</p>
-      <h3>Are there contraindications?</h3>
-      <p>Patients with uncontrolled diabetes or severe bone issues should undergo further evaluation first.</p>
-      <h3>How long does an implant last?</h3>
-      <p>With proper care, a dental implant can last 20 years or more.</p>
+      <h3 data-i18n="prosthetics.faq.q1">How long do crowns or bridges last?</h3>
+      <p data-i18n="prosthetics.faq.a1">With proper care, dental crowns and bridges can last 10 to 15 years or longer. Materials like zirconia are especially durable and resistant to wear.</p>
+      
+      <h3 data-i18n="prosthetics.faq.q2">Is zirconia better than porcelain?</h3>
+      <p data-i18n="prosthetics.faq.a2">Yes. Zirconia is stronger, more aesthetic, and more biocompatible, often preferred for long-term restorations.</p>
+      
+      <h3 data-i18n="prosthetics.faq.q3">Will it feel natural?</h3>
+      <p data-i18n="prosthetics.faq.a3">Yes. Our prosthetics are custom-designed to fit comfortably and restore natural chewing function.</p>
+      
+      <h3 data-i18n="prosthetics.faq.q4">Can I eat normally with crowns or dentures?</h3>
+      <p data-i18n="prosthetics.faq.a4">Absolutely. Crowns and bridges allow eating all types of food after adaptation. Removable dentures may take a few days to get used to.</p>
+      
+      <h3 data-i18n="prosthetics.faq.q5">What warranty do you offer?</h3>
+      <p data-i18n="prosthetics.faq.a5">We provide a 2–5 year warranty depending on the prosthetic type and materials used.</p>
     </div>
   </div>
 </section>
+
 
 <!-- Call to Action -->
 <section class="cta-section fade-in">
   <div class="container narrow center">
     <h2 class="section-title" style="color: #fff; margin-bottom: 10px;">Book Your Free Consultation Today!</h2>
     <p style="color: #fff; margin-bottom: 14px;">Let us restore your smile with the most advanced dental implant solutions.</p>
-    <a href="../contact.html" class="btn primary">Reserve Now</a>
+    <a href="../pages/contacts.html" class="btn primary">Reserve Now</a>
   </div>
 </section>
 
@@ -308,7 +344,9 @@
     <iframe
       src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2990.7989040537996!2d19.81485331542124!3d41.326120607642846!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x13503172e8cab76f%3A0x704934284304e7f0!2sMeto%20Dent!5e0!3m2!1sen!2s!4v1721670000000!5m2!1sen!2s"
       width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-    <a href="../pages/contacts.html" class="btn primary" data-i18n="book">Book Appointment</a>
+  <div class="hero-buttons">
+    <a href="pages/contacts.html#contact-form" class="btn primary" data-i18n="book">Book Appointment</a>
+  </div>
   </div>
 </section>
 
@@ -360,7 +398,144 @@
     © 2025 Orient Dental Clinic. All Rights Reserved.
   </div>
 </footer>
-
 <button id="scrollToTopBtn"><i class="fas fa-chevron-up"></i></button>
+<script>
+// ======================
+// PROSTHETICS TRANSLATIONS
+// ======================
+const prostheticsTranslations = {
+  al: {
+    title: "Stomatologjia është më shumë sesa rikthimi i dhëmbëve — është dhënia e buzëqeshjes, zërit dhe lirisë për të jetuar e ngrënë pa hezitim.",
+    intro: "Protezat dentare janë pajisje që përdoren për të rikthyer dhëmbët e munguar ose të dëmtuar. Ato përmirësojnë funksionin dhe estetikën. Pacientët zgjedhin proteza për të rifituar aftësinë e përtypjes, për të rikthyer besimin dhe për të përmirësuar të folurin.",
+    types_title: "Llojet e protezave dentare",
+    types: {
+      fixed: {
+        crowns: "Kurora (Zirkon, Porcelan, E-max)",
+        bridges: "Ura (3-elementëshe, harku i plotë)"
+      },
+      removable: {
+        full_dentures: "Proteza të plota",
+        partial_dentures: "Proteza të pjesshme",
+        flexible_dentures: "Proteza fleksibël",
+        implant_supported: "Proteza të mbështetura nga implante"
+      }
+    },
+    materials_title: "Materialet e zakonshme",
+    materials: {
+      zirconia: "Zirkon – shumë estetik dhe i fortë",
+      pfm: "Porcelan i shkrirë me metal (PFM) – i besueshëm dhe me kosto të përballueshme",
+      acrylic: "Akrilik – përdoret për zgjidhje të përkohshme",
+      titanium: "Titanium – përdoret në shufrat e mbështetura nga implanti"
+    },
+    procedure_title: "Si funksionon procedura e protezës dentare",
+    procedure: {
+      step1: "Konsultim & Marrje e masave: Dentisti shqyrton rastin dhe merr masat dentare.",
+      step2: "Përgatitja e dhëmbit: Nëse nevojitet, dhëmbët formësohen për të përshtatur kurorat ose urat.",
+      step3: "Puna laboratorike: Proteza prodhohet në laborator. Zgjat 3–7 ditë në varësi të materialit.",
+      step4: "Provë & rregullime: Dentisti provon protezën dhe kontrollon kafshimin, rehatinë dhe estetikën.",
+      step5: "Udhëzime pas trajtimit: Pacienti merr këshilla për mirëmbajtje dhe higjienë."
+    },
+    faq_title: "Pyetje të shpeshta",
+    faq: {
+      q1: "Sa zgjasin kurorat ose urat?",
+      a1: "Me kujdes të duhur, kurorat dhe urat mund të zgjasin 10–15 vjet ose më shumë. Materialet si zirkoni janë jashtëzakonisht të qëndrueshme.",
+      q2: "A është më i mirë zirkoni se porcelani?",
+      a2: "Po. Zirkoni është më i fortë, më estetik dhe më biokompatibël, duke qenë shpesh zgjedhja më e mirë për restaurime afatgjata.",
+      q3: "A do të ndjehet natyrale?",
+      a3: "Po. Protezat tona janë të personalizuara për t’u përshtatur rehatshëm dhe për të rikthyer funksionin natyral të përtypjes.",
+      q4: "A mund të ha normalisht me kurora ose proteza?",
+      a4: "Po. Me kurora dhe ura, mund të konsumoni çdo ushqim pas një periudhe përshtatjeje. Protezat e lëvizshme mund të kërkojnë disa ditë për t’u mësuar.",
+      q5: "Çfarë garancie ofroni?",
+      a5: "Ne ofrojmë garanci 2–5 vjet, në varësi të llojit të protezës dhe materialeve të përdorura."
+    },
+    sales_title: "Pse të na besoni ne për nevojat tuaja protetike?",
+    sales: {
+      tip1: "Thekso bukurinë dhe funksionin e kurorave të zirkonit",
+      tip2: "Përmend materialet e certifikuara europiane",
+      tip3: "Ndaj rezultatet para/pas",
+      tip4: "Thekso kursimet në krahasim me vendet e tjera",
+      tip5: "Përmend eksperiencën e mjekut dhe garancitë"
+    }
+  },
+  it: {
+    title: "L'odontoiatria è più che ripristinare i denti — è restituire ai pazienti il sorriso, la voce e la libertà di vivere e mangiare senza esitazione.",
+    intro: "Le protesi dentarie sono dispositivi utilizzati per ripristinare denti mancanti o danneggiati. Migliorano sia la funzione che l'estetica. I pazienti scelgono le protesi per riacquistare la capacità di masticare, la fiducia e migliorare la parola.",
+    types_title: "Tipi di protesi dentarie",
+    types: {
+      fixed: {
+        crowns: "Corone (Zirconia, Porcellana, E-max)",
+        bridges: "Ponti (3 elementi, arcata completa)"
+      },
+      removable: {
+        full_dentures: "Protesi totali",
+        partial_dentures: "Protesi parziali",
+        flexible_dentures: "Protesi flessibili",
+        implant_supported: "Protesi supportate da impianti"
+      }
+    },
+    materials_title: "Materiali comuni",
+    materials: {
+      zirconia: "Zirconia – altamente estetica e resistente",
+      pfm: "Porcellana fusa su metallo (PFM) – affidabile e conveniente",
+      acrylic: "Acrilico – usato per soluzioni temporanee",
+      titanium: "Titanio – usato nelle barre supportate da impianti"
+    },
+    procedure_title: "Come funziona la procedura protesica",
+    procedure: {
+      step1: "Consulto & impronte: Il dentista esamina il caso e prende le impronte dentali.",
+      step2: "Preparazione del dente: Se necessario, i denti vengono modellati per accogliere corone o ponti.",
+      step3: "Lavoro in laboratorio: La protesi viene realizzata in laboratorio. Richiede 3–7 giorni a seconda del materiale.",
+      step4: "Prova & regolazioni: Il dentista prova la protesi e controlla morso, comfort ed estetica.",
+      step5: "Istruzioni post-trattamento: Il paziente riceve consigli su manutenzione e igiene."
+    },
+    faq_title: "Domande frequenti",
+    faq: {
+      q1: "Quanto durano le corone o i ponti?",
+      a1: "Con la cura adeguata, le corone e i ponti possono durare 10–15 anni o più. Materiali come la zirconia sono estremamente durevoli.",
+      q2: "La zirconia è migliore della porcellana?",
+      a2: "Sì. La zirconia è più resistente, più estetica e più biocompatibile, ed è spesso la scelta preferita per restauri a lungo termine.",
+      q3: "Sembrerà naturale?",
+      a3: "Sì. Le nostre protesi sono progettate su misura per adattarsi comodamente e ripristinare la funzione masticatoria naturale.",
+      q4: "Posso mangiare normalmente con corone o protesi?",
+      a4: "Assolutamente. Con corone e ponti, si può mangiare ogni tipo di cibo dopo un breve periodo di adattamento. Le protesi mobili possono richiedere qualche giorno per abituarsi.",
+      q5: "Che garanzia offrite?",
+      a5: "Offriamo una garanzia da 2 a 5 anni, a seconda del tipo di protesi e dei materiali utilizzati."
+    },
+    sales_title: "Perché fidarsi di noi per le vostre esigenze protesiche?",
+    sales: {
+      tip1: "Sottolineare la bellezza e la funzionalità delle corone in zirconia",
+      tip2: "Menzionare materiali certificati europei",
+      tip3: "Mostrare risultati prima/dopo",
+      tip4: "Evidenziare il risparmio rispetto ad altri paesi",
+      tip5: "Promuovere l’esperienza del medico e le garanzie"
+    }
+  }
+};
+
+function updateLanguage(lang) {
+  document.querySelectorAll("[data-i18n]").forEach(el => {
+    const keys = el.getAttribute("data-i18n").split(".");
+    // Always start from the selected language object
+    let text = prostheticsTranslations[lang];
+
+    // Skip the first part ("prosthetics") in HTML keys
+    if (keys[0] === "prosthetics") {
+      keys.shift();
+    }
+
+    keys.forEach(k => {
+      if (text) text = text[k];
+    });
+
+    if (typeof text === "string") {
+      el.innerHTML = text;
+    }
+  });
+}
+
+document.getElementById("language").addEventListener("change", function() {
+  updateLanguage(this.value);
+});
+</script>
 </body>
 </html>
