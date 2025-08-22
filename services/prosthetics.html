@@ -8,35 +8,24 @@
   <script defer src="../script.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <link rel="icon" type="image/png" href="../images/logoqr1.png">
-  <style>
+<style>
 
+    /* === Section Styles === */
+    .section { padding: 44px 20px; position: relative; }
+    .section.beige { background: #fdf7f1; }
+    .container.narrow { max-width: 900px; margin: 0 auto; padding: 0 18px; }
     .section-title {
-      font-family: "Segoe UI", Roboto, system-ui, -apple-system, "Helvetica Neue", Arial;
       font-size: 1.95rem;
       font-weight: 700;
       color: #222;
       text-align: center;
-      margin: 0 0 18px;
-      padding-bottom: 8px;
-      position: relative;
+      margin-bottom: 18px;
       line-height: 1.15;
     }
+    .intro-text { color: #4b4b4b; text-align: center; font-size: 1.05rem; margin-bottom: 18px; }
 
-    /* subtle subtitle / intro text */
-    .intro-text {
-      color: #4b4b4b;
-      text-align: center;
-      font-size: 1.05rem;
-      margin-bottom: 18px;
-    }
-
-    /* checklist style */
-    .checklist {
-      list-style: none;
-      padding: 0;
-      margin: 0 auto;
-      max-width: 760px;
-    }
+    /* === Checklist === */
+    .checklist { list-style: none; padding: 0; margin: 0 auto; max-width: 760px; }
     .checklist li {
       position: relative;
       padding-left: 28px;
@@ -54,39 +43,32 @@
       font-size: 0.9rem;
     }
 
-    /* ========== Procedure images (2x2) ========== */
-    .procedure-images {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 14px;
-      max-width: 640px;
-      margin: 20px auto 0;
-      align-items: start;
-      padding: 0 12px;
+
+    
+    .faq h3 {
+        font-size: 1.1rem;
+        margin-top: 20px;
+        color: #b28756;
     }
 
-    .proc-step {
-      position: relative;
-      overflow: hidden;
+    /* === Alternating Steps Layout === */
+    .procedure-steps { display: flex; flex-direction: column; gap: 40px; margin-top: 20px; }
+    .procedure-step {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    .procedure-step:nth-child(even) { flex-direction: row-reverse; }
+    .step-text { flex: 1; min-width: 280px; }
+    .step-text strong { color: #b28756; }
+    .step-image { flex: 1; min-width: 280px; position: relative; }
+    .step-image img {
+      width: 100%;
+      height: auto;
       border-radius: 12px;
-      background: #fff;
       box-shadow: 0 8px 22px rgba(13,13,13,0.06);
     }
-
-    .proc-step img {
-      width: 100%;
-      height: 170px;          /* modest fixed height for consistency */
-      max-height: 200px;
-      object-fit: cover;
-      display: block;
-      transition: transform 220ms ease;
-      border-radius: 12px;
-    }
-
-    .proc-step:hover img {
-      transform: scale(1.03);
-    }
-
     .step-number {
       position: absolute;
       top: 10px;
@@ -103,31 +85,85 @@
       z-index: 2;
       font-size: 16px;
     }
+    /* PHOTO GRID */
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2x2 grid */
+  gap: 20px; /* space between images */
+  margin-top: 20px;
+}
 
-    /* responsive stacking for small screens */
-    @media (max-width: 600px) {
-      .procedure-images { grid-template-columns: 1fr; max-width: 420px; gap: 12px; }
-      .proc-step img { height: 150px; }
-      .section-title { font-size: 1.6rem; }
+.grid-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.grid-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  aspect-ratio: 1 / 1; /* make all images square for uniform 2x2 grid */
+  transition: transform 0.3s ease;
+}
+
+.grid-item:hover img {
+  transform: scale(1.05);
+}
+
+    /* === CTA === */
+    .cta-section {
+      background: #b28756;
+      color: #fff;
+      text-align: center;
+      padding: 36px 18px;
     }
-
-    /* section container spacing consistency (if your styles.css has different values override here) */
-    .section { padding: 44px 20px; }
-    .section.beige { background: #fdf7f1; }
-    .container.narrow { max-width: 900px; margin: 0 auto; padding: 0 18px; }
-
-    /* svg divider utility (full width wave-like dividers) */
-    .section-divider {
-      display: block;
-      width: 100%;
-      height: 60px;
+    .btn {
+      background: #b28756;
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: 6px;
+      text-decoration: none;
+      transition: background 0.3s;
     }
-    .section-divider svg { width: 100%; height: 100%; display: block; }
+    .btn:hover { background: #946a41; }
 
-    /* CTA tweaks (small) */
-    .cta-section { background: #b28756; color: #fff; text-align: center; padding: 36px 18px; }
-    .cta-section .btn { margin: 8px 6px; }
-  </style>
+/* responsive stacking for small screens */
+@media (max-width: 600px) {
+  .photo-grid {
+    grid-template-columns: 1fr; /* stack vertically on mobile */
+    gap: 15px;
+  }
+}
+
+/* section container spacing consistency */
+.section { padding: 44px 20px; }
+.section.beige { background: #fdf7f1; }
+.container.narrow { max-width: 900px; margin: 0 auto; padding: 0 18px; }  
+.section-title {
+  font-size: 1.95rem;
+  font-weight: 700;
+  color: #222;
+  text-align: center;
+  margin-bottom: 18px;
+  line-height: 1.15;
+  }
+
+/* svg divider utility */
+.section-divider {
+  display: block;
+  width: 100%;
+  height: 60px;
+}
+.section-divider svg { width: 100%; height: 100%; display: block; }
+
+/* CTA tweaks */
+.cta-section { background: #b28756; color: #fff; text-align: center; padding: 36px 18px; }
+.cta-section .btn { margin: 8px 6px; }
+
+</style>
 </head>
 <body>
 
@@ -176,7 +212,7 @@
 <section class="section beige">
   <div class="container narrow">
     <h2 class="section-title" data-i18n="prosthetics.title">
-      Dentistry is more than restoring teeth — it's about giving patients their smile back, their voice, and the freedom to live and eat without hesitation.
+      Dentistry isn’t just about teeth, it’s about restoring smiles, confidence, and freedom.
     </h2>
     <p class="intro-text" data-i18n="prosthetics.intro">
       Dental prosthetics are devices used to restore missing or damaged teeth. They improve both function and aesthetics. Patients choose prosthetics to regain chewing ability, restore confidence, and improve speech.
@@ -209,6 +245,48 @@
   </div>
 </section>
 
+<!-- SVG divider: white -> beige (wave down) -->
+<div class="section-divider wave-down">
+  <svg viewBox="0 0 1200 120" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0,0 C600,100 600,20 1200,0 L1200,120 L0,120 Z" fill="#fdf7f1"></path>
+  </svg>
+</div>
+
+<!-- images -->
+<section class="section beige">
+  <div class="container narrow">
+    <h2 class="section-title" data-i18n="prosthetics.images_title">Images of some of the Prosthetics</h2>
+
+    <!-- Grid container -->
+    <div class="photo-grid">
+      <div class="grid-item">
+        <img src="../images/Zirconia.jpeg" alt="Zirconia">
+        <div class="label">Zirconia</div>
+      </div>
+      <div class="grid-item">
+        <img src="../images/Porcelain.jpeg" alt="Porcelain">
+        <div class="label">Porcelain</div>
+      </div>
+      <div class="grid-item">
+        <img src="../images/Acrylic.jpeg" alt="Acrylic">
+        <div class="label">Acrylic</div>
+      </div>
+      <div class="grid-item">
+        <img src="../images/Titanium.jpeg" alt="Titanium">
+        <div class="label">Titanium</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- SVG divider: beige -> white (wave up) -->
+<div class="section-divider wave-up">
+  <svg viewBox="0 0 1200 120" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0,120 C600,20 600,100 1200,120 L1200,0 L0,0 Z" fill="#fdf7f1"></path>
+  </svg>
+</div>
+
 <!-- Common Materials -->
 <section class="section">
   <div class="container narrow">
@@ -235,43 +313,25 @@
     <h2 class="section-title" data-i18n="prosthetics.procedure_title">How the Prosthetic Procedure Works</h2>
     <div class="procedure-steps">
       <div class="procedure-step">
-        <div class="step-text" data-i18n="prosthetics.procedure.step1"><strong>Consultation & Impressions:</strong> The dentist examines the case and takes dental impressions.</div>
-        <div class="step-image">
-          <span class="step-number">1</span>
-          <img src="../images/prosthetics-step1.jpeg" alt="Step 1 - Consultation & Impressions">
-        </div>
+        <div class="step-text" data-i18n="prosthetics.procedure.step1"><strong>1. Consultation & Impressions:</strong> The dentist examines the case and takes dental impressions.</div>
       </div>
       <div class="procedure-step">
-        <div class="step-text" data-i18n="prosthetics.procedure.step2"><strong>Tooth Preparation:</strong> If needed, teeth are reshaped to accommodate crowns or bridges.</div>
-        <div class="step-image">
-          <span class="step-number">2</span>
-          <img src="../images/prosthetics-step2.jpeg" alt="Step 2 - Tooth Preparation">
-        </div>
+        <div class="step-text" data-i18n="prosthetics.procedure.step2"><strong>2. Tooth Preparation:</strong> If needed, teeth are reshaped to accommodate crowns or bridges.</div>
       </div>
       <div class="procedure-step">
-        <div class="step-text" data-i18n="prosthetics.procedure.step3"><strong>Lab Fabrication:</strong> The prosthetic is crafted in the lab. This takes 3–7 days depending on the material.</div>
-        <div class="step-image">
-          <span class="step-number">3</span>
-          <img src="../images/prosthetics-step3.jpeg" alt="Step 3 - Lab Fabrication">
-        </div>
+        <div class="step-text" data-i18n="prosthetics.procedure.step3"><strong>3. Lab Fabrication:</strong> The prosthetic is crafted in the lab. This takes 3–7 days depending on the material.</div>
       </div>
       <div class="procedure-step">
-        <div class="step-text" data-i18n="prosthetics.procedure.step4"><strong>Fitting & Adjustments:</strong> The dentist fits the prosthesis and checks bite, comfort, and aesthetics.</div>
-        <div class="step-image">
-          <span class="step-number">4</span>
-          <img src="../images/prosthetics-step4.jpeg" alt="Step 4 - Fitting & Adjustments">
-        </div>
+        <div class="step-text" data-i18n="prosthetics.procedure.step4"><strong>4. Fitting & Adjustments:</strong> The dentist fits the prosthesis and checks bite, comfort, and aesthetics.</div>
       </div>
       <div class="procedure-step">
-        <div class="step-text" data-i18n="prosthetics.procedure.step5"><strong>Aftercare Instructions:</strong> Patients receive guidance on maintenance and hygiene.</div>
-        <div class="step-image">
-          <span class="step-number">5</span>
-          <img src="../images/prosthetics-step5.jpeg" alt="Step 5 - Aftercare Instructions">
-        </div>
+        <div class="step-text" data-i18n="prosthetics.procedure.step5"><strong>5. Aftercare Instructions:</strong> Patients receive guidance on maintenance and hygiene.</div>
       </div>
     </div>
   </div>
 </section>
+
+
 
 <!-- SVG divider: beige -> white (wave up) -->
 <div class="section-divider wave-up">
@@ -302,25 +362,22 @@
   </svg>
 </div>
 
+
 <!-- FAQ -->
 <section class="section beige">
   <div class="container narrow">
-    <h2 class="section-title" data-i18n="prosthetics.faq_title">Frequently Asked Questions</h2>
+    <h2 class="section-title">Frequently Asked Questions</h2>
     <div class="faq">
-      <h3 data-i18n="prosthetics.faq.q1">How long do crowns or bridges last?</h3>
-      <p data-i18n="prosthetics.faq.a1">With proper care, dental crowns and bridges can last 10 to 15 years or longer. Materials like zirconia are especially durable and resistant to wear.</p>
-      
-      <h3 data-i18n="prosthetics.faq.q2">Is zirconia better than porcelain?</h3>
-      <p data-i18n="prosthetics.faq.a2">Yes. Zirconia is stronger, more aesthetic, and more biocompatible, often preferred for long-term restorations.</p>
-      
-      <h3 data-i18n="prosthetics.faq.q3">Will it feel natural?</h3>
-      <p data-i18n="prosthetics.faq.a3">Yes. Our prosthetics are custom-designed to fit comfortably and restore natural chewing function.</p>
-      
-      <h3 data-i18n="prosthetics.faq.q4">Can I eat normally with crowns or dentures?</h3>
-      <p data-i18n="prosthetics.faq.a4">Absolutely. Crowns and bridges allow eating all types of food after adaptation. Removable dentures may take a few days to get used to.</p>
-      
-      <h3 data-i18n="prosthetics.faq.q5">What warranty do you offer?</h3>
-      <p data-i18n="prosthetics.faq.a5">We provide a 2–5 year warranty depending on the prosthetic type and materials used.</p>
+      <h3>How long do crowns or bridges last?</h3>
+      <p>With proper care, dental crowns and bridges can last 10 to 15 years or longer. Materials like zirconia are especially durable and resistant to wear.</p>
+      <h3>Is zirconia better than porcelain?</h3>
+      <p>Yes. Zirconia is stronger, more aesthetic, and more biocompatible, often preferred for long-term restorations.</p>
+      <h3>Will it feel natural?</h3>
+      <p>Yes. Our prosthetics are custom-designed to fit comfortably and restore natural chewing function.</p>
+      <h3>Can I eat normally with crowns or dentures?</h3>
+      <p>Absolutely. Crowns and bridges allow eating all types of food after adaptation. Removable dentures may take a few days to get used to.</p>
+      <h3>What warranty do you offer?</h3>
+      <p>We provide a 2–5 year warranty depending on the prosthetic type and materials used.</p>
     </div>
   </div>
 </section>
