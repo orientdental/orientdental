@@ -8,36 +8,24 @@
   <script defer src="../script.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <link rel="icon" type="image/png" href="../images/logoqr1.png">
-  <style>
+    <style>
 
-    /* === Unified section title style === */
+    /* === Section Styles === */
+    .section { padding: 44px 20px; position: relative; }
+    .section.beige { background: #fdf7f1; }
+    .container.narrow { max-width: 900px; margin: 0 auto; padding: 0 18px; }
     .section-title {
-      font-family: "Segoe UI", Roboto, system-ui, -apple-system, "Helvetica Neue", Arial;
       font-size: 1.95rem;
       font-weight: 700;
       color: #222;
       text-align: center;
-      margin: 0 0 18px;
-      padding-bottom: 8px;
-      position: relative;
+      margin-bottom: 18px;
       line-height: 1.15;
     }
+    .intro-text { color: #4b4b4b; text-align: center; font-size: 1.05rem; margin-bottom: 18px; }
 
-    /* subtle subtitle / intro text */
-    .intro-text {
-      color: #4b4b4b;
-      text-align: center;
-      font-size: 1.05rem;
-      margin-bottom: 18px;
-    }
-
-    /* checklist style */
-    .checklist {
-      list-style: none;
-      padding: 0;
-      margin: 0 auto;
-      max-width: 760px;
-    }
+    /* === Checklist === */
+    .checklist { list-style: none; padding: 0; margin: 0 auto; max-width: 760px; }
     .checklist li {
       position: relative;
       padding-left: 28px;
@@ -55,39 +43,24 @@
       font-size: 0.9rem;
     }
 
-    /* ========== Procedure images (2x2) ========== */
-    .procedure-images {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 14px;
-      max-width: 640px;
-      margin: 20px auto 0;
-      align-items: start;
-      padding: 0 12px;
+    /* === Alternating Steps Layout === */
+    .procedure-steps { display: flex; flex-direction: column; gap: 40px; margin-top: 20px; }
+    .procedure-step {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
     }
-
-    .proc-step {
-      position: relative;
-      overflow: hidden;
+    .procedure-step:nth-child(even) { flex-direction: row-reverse; }
+    .step-text { flex: 1; min-width: 280px; }
+    .step-text strong { color: #b28756; }
+    .step-image { flex: 1; min-width: 280px; position: relative; }
+    .step-image img {
+      width: 100%;
+      height: auto;
       border-radius: 12px;
-      background: #fff;
       box-shadow: 0 8px 22px rgba(13,13,13,0.06);
     }
-
-    .proc-step img {
-      width: 100%;
-      height: 170px;          /* modest fixed height for consistency */
-      max-height: 200px;
-      object-fit: cover;
-      display: block;
-      transition: transform 220ms ease;
-      border-radius: 12px;
-    }
-
-    .proc-step:hover img {
-      transform: scale(1.03);
-    }
-
     .step-number {
       position: absolute;
       top: 10px;
@@ -105,29 +78,28 @@
       font-size: 16px;
     }
 
-    /* responsive stacking for small screens */
-    @media (max-width: 600px) {
-      .procedure-images { grid-template-columns: 1fr; max-width: 420px; gap: 12px; }
-      .proc-step img { height: 150px; }
-      .section-title { font-size: 1.6rem; }
+    /* === CTA === */
+    .cta-section {
+      background: #b28756;
+      color: #fff;
+      text-align: center;
+      padding: 36px 18px;
     }
-
-    /* section container spacing consistency (if your styles.css has different values override here) */
-    .section { padding: 44px 20px; }
-    .section.beige { background: #fdf7f1; }
-    .container.narrow { max-width: 900px; margin: 0 auto; padding: 0 18px; }
-
-    /* svg divider utility (full width wave-like dividers) */
-    .section-divider {
-      display: block;
-      width: 100%;
-      height: 60px;
+    .btn {
+      background: #b28756;
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: 6px;
+      text-decoration: none;
+      transition: background 0.3s;
     }
-    .section-divider svg { width: 100%; height: 100%; display: block; }
+    .btn:hover { background: #946a41; }
 
-    /* CTA tweaks (small) */
-    .cta-section { background: #b28756; color: #fff; text-align: center; padding: 36px 18px; }
-    .cta-section .btn { margin: 8px 6px; }
+    /* Responsive */
+    @media (max-width: 768px) {
+      .procedure-step { flex-direction: column !important; text-align: center; }
+      .procedure-step:nth-child(even) { flex-direction: column !important; }
+    }
   </style>
 </head>
 <body>
@@ -177,7 +149,7 @@
 <section class="section beige">
   <div class="container narrow">
     <h2 class="section-title" data-i18n="general.title">
-      At the heart of every healthy smile is prevention, precision, and patient care — general dentistry is where confident smiles begin.
+      Healthy smiles start with prevention, precision, and care, general dentistry makes confidence possible.
     </h2>
     <p class="intro-text" data-i18n="general.intro">
       General dentistry focuses on the prevention, diagnosis, and treatment of common dental problems. It forms the foundation of overall oral health, addressing everything from cavities and gum disease to emergency care.
@@ -225,28 +197,28 @@
         <div class="step-text" data-i18n="general.procedure.step1"><strong>Consultation & Diagnosis:</strong> Includes oral exam, X-rays, and patient history.</div>
         <div class="step-image">
           <span class="step-number">1</span>
-          <img src="../images/general-step1.jpeg" alt="Step 1 - Consultation & Diagnosis">
+          <img src="../images/implantimg1.jpeg" alt="Step 1 - Consultation & Diagnosis">
         </div>
       </div>
       <div class="procedure-step">
         <div class="step-text" data-i18n="general.procedure.step2"><strong>Treatment Plan:</strong> Dentist explains options and recommends the best approach.</div>
         <div class="step-image">
           <span class="step-number">2</span>
-          <img src="../images/general-step2.jpeg" alt="Step 2 - Treatment Plan">
+          <img src="../images/treatment-plan.jpg" alt="Step 2 - Treatment Plan">
         </div>
       </div>
       <div class="procedure-step">
         <div class="step-text" data-i18n="general.procedure.step3"><strong>Procedure:</strong> Performed with anesthesia if necessary (e.g., filling, extraction).</div>
         <div class="step-image">
           <span class="step-number">3</span>
-          <img src="../images/general-step3.jpeg" alt="Step 3 - Procedure">
+          <img src="../images/procedure.jpg" alt="Step 3 - Procedure">
         </div>
       </div>
       <div class="procedure-step">
         <div class="step-text" data-i18n="general.procedure.step4"><strong>Aftercare & Instructions:</strong> Patient is advised on recovery and hygiene.</div>
         <div class="step-image">
           <span class="step-number">4</span>
-          <img src="../images/general-step4.jpeg" alt="Step 4 - Aftercare & Instructions">
+          <img src="../images/followup.jpg" alt="Step 4 - Aftercare & Instructions">
         </div>
       </div>
     </div>
@@ -281,26 +253,22 @@
   </svg>
 </div>
 
+
 <!-- FAQ -->
 <section class="section beige">
   <div class="container narrow">
-    <h2 class="section-title" data-i18n="general.faq_title">Frequently Asked Questions</h2>
+    <h2 class="section-title">Frequently Asked Questions</h2>
     <div class="faq">
-      <h3 data-i18n="general.faq.q1">Is a dental filling painful?</h3>
-      <p data-i18n="general.faq.a1">No. Fillings are done under local anesthesia and are usually pain-free. Some sensitivity may occur afterward.</p>
-      
-      <h3 data-i18n="general.faq.q2">How do I know if I need a root canal?</h3>
-      <p data-i18n="general.faq.a2">Common signs include pain when chewing, prolonged sensitivity to hot or cold, and swelling near the tooth.</p>
-      
-      <h3 data-i18n="general.faq.q3">Is tooth extraction safe?</h3>
-      <p data-i18n="general.faq.a3">Yes, when performed by a professional. Most extractions are simple and heal quickly with proper care.</p>
-      
-      <h3 data-i18n="general.faq.q4">How often should I get a dental cleaning?</h3>
-      <p data-i18n="general.faq.a4">Most dentists recommend cleanings every 6 months to prevent plaque buildup and gum disease.</p>
-      
-      <h3 data-i18n="general.faq.q5">What should I do during a dental emergency?</h3>
-      <p data-i18n="general.faq.a5">Call the clinic immediately. If it involves swelling, pain, or a broken tooth, prompt treatment is crucial.</p>
-    </div>
+      <h3>Is a dental filling painful?</h3>
+      <p>No. Fillings are done under local anesthesia and are usually pain-free. Some sensitivity may occur afterward.</p>
+      <h3>How do I know if I need a root canal?</h3>
+      <p>Common signs include pain when chewing, prolonged sensitivity to hot or cold, and swelling near the tooth.</p>
+      <h3>Is tooth extraction safe?</h3>
+      <p>Yes, when performed by a professional. Most extractions are simple and heal quickly with proper care.</p>
+      <h3>How often should I get a dental cleaning?</h3>
+      <p>Most dentists recommend cleanings every 6 months to prevent plaque buildup and gum disease.</p>
+      <h3>What should I do during a dental emergency?</h3>
+      <p>Call the clinic immediately. If you have swelling, pain, or a broken tooth, seek help right away.</p>
   </div>
 </section>
 
