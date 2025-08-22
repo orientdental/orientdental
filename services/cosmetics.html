@@ -8,37 +8,24 @@
   <script defer src="../script.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <link rel="icon" type="image/png" href="../images/logoqr1.png">
-  <style>
-    /* === Removed fade-in animation styles === */
+    <style>
 
-    /* === Unified section title style === */
+    /* === Section Styles === */
+    .section { padding: 44px 20px; position: relative; }
+    .section.beige { background: #fdf7f1; }
+    .container.narrow { max-width: 900px; margin: 0 auto; padding: 0 18px; }
     .section-title {
-      font-family: "Segoe UI", Roboto, system-ui, -apple-system, "Helvetica Neue", Arial;
       font-size: 1.95rem;
       font-weight: 700;
       color: #222;
       text-align: center;
-      margin: 0 0 18px;
-      padding-bottom: 8px;
-      position: relative;
+      margin-bottom: 18px;
       line-height: 1.15;
     }
+    .intro-text { color: #4b4b4b; text-align: center; font-size: 1.05rem; margin-bottom: 18px; }
 
-    /* subtle subtitle / intro text */
-    .intro-text {
-      color: #4b4b4b;
-      text-align: center;
-      font-size: 1.05rem;
-      margin-bottom: 18px;
-    }
-
-    /* checklist style */
-    .checklist {
-      list-style: none;
-      padding: 0;
-      margin: 0 auto;
-      max-width: 760px;
-    }
+    /* === Checklist === */
+    .checklist { list-style: none; padding: 0; margin: 0 auto; max-width: 760px; }
     .checklist li {
       position: relative;
       padding-left: 28px;
@@ -56,39 +43,32 @@
       font-size: 0.9rem;
     }
 
-    /* ========== Procedure images (2x2) ========== */
-    .procedure-images {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 14px;
-      max-width: 640px;
-      margin: 20px auto 0;
-      align-items: start;
-      padding: 0 12px;
+
+    
+    .faq h3 {
+        font-size: 1.1rem;
+        margin-top: 20px;
+        color: #b28756;
     }
 
-    .proc-step {
-      position: relative;
-      overflow: hidden;
+    /* === Alternating Steps Layout === */
+    .procedure-steps { display: flex; flex-direction: column; gap: 40px; margin-top: 20px; }
+    .procedure-step {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    .procedure-step:nth-child(even) { flex-direction: row-reverse; }
+    .step-text { flex: 1; min-width: 280px; }
+    .step-text strong { color: #b28756; }
+    .step-image { flex: 1; min-width: 280px; position: relative; }
+    .step-image img {
+      width: 100%;
+      height: auto;
       border-radius: 12px;
-      background: #fff;
       box-shadow: 0 8px 22px rgba(13,13,13,0.06);
     }
-
-    .proc-step img {
-      width: 100%;
-      height: 170px;          /* modest fixed height for consistency */
-      max-height: 200px;
-      object-fit: cover;
-      display: block;
-      transition: transform 220ms ease;
-      border-radius: 12px;
-    }
-
-    .proc-step:hover img {
-      transform: scale(1.03);
-    }
-
     .step-number {
       position: absolute;
       top: 10px;
@@ -106,29 +86,28 @@
       font-size: 16px;
     }
 
-    /* responsive stacking for small screens */
-    @media (max-width: 600px) {
-      .procedure-images { grid-template-columns: 1fr; max-width: 420px; gap: 12px; }
-      .proc-step img { height: 150px; }
-      .section-title { font-size: 1.6rem; }
+    /* === CTA === */
+    .cta-section {
+      background: #b28756;
+      color: #fff;
+      text-align: center;
+      padding: 36px 18px;
     }
-
-    /* section container spacing consistency (if your styles.css has different values override here) */
-    .section { padding: 44px 20px; }
-    .section.beige { background: #fdf7f1; }
-    .container.narrow { max-width: 900px; margin: 0 auto; padding: 0 18px; }
-
-    /* svg divider utility (full width wave-like dividers) */
-    .section-divider {
-      display: block;
-      width: 100%;
-      height: 60px;
+    .btn {
+      background: #b28756;
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: 6px;
+      text-decoration: none;
+      transition: background 0.3s;
     }
-    .section-divider svg { width: 100%; height: 100%; display: block; }
+    .btn:hover { background: #946a41; }
 
-    /* CTA tweaks (small) */
-    .cta-section { background: #b28756; color: #fff; text-align: center; padding: 36px 18px; }
-    .cta-section .btn { margin: 8px 6px; }
+    /* Responsive */
+    @media (max-width: 768px) {
+      .procedure-step { flex-direction: column !important; text-align: center; }
+      .procedure-step:nth-child(even) { flex-direction: column !important; }
+    }
   </style>
 </head>
 <body>
@@ -177,89 +156,35 @@
 <!-- Service Overview -->
 <section class="section beige">
   <div class="container narrow">
-    <h2 class="section-title">Missing a Tooth is not the end, it's the Start of a New Smile!</h2>
-    <p class="intro-text">
-      Dental implants are the ideal solution for replacing missing teeth — providing long-lasting, natural results while protecting your oral health.
+    <h2 class="section-title" data-i18n="cosmetics.title">
+      A beautiful smile is more than aesthetics — it’s confidence, self-esteem, and first impressions that last.
+    </h2>
+    <p class="intro-text" data-i18n="cosmetics.intro">
+      Cosmetic dentistry focuses on enhancing the appearance of your teeth, gums, and overall smile. From whitening to veneers, our treatments combine artistry and dental science for life-changing results.
     </p>
     <div class="image-center">
-      <img src="../images/dental-implants.png" alt="Dental Implant" class="service-image" />
-    </div>  
-  </div>
-  
-</section>
-
-<!-- SVG divider: beige -> white -->
-<div class="section-divider">
-  <svg viewBox="0 0 1440 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M0,80 C360,0 1080,160 1440,40 L1440,80 L0,80 Z" fill="#ffffff"/>
-  </svg>
-</div>
-
-<!-- Why Implants -->
-<section class="section">
-  <div class="container narrow">
-    <h2 class="section-title">Why Choose Dental Implants?</h2>
-    <ul class="checklist">
-      <li>Permanent and long-lasting solution</li>
-      <li>Helps preserve jawbone structure</li>
-      <li>Improved chewing function and aesthetics</li>
-      <li>No damage to neighboring teeth (unlike traditional bridges)</li>
-    </ul>
-  </div>
-</section>
-
-<!-- Procedure Steps -->
-<section class="section beige">
-  <div class="container narrow">
-    <h2 class="section-title">How the Implant Procedure Works</h2>
-    <ol class="procedure-list">
-      <li><strong>Initial consultation:</strong> Detailed assessment by doctors with 30+ years of experience</li>
-      <li><strong>Implant placement:</strong> Precise, painless, and with maximum comfort</li>
-      <li><strong>Healing & osseointegration:</strong> 3–6 months for the implant to fuse with bone</li>
-      <li><strong>Final restoration:</strong> Abutment and permanent crown placement</li>
-    </ol>
-
-    <!-- 2x2 image grid showing the process (numbers indicate order) -->
-    <div class="procedure-images" aria-hidden="false">
-      <div class="proc-step">
-        <span class="step-number" aria-hidden="true">1</span>
-        <img src="../images/implantimg1.jpeg" alt="Step 1 - Initial evaluation">
-      </div>
-
-      <div class="proc-step">
-        <span class="step-number" aria-hidden="true">2</span>
-        <img src="../images/implantimg2.jpeg" alt="Step 2 - Implant placement">
-      </div>
-
-      <div class="proc-step">
-        <span class="step-number" aria-hidden="true">3</span>
-        <img src="../images/implantimg3.jpeg" alt="Step 3 - Healing / osseointegration">
-      </div>
-
-      <div class="proc-step">
-        <span class="step-number" aria-hidden="true">4</span>
-        <img src="../images/implantimg4.jpeg" alt="Step 4 - Abutment & final crown">
-      </div>
+      <img src="../images/dental-cosmetics.jpg" alt="Cosmetic Dentistry" class="service-image" />
     </div>
   </div>
 </section>
 
-<!-- SVG divider: beige -> white -->
-<div class="section-divider">
-  <svg viewBox="0 0 1440 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M0,80 C360,0 1080,160 1440,40 L1440,80 L0,80 Z" fill="#ffffff"/>
+<!-- SVG divider: beige -> white (wave up) -->
+<div class="section-divider wave-up">
+  <svg viewBox="0 0 1200 120" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0,120 C600,20 600,100 1200,120 L1200,0 L0,0 Z" fill="#fdf7f1"></path>
   </svg>
 </div>
 
-<!-- Why Trust Us -->
+<!-- Types of Treatments -->
 <section class="section">
   <div class="container narrow">
-    <h2 class="section-title">Why Trust Us With Your Smile?</h2>
+    <h2 class="section-title" data-i18n="cosmetics.types_title">Popular Cosmetic Treatments</h2>
     <ul class="checklist">
-      <li>30+ years of implantology experience</li>
-      <li>Certified Italian implants</li>
-      <li>Competitive, transparent pricing from the start</li>
-      <li>Modern technology & top-tier dental labs in Tirana</li>
+      <li data-i18n="cosmetics.types.whitening">Teeth Whitening – for a brighter smile</li>
+      <li data-i18n="cosmetics.types.veneers">Porcelain Veneers – correct shape, color, and alignment</li>
+      <li data-i18n="cosmetics.types.bonding">Composite Bonding – repair chips and cracks</li>
+      <li data-i18n="cosmetics.types.implants">Dental Implants – restore missing teeth with natural look</li>
+      <li data-i18n="cosmetics.types.gum">Gum Contouring – reshape gums for a balanced smile</li>
     </ul>
   </div>
 </section>
@@ -271,31 +196,84 @@
   </svg>
 </div>
 
+<!-- Procedure Steps -->
+<section class="section beige">
+  <div class="container narrow">
+    <h2 class="section-title" data-i18n="cosmetics.procedure_title">How Cosmetic Treatment Works</h2>
+    <div class="procedure-steps">
+      <div class="procedure-step">
+        <div class="step-text" data-i18n="cosmetics.procedure.step1"><strong>1. Consultation & Smile Analysis:</strong> A detailed discussion about your goals and evaluation of your teeth and gums.</div>
+      </div>
+      <div class="procedure-step">
+        <div class="step-text" data-i18n="cosmetics.procedure.step2"><strong>2. Digital Smile Design:</strong> Using advanced software, we plan and show you a preview of your future smile.</div>
+      </div>
+      <div class="procedure-step">
+        <div class="step-text" data-i18n="cosmetics.procedure.step3"><strong>3. Treatment Preparation:</strong> Teeth are cleaned, reshaped, or prepared depending on the procedure.</div>
+      </div>
+      <div class="procedure-step">
+        <div class="step-text" data-i18n="cosmetics.procedure.step4"><strong>4. Application:</strong> Whitening, veneers, bonding, or implants are performed with precision and care.</div>
+      </div>
+      <div class="procedure-step">
+        <div class="step-text" data-i18n="cosmetics.procedure.step5"><strong>5. Final Adjustments & Results:</strong> We polish, check bite alignment, and ensure your smile is natural and comfortable.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- SVG divider: beige -> white (wave up) -->
+<div class="section-divider wave-up">
+  <svg viewBox="0 0 1200 120" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0,120 C600,20 600,100 1200,120 L1200,0 L0,0 Z" fill="#fdf7f1"></path>
+  </svg>
+</div>
+
+<!-- Why Trust Us -->
+<section class="section">
+  <div class="container narrow">
+    <h2 class="section-title" data-i18n="cosmetics.sales_title">Why Choose Our Cosmetic Dentistry?</h2>
+    <ul class="checklist">
+      <li data-i18n="cosmetics.sales.tip1">Cutting-edge technology and materials</li>
+      <li data-i18n="cosmetics.sales.tip2">Personalized smile design approach</li>
+      <li data-i18n="cosmetics.sales.tip3">Natural-looking results with minimal discomfort</li>
+      <li data-i18n="cosmetics.sales.tip4">Affordable options with lasting benefits</li>
+      <li data-i18n="cosmetics.sales.tip5">Experienced cosmetic dentists you can trust</li>
+    </ul>
+  </div>
+</section>
+
+<!-- SVG divider: white -> beige (wave down) -->
+<div class="section-divider wave-down">
+  <svg viewBox="0 0 1200 120" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0,0 C600,100 600,20 1200,0 L1200,120 L0,120 Z" fill="#fdf7f1"></path>
+  </svg>
+</div>
+
+
 <!-- FAQ -->
 <section class="section beige">
   <div class="container narrow">
     <h2 class="section-title">Frequently Asked Questions</h2>
     <div class="faq">
-      <h3>Is there an age limit?</h3>
-      <p>No — even patients over 70 can receive implants if their bone structure is healthy.</p>
-      <h3>Is the procedure painful?</h3>
-      <p>No! With modern local anesthesia and our expertise, you will not feel pain during placement.</p>
-      <h3>How long does it take?</h3>
-      <p>The placement of a single implant can be done in under 20 minutes. Healing takes 3–6 months.</p>
-      <h3>Are there contraindications?</h3>
-      <p>Patients with uncontrolled diabetes or severe bone issues should undergo further evaluation first.</p>
-      <h3>How long does an implant last?</h3>
-      <p>With proper care, a dental implant can last 20 years or more.</p>
+      <h3>Is teeth whitening safe?</h3>
+      <p>Yes. Professional whitening under dentist supervision is safe and highly effective.</p>
+      <h3>Do veneers damage my natural teeth?</h3>
+      <p>A thin layer of enamel is reshaped, but when done professionally, veneers are safe and long-lasting.</p>
+      <h3>How long do cosmetic results last?</h3>
+      <p>With good care, veneers and implants last over 10 years, whitening 1–3 years depending on habits.</p>
+      <h3>Will cosmetic dentistry look natural?</h3>
+      <p>Yes. Modern techniques ensure natural color, shape, and function.</p>
     </div>
   </div>
 </section>
+
 
 <!-- Call to Action -->
 <section class="cta-section fade-in">
   <div class="container narrow center">
     <h2 class="section-title" style="color: #fff; margin-bottom: 10px;">Book Your Free Consultation Today!</h2>
     <p style="color: #fff; margin-bottom: 14px;">Let us restore your smile with the most advanced dental implant solutions.</p>
-    <a href="../contact.html" class="btn primary">Reserve Now</a>
+    <a href="../pages/contacts.html" class="btn primary">Reserve Now</a>
   </div>
 </section>
 
@@ -308,7 +286,9 @@
     <iframe
       src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2990.7989040537996!2d19.81485331542124!3d41.326120607642846!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x13503172e8cab76f%3A0x704934284304e7f0!2sMeto%20Dent!5e0!3m2!1sen!2s!4v1721670000000!5m2!1sen!2s"
       width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-    <a href="../pages/contacts.html" class="btn primary" data-i18n="book">Book Appointment</a>
+  <div class="hero-buttons">
+    <a href="pages/contacts.html#contact-form" class="btn primary" data-i18n="book">Book Appointment</a>
+  </div>
   </div>
 </section>
 
