@@ -1,28 +1,30 @@
-<!-- PART 1: HEAD AND NAVBAR -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Orient Dental Clinic</title>
+  <title data-i18n="page_title">Orient Dental Clinic</title>
   <link rel="stylesheet" href="styles.css" />
-  <script defer src="script.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <link rel="icon" type="image/png" href="images/logoqr1.png">
+  <style>
+    /* minimal inline to avoid layout break in case your styles.css is missing */
+    body { font-family: Arial, sans-serif; margin:0; padding:0; background:#fff; color:#222; }
+  </style>
 </head>
 <body>
 
 <!-- Top Navbar -->
 <header class="top-navbar" style="margin-bottom: 0;">
   <div class="social-icons">
-    <a href="#"><i class="fab fa-facebook-f"></i></a>
-    <a href="#"><i class="fab fa-instagram"></i></a>
+    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
   </div>
   <div class="search-container">
-    <input type="text" id="searchInput" placeholder="Search..." />
+    <input type="text" id="searchInput" data-i18n-placeholder="search_placeholder" placeholder="Search..." />
   </div>
   <div class="language-select">
-    <select id="language">
+    <select id="language" aria-label="Language selector">
       <option value="en">EN</option>
       <option value="de">DE</option>
       <option value="it">IT</option>
@@ -30,26 +32,27 @@
     </select>
   </div>
 </header>
+
 <nav class="dentozen-navbar" style="margin-top: 0;">
   <div class="nav-content">
     <div class="logo">
-  <a href="index.html">
-    <img src="images/logodent.png" alt="Orient Dental Logo" />
-  </a>
-</div>
+      <a href="index.html">
+        <img src="images/logodent.png" alt="Orient Dental Logo" />
+      </a>
+    </div>
 
     <div class="hamburger" onclick="toggleMobileNav()">
       <i class="fas fa-bars"></i>
     </div>
     <ul class="nav-links" id="navLinks">
-      <li><a href="pages/aboutus.html">About Us</a></li>
-      <li><a href="pages/testimonials.html">Reviews</a></li>
-      <li><a href="pages/treatments.html">Services</a></li>
-      <li><a href="pages/pricing.html">Pricing</a></li>
-      <li><a href="pages/team.html">Team</a></li>
-      <li><a href="pages/contacts.html">Contact</a></li>
+      <li><a href="pages/aboutus.html" data-i18n="nav_about">About Us</a></li>
+      <li><a href="pages/testimonials.html" data-i18n="nav_reviews">Reviews</a></li>
+      <li><a href="pages/treatments.html" data-i18n="nav_services">Services</a></li>
+      <li><a href="pages/pricing.html" data-i18n="nav_pricing">Pricing</a></li>
+      <li><a href="pages/team.html" data-i18n="nav_team">Team</a></li>
+      <li><a href="pages/contacts.html" data-i18n="nav_contact">Contact</a></li>
     </ul>
-    <a class="appointment-btn" href="pages/contacts.html#contact-form">Book Appointment</a>
+    <a class="appointment-btn" href="pages/contacts.html#contact-form" data-i18n="book">Book Appointment</a>
   </div>
 </nav>
 
@@ -64,13 +67,10 @@
     </div>
   </div>
   <svg class="hero-wave" viewBox="0 0 1440 100" preserveAspectRatio="none" aria-hidden="true">
-  <!-- Fills the BOTTOM area of the SVG so it “cuts” the hero -->
-  <path fill="#fdf7f1"
-        d="M0,20 C300,80 1140,-20 1440,40 L1440,100 L0,100 Z"></path>
-</svg>
-
+    <path fill="#fdf7f1"
+          d="M0,20 C300,80 1140,-20 1440,40 L1440,100 L0,100 Z"></path>
+  </svg>
 </section>
-
 
 <!-- Info Section -->
 <section class="section beige" id="aboutus">
@@ -99,20 +99,18 @@
   </div>
 </section>
 
-
-
 <!-- Review Section -->
-  <div class="reviews-container">
-    <div class="section-divider top-divider">
+<div class="reviews-container">
+  <div class="section-divider top-divider">
     <svg viewBox="0 0 1440 100" preserveAspectRatio="none">
       <path fill="#fdf7f1" d="M0,0 C360,100 1080,0 1440,100 L1440,0 L0,0 Z"></path>
-
     </svg>
-    </div>
+  </div>
+
   <div class="section reviews-inner">
     <h2 class="section-title" data-i18n="patient_reviews">Patient Reviews</h2>
     <div class="reviews-wrapper">
-      <button class="reviews-arrow left">&#10094;</button>
+      <button class="reviews-arrow left" aria-label="previous review">&#10094;</button>
       <div class="reviews-track">
         <!-- Review Card 1 -->
         <div class="review-card">
@@ -178,21 +176,20 @@
           <p>Incredible attention to detail and a very warm welcome. Absolutely recommend it!</p>
         </div>
       </div>
-      <button class="reviews-arrow right">&#10095;</button>
-    </div>
+      <button class="reviews-arrow right" aria-label="next review">&#10095;</button>
     </div>
 
     <div class="hero-buttons">
-    <a href="pages/contacts.html#contact-form" class="btn primary" data-i18n="book">Open Maps</a>
+      <a href="pages/contacts.html#contact-form" class="btn primary" data-i18n="open_maps">Open Maps</a>
     </div>
+
     <div class="section-divider bottom-divider">
-    <svg viewBox="0 0 1440 100" preserveAspectRatio="none">
-      <path fill="#fdf7f1" d="M0,100 C360,0 1080,100 1440,0 L1440,100 L0,100 Z"></path>
-
-    </svg>
+      <svg viewBox="0 0 1440 100" preserveAspectRatio="none">
+        <path fill="#fdf7f1" d="M0,100 C360,0 1080,100 1440,0 L1440,100 L0,100 Z"></path>
+      </svg>
+    </div>
   </div>
-</section>
-
+</div>
 
 <!-- Services -->
 <section class="section beige">
@@ -200,84 +197,86 @@
   <div class="services-grid">
     <div class="service-card">
       <img src="images/dental-implants.png" alt="Dental Implants" />
-      <h3>Dental Implants</h3>
-      <p>Durable and natural-looking replacement teeth that function like your own.</p>
-      <a href="services/implants.html" class="btn outline">Learn More</a>
+      <h3 data-i18n="service_implants_title">Dental Implants</h3>
+      <p data-i18n="service_implants_desc">Durable and natural-looking replacement teeth that function like your own.</p>
+      <a href="services/implants.html" class="btn outline" data-i18n="learn_more">Learn More</a>
     </div>
     <div class="service-card">
       <img src="images/dental-prosthesis.jpg" alt="Dental Prosthetics" />
-      <h3>Dental Prosthetics</h3>
-      <p>Custom-made devices to replace missing teeth and restore your smile.</p>
-      <a href="services/prosthetics.html" class="btn outline">Learn More</a>
+      <h3 data-i18n="service_prosthetics_title">Dental Prosthetics</h3>
+      <p data-i18n="service_prosthetics_desc">Custom-made devices to replace missing teeth and restore your smile.</p>
+      <a href="services/prosthetics.html" class="btn outline" data-i18n="learn_more">Learn More</a>
     </div>
     <div class="service-card">
       <img src="images/dental-cosmetics.jpg" alt="Dental Cosmetics" />
-      <h3>Dental Cosmetics</h3>
-      <p>Professional teeth whitening and smile design to enhance your natural beauty.</p>
-      <a href="services/cosmetics.html" class="btn outline">Learn More</a>
+      <h3 data-i18n="service_cosmetics_title">Dental Cosmetics</h3>
+      <p data-i18n="service_cosmetics_desc">Professional teeth whitening and smile design to enhance your natural beauty.</p>
+      <a href="services/cosmetics.html" class="btn outline" data-i18n="learn_more">Learn More</a>
     </div>
     <div class="service-card">
       <img src="images/composite-fillings.jpg" alt="Composite Fillings" />
-      <h3>General Dentistry</h3>
-      <p>Comprehensive dental care for the whole family, including check-ups and cleanings.</p>
-      <a href="services/general.html" class="btn outline">Learn More</a>
+      <h3 data-i18n="service_general_title">General Dentistry</h3>
+      <p data-i18n="service_general_desc">Comprehensive dental care for the whole family, including check-ups and cleanings.</p>
+      <a href="services/general.html" class="btn outline" data-i18n="learn_more">Learn More</a>
     </div>
     <div class="service-card">
       <img src="images/dental-aligners.jpg" alt="Orthodontics" />
-      <h3>Orthodontics</h3>
-      <p>Comprehensive orthodontic care, including braces and aligners, for a straighter smile.</p>
-      <a href="services/orthodontics.html" class="btn outline">Learn More</a>
+      <h3 data-i18n="service_orthodontics_title">Orthodontics</h3>
+      <p data-i18n="service_orthodontics_desc">Comprehensive orthodontic care, including braces and aligners, for a straighter smile.</p>
+      <a href="services/orthodontics.html" class="btn outline" data-i18n="learn_more">Learn More</a>
     </div>
     <div class="service-card">
       <img src="images/oral-surgery.jpg" alt="Oral Surgeries" />
-      <h3>Oral Surgeries</h3>
-      <p>Expert surgical procedures for wisdom teeth removal, implants, and more.</p>
-      <a href="services/oral-surgeries.html" class="btn outline">Learn More</a>
+      <h3 data-i18n="service_oral_title">Oral Surgeries</h3>
+      <p data-i18n="service_oral_desc">Expert surgical procedures for wisdom teeth removal, implants, and more.</p>
+      <a href="services/oral-surgeries.html" class="btn outline" data-i18n="learn_more">Learn More</a>
     </div>
   </div>
 </section>
 
 <!-- WHY CHOOSE US SECTION -->
 <section class="section beige why-choose-us">
-    <h2 class="section-title" data-i18n="why_choose_us">Why Choose Us?</h2>
+  <h2 class="section-title" data-i18n="why_choose_us">Why Choose Us?</h2>
 
-    <p class="highlight" style="margin: 1cm;">
-      We are committed to providing top-quality dental care with comfort, safety, and expertise at the heart of every treatment.
-    </p>
+  <p class="highlight" style="margin: 1cm;" data-i18n="why_highlight">
+    We are committed to providing top-quality dental care with comfort, safety, and expertise at the heart of every treatment.
+  </p>
 
   <div class="why-grid">
     <div class="why-item">
       <img src="images/why1.png" alt="Expert Dentists" />
-      <h3>Expert Dentists</h3>
-      <p>Highly experienced and internationally trained professionals at your service.</p>
+      <h3 data-i18n="why_expert">Expert Dentists</h3>
+      <p data-i18n="why_expert_desc">Highly experienced and internationally trained professionals at your service.</p>
     </div>
     <div class="why-item">
       <img src="images/why2.jpg" alt="Flexible Hours" />
-      <h3>Flexible Hours</h3>
-      <p>Evening and weekend appointments available for your convenience.</p>
+      <h3 data-i18n="why_flexible">Flexible Hours</h3>
+      <p data-i18n="why_flexible_desc">Evening and weekend appointments available for your convenience.</p>
     </div>
     <div class="why-item">
       <img src="images/why3.jpg" alt="Modern Equipment" />
-      <h3>Modern Equipment</h3>
-      <p>State-of-the-art technology ensures the best care and comfort.</p>
+      <h3 data-i18n="why_modern">Modern Equipment</h3>
+      <p data-i18n="why_modern_desc">State-of-the-art technology ensures the best care and comfort.</p>
     </div>
     <div class="why-item">
       <img src="images/why4.jpg" alt="Patient Comfort" />
-      <h3>Patient Comfort</h3>
-      <p>A calm, relaxing environment designed with your well-being in mind.</p>
+      <h3 data-i18n="why_comfort">Patient Comfort</h3>
+      <p data-i18n="why_comfort_desc">A calm, relaxing environment designed with your well-being in mind.</p>
     </div>
     <div class="why-item">
       <img src="images/why5.jpg" alt="Certified Care" />
-      <h3>Certified Care</h3>
-      <p>Official certifications and high-quality standards in every treatment.</p>
+      <h3 data-i18n="why_certified">Certified Care</h3>
+      <p data-i18n="why_certified_desc">Official certifications and high-quality standards in every treatment.</p>
     </div>
   </div><br>
+
   <p data-i18n="email_or_book">Feel free to email us or book an appointment now.</p>
   <div class="hero-buttons" style="margin-top: 20px;">
-    <a href="mailto:orientdental7@gmail.com" class="btn secondary">Message Us</a>
-    <a href="pages/contacts.html#contact-form" class="btn primary">Book Now</a>
+    <a href="mailto:orientdental7@gmail.com" class="btn secondary" data-i18n="message_us">Message Us</a>
+    <a href="pages/contacts.html#contact-form" class="btn primary" data-i18n="book">Book Now</a>
   </div>
 </section>
+
 <div class="section-divider wave-up">
   <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
     <path d="M0,120 C600,20 600,100 1200,120 L1200,0 L0,0 Z" fill="#fdf7f1"></path>
@@ -287,8 +286,8 @@
 <!-- Contact -->
 <section class="section contact" id="contact">
   <h2 class="section-title" data-i18n="contact_us">How Can You Find Us?</h2>
-  <p><strong>Location:</strong> Rruga Him Kolli, Tirana, Albania</p>
-  <p><strong>Phone:</strong> +355 69 204 0130</p>
+  <p><strong data-i18n="location_label">Location:</strong> <span data-i18n="location_text">Rruga Him Kolli, Tirana, Albania</span></p>
+  <p><strong data-i18n="phone_label">Phone:</strong> <span data-i18n="phone_text">+355 69 204 0130</span></p>
   <iframe
     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2990.7989040537996!2d19.81485331542124!3d41.326120607642846!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x13503172e8cab76f%3A0x704934284304e7f0!2sMeto%20Dent!5e0!3m2!1sen!2s!4v1721670000000!5m2!1sen!2s"
     width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy">
@@ -308,8 +307,8 @@
   <h2 class="section-title" data-i18n="questions">Questions about your treatment?</h2>
   <p data-i18n="email_or_book">Feel free to email us or book an appointment now.</p>
   <div class="hero-buttons" style="margin-top: 20px;">
-    <a href="mailto:orientdental7@gmail.com" class="btn secondary">Message Us</a>
-    <a href="pages/contacts.html#contact-form" class="btn primary">Book Now</a>
+    <a href="mailto:orientdental7@gmail.com" class="btn secondary" data-i18n="message_us">Message Us</a>
+    <a href="pages/contacts.html#contact-form" class="btn primary" data-i18n="book">Book Now</a>
   </div>
 </section>
 
@@ -317,32 +316,208 @@
 <footer class="footer">
   <div class="footer-grid">
     <div>
-      <h4>Quick Links</h4>
+      <h4 data-i18n="footer_quick_links">Quick Links</h4>
       <ul>
-        <li><a href="pages/treatments.html">Treatments</a></li>
-        <li><a href="pages/pricing.html">Pricing</a></li>
-        <li><a href="pages/team.html">Team</a></li>
+        <li><a href="pages/treatments.html" data-i18n="footer_treatments">Treatments</a></li>
+        <li><a href="pages/pricing.html" data-i18n="footer_pricing">Pricing</a></li>
+        <li><a href="pages/team.html" data-i18n="footer_team">Team</a></li>
       </ul>
     </div>
     <div>
-      <h4>Disclaimer</h4>
-      <p>This website provides general dental information. Information taken from this site is not a substitute for professional dental advice. Always consult your dentist before treatment.</p>
+      <h4 data-i18n="footer_disclaimer_title">Disclaimer</h4>
+      <p data-i18n="footer_disclaimer_text">This website provides general dental information. Information taken from this site is not a substitute for professional dental advice. Always consult your dentist before treatment.</p>
     </div>
     <div class="contactfootercontent">
-      <h4>Contact</h4>
-      <p>Rruga Him Kolli, Tirana<br>Phone: +355 69 204 0130<br>Email: orientdental7@gmail.com</p>
+      <h4 data-i18n="footer_contact">Contact</h4>
+      <p data-i18n="footer_contact_details">Rruga Him Kolli, Tirana<br>Phone: +355 69 204 0130<br>Email: orientdental7@gmail.com</p>
       <div class="social-icons">
-        <a href="#"><i class="fab fa-facebook-f"></i></a>
-        <a href="#"><i class="fab fa-instagram"></i></a>
-        <a href="#"><i class="fab fa-whatsapp"></i></a>
+        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
       </div>
     </div>
   </div> <!-- End of footer-grid -->
   
-  <div class="copyright">
+  <div class="copyright" data-i18n="copyright">
     © 2025 Orient Dental Clinic. All Rights Reserved.
   </div>
 </footer>
-<button id="scrollToTopBtn"><i class="fas fa-chevron-up"></i></button>
+
+<button id="scrollToTopBtn" title="Back to top"><i class="fas fa-chevron-up"></i></button>
+
+<!-- TRANSLATION SCRIPT -->
+<script>
+
+const translations = {
+  it: {
+    page_title: "Orient Dental Clinic",
+    search_placeholder: "Cerca...",
+    nav_about: "Chi Siamo",
+    nav_reviews: "Recensioni",
+    nav_services: "Servizi",
+    nav_pricing: "Prezzi",
+    nav_team: "Team",
+    nav_contact: "Contatti",
+
+    hero_title: "Benvenuti alla Orient Dental Clinic",
+    hero_description: "Offriamo cure dentistiche moderne, delicate e professionali. Visitateci oggi per un sorriso più sicuro.",
+    book: "Prenota Appuntamento",
+    call: "Chiama la Reception",
+
+    modern_dentistry: "Odontoiatria Moderna & Trattamenti Estetici",
+    modern_text: `
+      <p>
+      La nostra clinica dentale moderna combina cure odontoiatriche avanzate con trattamenti estetici professionali.
+      Guidato dall'Ortodonzista <strong>Orhan Et'hemi</strong>, il nostro team esperto offre cure complete utilizzando le tecniche e le tecnologie più recenti.
+      </p>
+      <p>
+      Offriamo servizi dentistici completi, dalla cura di routine a procedure cosmetiche selezionate, il tutto in un ambiente confortevole e professionale.
+      Ogni aspetto della nostra pratica è pensato per garantire cure di qualità e il massimo comfort per il paziente.
+      </p>
+      <p class="highlight">
+      ⭐ <strong>Valutazione 5/5</strong> con oltre 50 recensioni su Google.<br />
+      📍 Aperto tutti i giorni 9:00–18:00 vicino a Rruga Him Kolli, Tirana.<br />
+      📞 Prenota ora: <a href="tel:+355692040130">+355 69 204 0130</a>
+      </p>
+    `,
+
+    patient_reviews: "Recensioni dei Pazienti",
+    open_maps: "Apri Maps",
+
+    our_services: "I Nostri Servizi",
+    service_implants_title: "Impianti Dentali",
+    service_implants_desc: "Sostituzioni dentali durature e dall'aspetto naturale che funzionano come i tuoi denti.",
+    service_prosthetics_title: "Protesi Dentali",
+    service_prosthetics_desc: "Dispositivi su misura per sostituire i denti mancanti e ripristinare il sorriso.",
+    service_cosmetics_title: "Odontoiatria Estetica",
+    service_cosmetics_desc: "Sbiancamento professionale e progettazione del sorriso per valorizzare la tua bellezza naturale.",
+    service_general_title: "Odontoiatria Generale",
+    service_general_desc: "Cure odontoiatriche complete per tutta la famiglia, inclusi controlli e pulizie.",
+    service_orthodontics_title: "Ortodonzia",
+    service_orthodontics_desc: "Cure ortodontiche complete, inclusi apparecchi e aligner, per un sorriso più dritto.",
+    service_oral_title: "Chirurgia Orale",
+    service_oral_desc: "Procedure chirurgiche esperte per estrazione dei denti del giudizio, impianti e altro.",
+
+    learn_more: "Scopri di più",
+
+    why_choose_us: "Perché Sceglierci?",
+    why_highlight: "Siamo impegnati a fornire cure dentali di alta qualità con comfort, sicurezza e competenza al centro di ogni trattamento.",
+    why_expert: "Dentisti Esperti",
+    why_expert_desc: "Professionisti altamente esperti e formati a livello internazionale al tuo servizio.",
+    why_flexible: "Orari Flessibili",
+    why_flexible_desc: "Disponibili appuntamenti serali e nei weekend per la tua comodità.",
+    why_modern: "Attrezzature Moderne",
+    why_modern_desc: "Tecnologia all'avanguardia per garantire la migliore cura e comfort.",
+    why_comfort: "Comfort del Paziente",
+    why_comfort_desc: "Un ambiente tranquillo e rilassante pensato per il tuo benessere.",
+    why_certified: "Cure Certificate",
+    why_certified_desc: "Certificazioni ufficiali e standard elevati in ogni trattamento.",
+
+    email_or_book: "Scrivici via email o prenota un appuntamento ora.",
+    message_us: "Inviaci un Messaggio",
+
+    contact_us: "Come Puoi Trovarci?",
+    location_label: "Posizione:",
+    location_text: "Rruga Him Kolli, Tirana, Albania",
+    phone_label: "Telefono:",
+    phone_text: "+355 69 204 0130",
+
+    questions: "Domande sul tuo trattamento?",
+
+    footer_quick_links: "Link Rapidi",
+    footer_treatments: "Trattamenti",
+    footer_pricing: "Prezzi",
+    footer_team: "Team",
+    footer_disclaimer_title: "Disclaimer",
+    footer_disclaimer_text: "Questo sito fornisce informazioni dentali generali. Le informazioni prese da questo sito non sostituiscono il consiglio professionale del dentista. Consulta sempre il tuo dentista prima di un trattamento.",
+    footer_contact: "Contatti",
+    footer_contact_details: "Rruga Him Kolli, Tirana<br>Telefono: +355 69 204 0130<br>Email: orientdental7@gmail.com",
+    copyright: "© 2025 Orient Dental Clinic. Tutti i diritti riservati."
+  }
+};
+
+/* SAVE ORIGINAL TEXTS */
+function saveOriginals() {
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    if (!el.dataset.defaultText) el.dataset.defaultText = el.innerHTML.trim();
+  });
+
+  document.querySelectorAll('[data-i18n-placeholder]').forEach(inp => {
+    if (!inp.dataset.defaultPlaceholder) inp.dataset.defaultPlaceholder = inp.placeholder;
+  });
+
+  const titleEl = document.querySelector('title');
+  if (titleEl && !titleEl.dataset.defaultText) {
+    titleEl.dataset.defaultText = titleEl.innerText;
+  }
+}
+
+/* APPLY TRANSLATION */
+function applyTranslation(lang) {
+  if (!lang || lang === 'en') {
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+      if (el.dataset.defaultText) el.innerHTML = el.dataset.defaultText;
+    });
+
+    document.querySelectorAll('[data-i18n-placeholder]').forEach(inp => {
+      if (inp.dataset.defaultPlaceholder) inp.placeholder = inp.dataset.defaultPlaceholder;
+    });
+
+    const titleEl = document.querySelector('title');
+    if (titleEl && titleEl.dataset.defaultText) titleEl.innerText = titleEl.dataset.defaultText;
+
+    return;
+  }
+
+  const dict = translations[lang];
+  if (!dict) return;
+
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const key = el.getAttribute('data-i18n');
+    if (dict[key] !== undefined) el.innerHTML = dict[key];
+  });
+
+  document.querySelectorAll('[data-i18n-placeholder]').forEach(inp => {
+    const key = inp.getAttribute('data-i18n-placeholder');
+    if (dict[key] !== undefined) inp.placeholder = dict[key];
+  });
+
+  const titleEl = document.querySelector('title');
+  if (titleEl && dict.page_title) titleEl.innerText = dict.page_title;
+}
+
+/* INITIALIZE */
+document.addEventListener('DOMContentLoaded', () => {
+  saveOriginals();
+
+  const langSelect = document.getElementById('language');
+  const savedLang = localStorage.getItem('lang') || 'en';
+
+  langSelect.value = savedLang;
+  applyTranslation(savedLang);
+
+  langSelect.addEventListener('change', () => {
+    const lang = langSelect.value;
+    localStorage.setItem('lang', lang);
+    applyTranslation(lang);
+  });
+});
+</script>
+
+
+
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/691e1c2c1d15ae193bc31a1d/1jaeps43s';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!--End of Tawk.to Script-->
 </body>
 </html>
