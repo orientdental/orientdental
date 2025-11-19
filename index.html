@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title data-i18n="page_title">Orient Dental Clinic</title>
   <link rel="stylesheet" href="styles.css" />
+  <script defer src="script.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <link rel="icon" type="image/png" href="images/logoqr1.png">
   <style>
@@ -26,9 +27,7 @@
   <div class="language-select">
     <select id="language" aria-label="Language selector">
       <option value="en">EN</option>
-      <option value="de">DE</option>
       <option value="it">IT</option>
-      <option value="al">AL</option>
     </select>
   </div>
 </header>
@@ -100,17 +99,17 @@
 </section>
 
 <!-- Review Section -->
-<div class="reviews-container">
-  <div class="section-divider top-divider">
+  <div class="reviews-container">
+    <div class="section-divider top-divider">
     <svg viewBox="0 0 1440 100" preserveAspectRatio="none">
       <path fill="#fdf7f1" d="M0,0 C360,100 1080,0 1440,100 L1440,0 L0,0 Z"></path>
-    </svg>
-  </div>
 
+    </svg>
+    </div>
   <div class="section reviews-inner">
     <h2 class="section-title" data-i18n="patient_reviews">Patient Reviews</h2>
     <div class="reviews-wrapper">
-      <button class="reviews-arrow left" aria-label="previous review">&#10094;</button>
+      <button class="reviews-arrow left">&#10094;</button>
       <div class="reviews-track">
         <!-- Review Card 1 -->
         <div class="review-card">
@@ -176,20 +175,16 @@
           <p>Incredible attention to detail and a very warm welcome. Absolutely recommend it!</p>
         </div>
       </div>
-      <button class="reviews-arrow right" aria-label="next review">&#10095;</button>
-    </div>
-
-    <div class="hero-buttons">
-      <a href="pages/contacts.html#contact-form" class="btn primary" data-i18n="open_maps">Open Maps</a>
-    </div>
-
-    <div class="section-divider bottom-divider">
-      <svg viewBox="0 0 1440 100" preserveAspectRatio="none">
-        <path fill="#fdf7f1" d="M0,100 C360,0 1080,100 1440,0 L1440,100 L0,100 Z"></path>
-      </svg>
+      <button class="reviews-arrow right">&#10095;</button>
     </div>
   </div>
-</div>
+  <div class="section-divider bottom-divider">
+    <svg viewBox="0 0 1440 100" preserveAspectRatio="none">
+      <path fill="#fdf7f1" d="M0,100 C360,0 1080,100 1440,0 L1440,100 L0,100 Z"></path>
+
+    </svg>
+  </div>
+</section>
 
 <!-- Services -->
 <section class="section beige">
@@ -347,7 +342,7 @@
 
 <!-- TRANSLATION SCRIPT -->
 <script>
-
+/* ===== TRANSLATION DICTIONARY ===== */
 const translations = {
   it: {
     page_title: "Orient Dental Clinic",
@@ -436,88 +431,124 @@ const translations = {
   }
 };
 
-/* SAVE ORIGINAL TEXTS */
+/* ===== UTILITY: Save original (English) text for restoring later ===== */
 function saveOriginals() {
+  // For elements using innerHTML
   document.querySelectorAll('[data-i18n]').forEach(el => {
-    if (!el.dataset.defaultText) el.dataset.defaultText = el.innerHTML.trim();
+    if (el.dataset.defaultText === undefined) {
+      el.dataset.defaultText = el.innerHTML.trim();
+    }
   });
 
+  // For inputs with placeholder translations
   document.querySelectorAll('[data-i18n-placeholder]').forEach(inp => {
-    if (!inp.dataset.defaultPlaceholder) inp.dataset.defaultPlaceholder = inp.placeholder;
+    if (inp.dataset.defaultPlaceholder === undefined) {
+      inp.dataset.defaultPlaceholder = inp.getAttribute('placeholder') || '';
+    }
   });
 
+  // page title
   const titleEl = document.querySelector('title');
-  if (titleEl && !titleEl.dataset.defaultText) {
+  if (titleEl && titleEl.dataset.defaultText === undefined) {
     titleEl.dataset.defaultText = titleEl.innerText;
   }
 }
 
-/* APPLY TRANSLATION */
+/* ===== APPLY TRANSLATION ===== */
 function applyTranslation(lang) {
+  // If lang is 'en' -> restore defaults
   if (!lang || lang === 'en') {
+    // restore elements
     document.querySelectorAll('[data-i18n]').forEach(el => {
-      if (el.dataset.defaultText) el.innerHTML = el.dataset.defaultText;
+      if (el.dataset.defaultText !== undefined) {
+        el.innerHTML = el.dataset.defaultText;
+      }
     });
-
+    // restore placeholders
     document.querySelectorAll('[data-i18n-placeholder]').forEach(inp => {
-      if (inp.dataset.defaultPlaceholder) inp.placeholder = inp.dataset.defaultPlaceholder;
+      if (inp.dataset.defaultPlaceholder !== undefined) {
+        inp.setAttribute('placeholder', inp.dataset.defaultPlaceholder);
+      }
     });
-
+    // restore title if saved
     const titleEl = document.querySelector('title');
-    if (titleEl && titleEl.dataset.defaultText) titleEl.innerText = titleEl.dataset.defaultText;
-
+    if (titleEl && titleEl.dataset.defaultText !== undefined) {
+      titleEl.innerText = titleEl.dataset.defaultText;
+    }
     return;
   }
 
   const dict = translations[lang];
   if (!dict) return;
 
+  // set innerHTMLs
   document.querySelectorAll('[data-i18n]').forEach(el => {
     const key = el.getAttribute('data-i18n');
-    if (dict[key] !== undefined) el.innerHTML = dict[key];
+    if (!key) return;
+    if (dict[key] !== undefined) {
+      el.innerHTML = dict[key];
+    }
   });
 
+  // set placeholders
   document.querySelectorAll('[data-i18n-placeholder]').forEach(inp => {
     const key = inp.getAttribute('data-i18n-placeholder');
-    if (dict[key] !== undefined) inp.placeholder = dict[key];
+    if (!key) return;
+    if (dict[key] !== undefined) {
+      inp.setAttribute('placeholder', dict[key]);
+    }
   });
 
+  // title
   const titleEl = document.querySelector('title');
-  if (titleEl && dict.page_title) titleEl.innerText = dict.page_title;
+  if (titleEl && dict['page_title'] !== undefined) {
+    titleEl.innerText = dict['page_title'];
+  }
 }
 
-/* INITIALIZE */
-document.addEventListener('DOMContentLoaded', () => {
+/* ===== LANGUAGE SELECT HANDLER & localStorage persistence ===== */
+const LANG_KEY = 'site_language';
+
+function initLanguage() {
   saveOriginals();
 
-  const langSelect = document.getElementById('language');
-  const savedLang = localStorage.getItem('lang') || 'en';
+  const select = document.getElementById('language');
+  // load from localStorage if present
+  const stored = localStorage.getItem(LANG_KEY) || 'en';
+  select.value = stored;
 
-  langSelect.value = savedLang;
-  applyTranslation(savedLang);
+  applyTranslation(stored);
 
-  langSelect.addEventListener('change', () => {
-    const lang = langSelect.value;
-    localStorage.setItem('lang', lang);
-    applyTranslation(lang);
+  select.addEventListener('change', function() {
+    const val = this.value;
+    // store selection
+    localStorage.setItem(LANG_KEY, val);
+    applyTranslation(val);
   });
+}
+
+/* ===== Mobile nav toggle placeholder (your original function may exist) ===== */
+function toggleMobileNav() {
+  const nav = document.getElementById('navLinks');
+  if (!nav) return;
+  nav.classList.toggle('open');
+}
+
+/* ===== Initialize on DOM ready ===== */
+document.addEventListener('DOMContentLoaded', function() {
+  initLanguage();
+
+  // optional: add smooth scroll to top button behavior
+  const scrollBtn = document.getElementById('scrollToTopBtn');
+  if (scrollBtn) {
+    scrollBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 300) scrollBtn.style.display = 'block';
+      else scrollBtn.style.display = 'none';
+    });
+  }
 });
 </script>
 
-
-
-<!--Start of Tawk.to Script-->
-<script type="text/javascript">
-var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-(function(){
-var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-s1.async=true;
-s1.src='https://embed.tawk.to/691e1c2c1d15ae193bc31a1d/1jaeps43s';
-s1.charset='UTF-8';
-s1.setAttribute('crossorigin','*');
-s0.parentNode.insertBefore(s1,s0);
-})();
-</script>
-<!--End of Tawk.to Script-->
 </body>
 </html>
