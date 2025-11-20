@@ -30,26 +30,27 @@
     </select>
   </div>
 </header>
+
 <nav class="dentozen-navbar" style="margin-top: 0;">
   <div class="nav-content">
     <div class="logo">
-  <a href="../index.html">
-    <img src="../images/logodent.png" alt="Orient Dental Logo" />
-  </a>
-</div>
+      <a href="../index.html">
+        <img src="../images/logodent.png" alt="Orient Dental Logo" />
+      </a>
+    </div>
 
     <div class="hamburger" onclick="toggleMobileNav()">
       <i class="fas fa-bars"></i>
     </div>
     <ul class="nav-links" id="navLinks">
-      <li><a href="../pages/aboutus.html">About Us</a></li>
-      <li><a href="../pages/testimonials.html">Reviews</a></li>
-      <li><a href="../pages/treatments.html">Services</a></li>
-      <li><a href="../pages/pricing.html">Pricing</a></li>
-      <li><a href="../pages/team.html">Team</a></li>
-      <li><a href="../pages/contacts.html">Contact</a></li>
+      <li><a href="../pages/aboutus.html" data-i18n="nav.about">About Us</a></li>
+      <li><a href="../pages/testimonials.html" data-i18n="nav.reviews">Reviews</a></li>
+      <li><a href="../pages/treatments.html" data-i18n="nav.services">Services</a></li>
+      <li><a href="../pages/pricing.html" data-i18n="nav.pricing">Pricing</a></li>
+      <li><a href="../pages/team.html" data-i18n="nav.team">Team</a></li>
+      <li><a href="../pages/contacts.html" data-i18n="nav.contact">Contact</a></li>
     </ul>
-    <a class="appointment-btn" href="../pages/contacts.html#contact-form">Book Appointment</a>
+    <a class="appointment-btn" href="../pages/contacts.html#contact-form" data-i18n="nav.appointment">Book Appointment</a>
   </div>
 </nav>
 
@@ -127,11 +128,11 @@
 <!-- Contact -->
 <section class="section contact" id="contact">
   <h2 class="section-title" data-i18n="contact_us">How Can You Find Us?</h2>
-  <p><strong>Location:</strong> Rruga Him Kolli, Tirana, Albania</p>
-  <p><strong>Phone:</strong> +355 123 4567</p>
+  <p data-i18n="contact.location"><strong>Location:</strong> Rruga Him Kolli, Tirana, Albania</p>
+  <p data-i18n="contact.phone"><strong>Phone:</strong> +355 123 4567</p>
   <iframe
-    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2990.7989040537996!2d19.81485331542124!3d41.326120607642846!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x13503172e8cab76f%3A0x704934284304e7f0!2sMeto%20Dent!5e0!3m2!1sen!2s!4v1721670000000!5m2!1sen!2s"
-    width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy">
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3037.459722081942!2d19.8090!3d41.3256!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x135031002bdab639%3A0x9553264d253b605c!2sOrient%20Dental%20Clinic!5e0!3m2!1sen!2s!4v1732100000000"
+      width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy">
   </iframe>
   <a href="../pages/contacts.html" class="btn primary" data-i18n="book">Book Appointment</a>
 </section>
@@ -146,8 +147,8 @@
   <h2 class="section-title" data-i18n="questions">Questions about your treatment?</h2>
   <p data-i18n="email_or_book">Feel free to email us or book an appointment now.</p>
   <div class="hero-buttons" style="margin-top: 20px;">
-    <a href="mailto:clinic@example.com" class="btn secondary">Message Us</a>
-    <a href="pages/contacts.html#contact-form" class="btn primary">Book Now</a>
+    <a href="mailto:clinic@example.com" class="btn secondary" data-i18n="questions.btn.message">Message Us</a>
+    <a href="../pages/contacts.html#contact-form" class="btn primary" data-i18n="questions.btn.book">Book Now</a>
   </div>
 </section>
 
@@ -155,34 +156,185 @@
 <footer class="footer">
   <div class="footer-grid">
     <div>
-      <h4>Quick Links</h4>
+      <h4 data-i18n="footer.quicklinks.title">Quick Links</h4>
       <ul>
-        <li><a href="pages/treatments.html">Services</a></li>
-        <li><a href="pages/pricing.html">Pricing</a></li>
-        <li><a href="pages/team.html">Team</a></li>
+        <li><a href="../pages/treatments.html" data-i18n="footer.quicklinks.services">Services</a></li>
+        <li><a href="../pages/pricing.html" data-i18n="footer.quicklinks.pricing">Pricing</a></li>
+        <li><a href="../pages/team.html" data-i18n="footer.quicklinks.team">Team</a></li>
       </ul>
     </div>
     <div>
-      <h4>Disclaimer</h4>
-      <p>This website provides general dental information. Information taken from this site is not a substitute for professional dental advice. Always consult your dentist before treatment.</p>
+      <h4 data-i18n="footer.disclaimer.title">Disclaimer</h4>
+      <p data-i18n="footer.disclaimer.text">
+        This website provides general dental information. Information taken from this site is not a substitute for professional dental advice. Always consult your dentist before treatment.
+      </p>
     </div>
     <div class="contactfootercontent">
-  <h4>Contact</h4>
-  <p>Rruga Him Kolli, Tirana<br>Phone: +355 69 204 0130<br>Email: klinikaorient@gmail.com</p>
-  <div class="social-icons">
-    <a href="#"><i class="fab fa-facebook-f"></i></a>
-    <a href="#"><i class="fab fa-instagram"></i></a>
-    <a href="#"><i class="fab fa-whatsapp"></i></a>
+      <h4 data-i18n="footer.contact.title">Contact</h4>
+      <p data-i18n="footer.contact.text">
+        Rruga Him Kolli, Tirana<br>Phone: +355 69 204 0130<br>Email: klinikaorient@gmail.com
+      </p>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-whatsapp"></i></a>
+      </div>
+    </div>
   </div>
-</div>
 
-</div>
-
-  </div>
-  <div class="copyright">
+  <div class="copyright" data-i18n="footer.copyright">
     © 2025 Orient Dental Clinic. All Rights Reserved.
   </div>
 </footer>
+
 <button id="scrollToTopBtn"><i class="fas fa-chevron-up"></i></button>
+
+<!-- Inline language JS for EN/IT with persistence across pages -->
+<script>
+  (function () {
+    const translations = {
+      en: {
+        "search.placeholder": "Search...",
+
+        "nav.about": "About Us",
+        "nav.reviews": "Reviews",
+        "nav.services": "Services",
+        "nav.pricing": "Pricing",
+        "nav.team": "Team",
+        "nav.contact": "Contact",
+        "nav.appointment": "Book Appointment",
+
+        "pricing_title": "Our Pricing",
+        "temporary_filling": "Temporary filling",
+        "composition_filling": "Composition filling",
+        "composite_reconstruction": "Composite reconstruction",
+        "tooth_devitalization": "Tooth devitalization (per canal)",
+        "wisdom_tooth_extraction": "Wisdom tooth extraction",
+        "impacted_extraction": "Extraction of impacted wisdom tooth",
+        "titanium_implant": "Pure titanium dental implant",
+        "metal_ceramic_crown": "Metal-ceramic crown",
+        "zirconium_crown": "Zirconium crown",
+        "bone_regeneration": "Bone regeneration with sinus lift",
+        "emax_veneer": "e-max® veneer",
+        "whitening_session": "Professional whitening (1st session)",
+        "all_on_4": "Fixed all on 4",
+        "all_on_6": "Fixed all on 6",
+
+        "contact_us": "How Can You Find Us?",
+        "contact.location": "<strong>Location:</strong> Rruga Him Kolli, Tirana, Albania",
+        "contact.phone": "<strong>Phone:</strong> +355 123 4567",
+        "book": "Book Appointment",
+
+        "questions": "Questions about your treatment?",
+        "email_or_book": "Feel free to email us or book an appointment now.",
+        "questions.btn.message": "Message Us",
+        "questions.btn.book": "Book Now",
+
+        "footer.quicklinks.title": "Quick Links",
+        "footer.quicklinks.services": "Services",
+        "footer.quicklinks.pricing": "Pricing",
+        "footer.quicklinks.team": "Team",
+
+        "footer.disclaimer.title": "Disclaimer",
+        "footer.disclaimer.text": "This website provides general dental information. Information taken from this site is not a substitute for professional dental advice. Always consult your dentist before treatment.",
+
+        "footer.contact.title": "Contact",
+        "footer.contact.text": "Rruga Him Kolli, Tirana<br>Phone: +355 69 204 0130<br>Email: klinikaorient@gmail.com",
+
+        "footer.copyright": "© 2025 Orient Dental Clinic. All Rights Reserved."
+      },
+
+      it: {
+        "search.placeholder": "Cerca...",
+
+        "nav.about": "Chi Siamo",
+        "nav.reviews": "Recensioni",
+        "nav.services": "Trattamenti",
+        "nav.pricing": "Prezzi",
+        "nav.team": "Team",
+        "nav.contact": "Contatti",
+        "nav.appointment": "Prenota una Visita",
+
+        "pricing_title": "I nostri prezzi",
+        "temporary_filling": "Otturazione provvisoria",
+        "composition_filling": "Otturazione in composito",
+        "composite_reconstruction": "Ricostruzione in composito",
+        "tooth_devitalization": "Devitalizzazione del dente (per canale)",
+        "wisdom_tooth_extraction": "Estrazione dente del giudizio",
+        "impacted_extraction": "Estrazione di dente del giudizio incluso",
+        "titanium_implant": "Impianto dentale in titanio puro",
+        "metal_ceramic_crown": "Corona metallo-ceramica",
+        "zirconium_crown": "Corona in zirconia",
+        "bone_regeneration": "Rigenerazione ossea con rialzo del seno",
+        "emax_veneer": "Faccetta e-max®",
+        "whitening_session": "Sbiancamento professionale (1ª seduta)",
+        "all_on_4": "Protesi fissa All-on-4",
+        "all_on_6": "Protesi fissa All-on-6",
+
+        "contact_us": "Come puoi trovarci?",
+        "contact.location": "<strong>Indirizzo:</strong> Rruga Him Kolli, Tirana, Albania",
+        "contact.phone": "<strong>Telefono:</strong> +355 123 4567",
+        "book": "Prenota una visita",
+
+        "questions": "Domande sul tuo trattamento?",
+        "email_or_book": "Scrivici via e-mail oppure prenota subito una visita.",
+        "questions.btn.message": "Scrivici",
+        "questions.btn.book": "Prenota ora",
+
+        "footer.quicklinks.title": "Link rapidi",
+        "footer.quicklinks.services": "Trattamenti",
+        "footer.quicklinks.pricing": "Prezzi",
+        "footer.quicklinks.team": "Team",
+
+        "footer.disclaimer.title": "Disclaimer",
+        "footer.disclaimer.text": "Questo sito fornisce informazioni odontoiatriche generali. Le informazioni presenti non sostituiscono in alcun modo il parere del dentista. Prima di intraprendere o modificare qualsiasi cura, consulta sempre il tuo odontoiatra.",
+
+        "footer.contact.title": "Contatti",
+        "footer.contact.text": "Rruga Him Kolli, Tirana<br>Telefono: +355 69 204 0130<br>Email: klinikaorient@gmail.com",
+
+        "footer.copyright": "© 2025 Orient Dental Clinic. Tutti i diritti riservati."
+      }
+    };
+
+    function applyTranslations(lang) {
+      const elements = document.querySelectorAll("[data-i18n]");
+      elements.forEach(el => {
+        const key = el.dataset.i18n;
+        const value = translations[lang] && translations[lang][key];
+        if (value) {
+          el.innerHTML = value;
+        }
+      });
+
+      const searchInput = document.getElementById("searchInput");
+      if (searchInput && translations[lang] && translations[lang]["search.placeholder"]) {
+        searchInput.setAttribute("placeholder", translations[lang]["search.placeholder"]);
+      }
+
+      document.documentElement.lang = lang;
+    }
+
+    document.addEventListener("DOMContentLoaded", function () {
+      const select = document.getElementById("language");
+      const savedLang = localStorage.getItem("siteLanguage") || "en";
+      const initialLang = (savedLang === "en" || savedLang === "it") ? savedLang : "en";
+
+      if (select) {
+        select.value = initialLang;
+      }
+      applyTranslations(initialLang);
+
+      if (select) {
+        select.addEventListener("change", function () {
+          const lang = select.value;
+          const effectiveLang = (lang === "en" || lang === "it") ? lang : "en";
+          localStorage.setItem("siteLanguage", effectiveLang);
+          applyTranslations(effectiveLang);
+        });
+      }
+    });
+  })();
+</script>
+
 </body>
 </html>
