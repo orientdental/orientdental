@@ -30,153 +30,316 @@
     </select>
   </div>
 </header>
+
 <nav class="dentozen-navbar" style="margin-top: 0;">
   <div class="nav-content">
     <div class="logo">
-  <a href="../index.html">
-    <img src="../images/logodent.png" alt="Orient Dental Logo" />
-  </a>
-</div>
+      <a href="../index.html">
+        <img src="../images/logodent.png" alt="Orient Dental Logo" />
+      </a>
+    </div>
 
     <div class="hamburger" onclick="toggleMobileNav()">
       <i class="fas fa-bars"></i>
     </div>
     <ul class="nav-links" id="navLinks">
-      <li><a href="../pages/aboutus.html">About Us</a></li>
-      <li><a href="../pages/testimonials.html">Reviews</a></li>
-      <li><a href="../pages/treatments.html">Services</a></li>
-      <li><a href="../pages/pricing.html">Pricing</a></li>
-      <li><a href="../pages/team.html">Team</a></li>
-      <li><a href="../pages/contacts.html">Contact</a></li>
+      <li><a href="../pages/aboutus.html" data-i18n="nav.about">About Us</a></li>
+      <li><a href="../pages/testimonials.html" data-i18n="nav.reviews">Reviews</a></li>
+      <li><a href="../pages/treatments.html" data-i18n="nav.services">Services</a></li>
+      <li><a href="../pages/pricing.html" data-i18n="nav.pricing">Pricing</a></li>
+      <li><a href="../pages/team.html" data-i18n="nav.team">Team</a></li>
+      <li><a href="../pages/contacts.html" data-i18n="nav.contact">Contact</a></li>
     </ul>
-    <a class="appointment-btn" href="../pages/contacts.html#contact-form">Book Appointment</a>
+    <a class="appointment-btn" href="../pages/contacts.html#contact-form" data-i18n="nav.appointment">Book Appointment</a>
   </div>
 </nav>
 
 <!-- Review Section -->
-  <div class="reviews-container">
+<section class="section reviews-container">
+
   <div class="section reviews-inner">
     <h2 class="section-title" data-i18n="patient_reviews">Patient Reviews</h2>
     <div class="reviews-wrapper">
       <button class="reviews-arrow left">&#10094;</button>
       <div class="reviews-track">
-        <!-- Review Card 1 -->
+
+        <!-- Review Card 1 (AL) -->
         <div class="review-card">
           <div class="review-profile" style="background-color: #FF6F61;">A</div>
           <h4>Ardit Beqiri</h4>
           <div class="review-stars">★★★★★</div>
-          <p>Fantastic service and very welcoming staff. Highly recommend this clinic!</p>
+          <p data-i18n="reviews.1.text">Shërbim fantastik dhe staf shumë mikpritës. Me të vërtetë një klinikë që e rekomandoj!</p>
         </div>
-        <!-- Review Card 2 -->
-        <div class="review-card">
-          <div class="review-profile" style="background-color: #6A5ACD;">L</div>
-          <h4>Lina Müller</h4>
-          <div class="review-stars">★★★★★</div>
-          <p>The doctors were professional and made me feel at ease throughout my treatment.</p>
-        </div>
-        <!-- Review Card 3 -->
+
+        <!-- Review Card 3 (IT) -->
         <div class="review-card">
           <div class="review-profile" style="background-color: #FFB703;">F</div>
           <h4>Francesco Santoro</h4>
           <div class="review-stars">★★★★★</div>
-          <p>Modern clinic with excellent facilities and very attentive staff.</p>
+          <p data-i18n="reviews.3.text">Clinica moderna con attrezzature eccellenti e personale molto attento.</p>
         </div>
-        <!-- Review Card 4 -->
-        <div class="review-card">
-          <div class="review-profile" style="background-color: #4CAF50;">E</div>
-          <h4>Emma Anderson</h4>
-          <div class="review-stars">★★★★★</div>
-          <p>I had a great experience here. The treatment was painless and quick.</p>
-        </div>
-        <!-- Review Card 5 -->
+
+        <!-- Review Card 5 (AL) -->
         <div class="review-card">
           <div class="review-profile" style="background-color: #E91E63;">B</div>
           <h4>Besart Kola</h4>
           <div class="review-stars">★★★★★</div>
-          <p>Clean, professional and very friendly team. Definitely coming back.</p>
+          <p data-i18n="reviews.5.text">Shumë të rregullt, profesionistë dhe të sjellshëm. Do rikthehem patjetër.</p>
         </div>
-        <!-- Review Card 6 -->
-        <div class="review-card">
-          <div class="review-profile" style="background-color: #00B8D9;">J</div>
-          <h4>Julia Roth</h4>
-          <div class="review-stars">★★★★★</div>
-          <p>From start to finish, everything was explained clearly and done efficiently.</p>
-        </div>
-        <!-- Review Card 7 -->
+
+        <!-- Review Card 7 (AL) -->
         <div class="review-card">
           <div class="review-profile" style="background-color: #9C27B0;">G</div>
           <h4>Genti Ajazi</h4>
           <div class="review-stars">★★★★★</div>
-          <p>Highly trained professionals and top-notch dental technology. Five stars!</p>
+          <p data-i18n="reviews.7.text">Staf shumë i trajnuar dhe pajisje moderne. Vlerësim maksimal!</p>
         </div>
-        <!-- Review Card 8 -->
+
+        <!-- Review Card 8 (IT) -->
         <div class="review-card">
           <div class="review-profile" style="background-color: #3F51B5;">S</div>
           <h4>Stefano Marino</h4>
           <div class="review-stars">★★★★★</div>
-          <p>The best dental experience I’ve ever had. Everything was smooth and professional.</p>
+          <p data-i18n="reviews.8.text">La migliore esperienza odontoiatrica che abbia mai avuto. Tutto perfetto.</p>
         </div>
-        <!-- Review Card 9 -->
+
+        <!-- Review Card 10 (AL) -->
         <div class="review-card">
-          <div class="review-profile" style="background-color: #F44336;">C</div>
-          <h4>Claire Hughes</h4>
+          <div class="review-profile" style="background-color: #2E8B57;">A</div>
+          <h4>Arlinda Gruda</h4>
           <div class="review-stars">★★★★★</div>
-          <p>Incredible attention to detail and a very warm welcome. Absolutely recommend it!</p>
+          <p data-i18n="reviews.10.text">Doktori ishte shumë i kujdesshëm dhe më shpjegoi çdo hap të trajtimit. Jam shumë e kënaqur.</p>
         </div>
+
+        <!-- Review Card 11 (IT) -->
+        <div class="review-card">
+          <div class="review-profile" style="background-color: #8E44AD;">M</div>
+          <h4>Matteo Bianchi</h4>
+          <div class="review-stars">★★★★★</div>
+          <p data-i18n="reviews.11.text">Ottimo servizio! Ambiente pulitissimo e molto accogliente.</p>
+        </div>
+
+        <!-- Review Card 12 (AL) -->
+        <div class="review-card">
+          <div class="review-profile" style="background-color: #FF7043;">R</div>
+          <h4>Rinesa Dervishi</h4>
+          <div class="review-stars">★★★★★</div>
+          <p data-i18n="reviews.12.text">Ishte hera e parë që nuk ndjeva fare dhimbje. Mjekë të mrekullueshëm!</p>
+        </div>
+
+        <!-- Review Card 13 (IT) -->
+        <div class="review-card">
+          <div class="review-profile" style="background-color: #1E88E5;">G</div>
+          <h4>Gianni Moretti</h4>
+          <div class="review-stars">★★★★★</div>
+          <p data-i18n="reviews.13.text">Staff impeccabile, disponibili e molto preparati. Tornerò di sicuro.</p>
+        </div>
+
+        <!-- Review Card 14 (AL) -->
+        <div class="review-card">
+          <div class="review-profile" style="background-color: #C62828;">D</div>
+          <h4>Dorjan Lleshi</h4>
+          <div class="review-stars">★★★★★</div>
+          <p data-i18n="reviews.14.text">S’kam pasur ndonjëherë përvojë kaq të mirë te dentisti. Faleminderit për gjithçka.</p>
+        </div>
+
+        <!-- Review Card 15 (IT) -->
+        <div class="review-card">
+          <div class="review-profile" style="background-color: #009688;">F</div>
+          <h4>Federica Lotti</h4>
+          <div class="review-stars">★★★★★</div>
+          <p data-i18n="reviews.15.text">Esperienza eccellente, risultato perfetto e zero dolore.</p>
+        </div>
+
+        <!-- Review Card 16 (IT) -->
+        <div class="review-card">
+          <div class="review-profile" style="background-color: #7CB342;">C</div>
+          <h4>Cristiano Rizzi</h4>
+          <div class="review-stars">★★★★★</div>
+          <p data-i18n="reviews.16.text">Professionali, veloci e molto gentili. Una clinica davvero seria.</p>
+        </div>
+
+        <!-- Review Card 17 (AL) -->
+        <div class="review-card">
+          <div class="review-profile" style="background-color: #5C6BC0;">V</div>
+          <h4>Valmira Sharra</h4>
+          <div class="review-stars">★★★★★</div>
+          <p data-i18n="reviews.17.text">Shërbim i shkëlqyer dhe atmosferë shumë e ngrohtë. Ndihem shumë e sigurt këtu.</p>
+        </div>
+
+        <!-- Review Card 18 (IT) -->
+        <div class="review-card">
+          <div class="review-profile" style="background-color: #EF5350;">A</div>
+          <h4>Alessandro Neri</h4>
+          <div class="review-stars">★★★★★</div>
+          <p data-i18n="reviews.18.text">La qualità del lavoro è semplicemente superiore. Consigliato senza dubbi.</p>
+        </div>
+
+        <!-- Review Card 19 (AL) -->
+        <div class="review-card">
+          <div class="review-profile" style="background-color: #AB47BC;">K</div>
+          <h4>Kelvin Marku</h4>
+          <div class="review-stars">★★★★★</div>
+          <p data-i18n="reviews.19.text">Më pëlqeu që gjithçka u bë me qetësi dhe profesionalizëm. Rezultati perfekt.</p>
+        </div>
+
+        <!-- Review Card 20 (IT) -->
+        <div class="review-card">
+          <div class="review-profile" style="background-color: #42A5F5;">S</div>
+          <h4>Sofia Venturi</h4>
+          <div class="review-stars">★★★★★</div>
+          <p data-i18n="reviews.20.text">Trattamento eccellente, personale gentilissimo e sempre sorridente.</p>
+        </div>
+
+        <!-- Review Card 21 (IT) -->
+        <div class="review-card">
+          <div class="review-profile" style="background-color: #26A69A;">L</div>
+          <h4>Lorenzo Bellini</h4>
+          <div class="review-stars">★★★★★</div>
+          <p data-i18n="reviews.21.text">Precisione, cura e grande professionalità. Davvero soddisfatto.</p>
+        </div>
+
+        <!-- Review Card 22 (AL) -->
+        <div class="review-card">
+          <div class="review-profile" style="background-color: #66BB6A;">M</div>
+          <h4>Merita Basha</h4>
+          <div class="review-stars">★★★★★</div>
+          <p data-i18n="reviews.22.text">Staf shumë i sjellshëm dhe trajtim shumë i shpejtë. E rekomandoj pa hezitim.</p>
+        </div>
+
+        <!-- Review Card 23 (IT) -->
+        <div class="review-card">
+          <div class="review-profile" style="background-color: #FFA726;">D</div>
+          <h4>Davide Romano</h4>
+          <div class="review-stars">★★★★★</div>
+          <p data-i18n="reviews.23.text">Servizio impeccabile, puntualità e grande attenzione al dettaglio.</p>
+        </div>
+
+        <!-- Review Card 24 (IT) -->
+        <div class="review-card">
+          <div class="review-profile" style="background-color: #EC407A;">C</div>
+          <h4>Caterina Sorsi</h4>
+          <div class="review-stars">★★★★★</div>
+          <p data-i18n="reviews.24.text">Mi sono trovata benissimo, ho finalmente trovato la mia clinica di fiducia.</p>
+        </div>
+
+        <!-- Review Card 25 (AL) -->
+        <div class="review-card">
+          <div class="review-profile" style="background-color: #8D6E63;">B</div>
+          <h4>Brikena Halili</h4>
+          <div class="review-stars">★★★★★</div>
+          <p data-i18n="reviews.25.text">Rezultat shumë i bukur dhe natyral. Faleminderit për kujdesin e treguar.</p>
+        </div>
+
+        <!-- Review Card 26 (IT) -->
+        <div class="review-card">
+          <div class="review-profile" style="background-color: #78909C;">P</div>
+          <h4>Pietro Mancini</h4>
+          <div class="review-stars">★★★★★</div>
+          <p data-i18n="reviews.26.text">Personale disponibile, simpatico e davvero competente. Esperienza perfetta.</p>
+        </div>
+
+        <!-- Review Card 27 (IT) -->
+        <div class="review-card">
+          <div class="review-profile" style="background-color: #FFCA28;">R</div>
+          <h4>Raffaella Costa</h4>
+          <div class="review-stars">★★★★★</div>
+          <p data-i18n="reviews.27.text">Clinica eccellente, pulizia impeccabile e trattamento rapido.</p>
+        </div>
+
+        <!-- Review Card 28 (AL) -->
+        <div class="review-card">
+          <div class="review-profile" style="background-color: #26C6DA;">S</div>
+          <h4>Shkëlqim Lila</h4>
+          <div class="review-stars">★★★★★</div>
+          <p data-i18n="reviews.28.text">Nuk kam pasur kurrë trajtim më profesional. Të përkryer në çdo detaj.</p>
+        </div>
+
+        <!-- Review Card 29 (IT) -->
+        <div class="review-card">
+          <div class="review-profile" style="background-color: #42A5F5;">E</div>
+          <h4>Elena Fabbri</h4>
+          <div class="review-stars">★★★★★</div>
+          <p data-i18n="reviews.29.text">Lavoro perfetto e personale veramente straordinario. Super consigliato!</p>
+        </div>
+
+        <!-- Review Card 30 (IT) -->
+        <div class="review-card">
+          <div class="review-profile" style="background-color: #7E57C2;">N</div>
+          <h4>Nicola Traversi</h4>
+          <div class="review-stars">★★★★★</div>
+          <p data-i18n="reviews.30.text">Non potevo scegliere clinica migliore. Tutto rapido, preciso e di altissima qualità.</p>
+        </div>
+
       </div>
       <button class="reviews-arrow right">&#10095;</button>
     </div>
   </div>
+
+</section>
+
+
+  <div class="hero-buttons">
+    <a
+      href="https://www.google.com/maps/place/Orient+Dental+Clinic/@41.3255331,19.8113474,191m/data=!3m1!1e3!4m14!1m7!3m6!1s0x135031002bdab639:0x9553264d253b605c!2sOrient+Dental+Clinic!8m2!3d41.325639!4d19.8111582!16s%2Fg%2F11mm7bhlym!3m5!1s0x135031002bdab639:0x9553264d253b605c!8m2!3d41.325639!4d19.8111582!16s%2Fg%2F11mm7bhlym?entry=ttu&g_ep=EgoyMDI1MTExNy4wIKXMDSoASAFQAw%3D%3D"
+      class="btn primary"
+      data-i18n="open_maps"
+    >
+      Open Maps
+    </a>
+  </div>
+
+</section>
+
+
   <div class="section-divider bottom-divider">
     <svg viewBox="0 0 1440 100" preserveAspectRatio="none">
       <path fill="#fdf7f1" d="M0,100 C360,0 1080,100 1440,0 L1440,100 L0,100 Z"></path>
-
     </svg>
   </div>
-</section>
-
 <!-- Services -->
 <section class="section beige">
   <h2 class="section-title" data-i18n="our_services">Our Services</h2>
   <div class="services-grid">
     <div class="service-card">
       <img src="../images/dental-implants.png" alt="Dental Implants" />
-      <h3>Dental Implants</h3>
-      <p>Durable and natural-looking replacement teeth that function like your own.</p>
-      <a href="../services/implants.html" class="btn outline">Learn More</a>
+      <h3 data-i18n="services.implants.title">Dental Implants</h3>
+      <p data-i18n="services.implants.text">Durable and natural-looking replacement teeth that function like your own.</p>
+      <a href="../services/implants.html" class="btn outline" data-i18n="services.implants.btn">Learn More</a>
     </div>
     <div class="service-card">
       <img src="../images/dental-prosthesis.jpg" alt="Dental Prosthetics" />
-      <h3>Dental Prosthetics</h3>
-      <p>Custom-made devices to replace missing teeth and restore your smile.</p>
-      <a href="../services/prosthetics.html" class="btn outline">Learn More</a>
+      <h3 data-i18n="services.prosthetics.title">Dental Prosthetics</h3>
+      <p data-i18n="services.prosthetics.text">Custom-made devices to replace missing teeth and restore your smile.</p>
+      <a href="../services/prosthetics.html" class="btn outline" data-i18n="services.prosthetics.btn">Learn More</a>
     </div>
     <div class="service-card">
       <img src="../images/dental-cosmetics.jpg" alt="Dental Cosmetics" />
-      <h3>Dental Cosmetics</h3>
-      <p>Professional teeth whitening and smile design to enhance your natural beauty.</p>
-      <a href="../services/cosmetics.html" class="btn outline">Learn More</a>
+      <h3 data-i18n="services.cosmetics.title">Dental Cosmetics</h3>
+      <p data-i18n="services.cosmetics.text">Professional teeth whitening and smile design to enhance your natural beauty.</p>
+      <a href="../services/cosmetics.html" class="btn outline" data-i18n="services.cosmetics.btn">Learn More</a>
     </div>
     <div class="service-card">
       <img src="../images/composite-fillings.jpg" alt="Composite Fillings" />
-      <h3>General Dentistry</h3>
-      <p>Comprehensive dental care for the whole family, including check-ups and cleanings.</p>
-      <a href="../services/general.html" class="btn outline">Learn More</a>
+      <h3 data-i18n="services.general.title">General Dentistry</h3>
+      <p data-i18n="services.general.text">Comprehensive dental care for the whole family, including check-ups and cleanings.</p>
+      <a href="../services/general.html" class="btn outline" data-i18n="services.general.btn">Learn More</a>
     </div>
     <div class="service-card">
       <img src="../images/dental-aligners.jpg" alt="Orthodontics" />
-      <h3>Orthodontics</h3>
-      <p>Comprehensive orthodontic care, including braces and aligners, for a straighter smile.</p>
-      <a href="../services/orthodontics.html" class="btn outline">Learn More</a>
+      <h3 data-i18n="services.orthodontics.title">Orthodontics</h3>
+      <p data-i18n="services.orthodontics.text">Comprehensive orthodontic care, including braces and aligners, for a straighter smile.</p>
+      <a href="../services/orthodontics.html" class="btn outline" data-i18n="services.orthodontics.btn">Learn More</a>
     </div>
     <div class="service-card">
       <img src="../images/oral-surgery.jpg" alt="Oral Surgeries" />
-      <h3>Oral Surgeries</h3>
-      <p>Expert surgical procedures for wisdom teeth removal, implants, and more.</p>
-      <a href="../services/oral-surgeries.html" class="btn outline">Learn More</a>
+      <h3 data-i18n="services.surgery.title">Oral Surgeries</h3>
+      <p data-i18n="services.surgery.text">Expert surgical procedures for wisdom teeth removal, implants, and more.</p>
+      <a href="../services/oral-surgeries.html" class="btn outline" data-i18n="services.surgery.btn">Learn More</a>
     </div>
   </div>
 </section>
+
 <div class="section-divider wave-up">
   <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
     <path d="M0,120 C600,20 600,100 1200,120 L1200,0 L0,0 Z" fill="#fdf7f1"></path>
@@ -186,8 +349,8 @@
 <!-- Contact -->
 <section class="section contact" id="contact">
   <h2 class="section-title" data-i18n="contact_us">How Can You Find Us?</h2>
-  <p><strong>Location:</strong> Rruga Him Kolli, Tirana, Albania</p>
-  <p><strong>Phone:</strong> +355 69 204 0130</p>
+  <p data-i18n="contact.location"><strong>Location:</strong> Rruga Him Kolli, Tirana, Albania</p>
+  <p data-i18n="contact.phone"><strong>Phone:</strong> +355 69 204 0130</p>
   <iframe
     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2990.7989040537996!2d19.81485331542124!3d41.326120607642846!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x13503172e8cab76f%3A0x704934284304e7f0!2sMeto%20Dent!5e0!3m2!1sen!2s!4v1721670000000!5m2!1sen!2s"
     width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy">
@@ -201,12 +364,13 @@
     <path d="M0,0 C600,100 600,20 1200,0 L1200,120 L0,120 Z" fill="#fdf7f1"></path>
   </svg>
 </div>
+
 <section class="section beige">
   <h2 class="section-title" data-i18n="questions">Questions about your treatment?</h2>
   <p data-i18n="email_or_book">Feel free to email us or book an appointment now.</p>
   <div class="hero-buttons" style="margin-top: 20px;">
-    <a href="mailto:orientdental7@gmail.com" class="btn secondary">Message Us</a>
-    <a href="pages/contacts.html#contact-form" class="btn primary">Book Now</a>
+    <a href="mailto:orientdental7@gmail.com" class="btn secondary" data-i18n="questions.btn.message">Message Us</a>
+    <a href="pages/contacts.html#contact-form" class="btn primary" data-i18n="questions.btn.book">Book Now</a>
   </div>
 </section>
 
@@ -214,33 +378,235 @@
 <footer class="footer">
   <div class="footer-grid">
     <div>
-      <h4>Quick Links</h4>
+      <h4 data-i18n="footer.quicklinks.title">Quick Links</h4>
       <ul>
-        <li><a href="../pages/treatments.html"><S></S></a></li>
-        <li><a href="../pages/pricing.html">Pricing</a></li>
-        <li><a href="../pages/team.html">Team</a></li>
+        <li><a href="../pages/treatments.html" data-i18n="footer.quicklinks.services">Services</a></li>
+        <li><a href="../pages/pricing.html" data-i18n="footer.quicklinks.pricing">Pricing</a></li>
+        <li><a href="../pages/team.html" data-i18n="footer.quicklinks.team">Team</a></li>
       </ul>
     </div>
     <div>
-      <h4>Disclaimer</h4>
-      <p>This website provides general dental information. Information taken from this site is not a substitute for professional dental advice. Always consult your dentist before treatment.</p>
+      <h4 data-i18n="footer.disclaimer.title">Disclaimer</h4>
+      <p data-i18n="footer.disclaimer.text">
+        This website provides general dental information. Information taken from this site is not a substitute for professional dental advice. Always consult your dentist before treatment.
+      </p>
     </div>
     <div class="contactfootercontent">
-  <h4>Contact</h4>
-  <p>Rruga Him Kolli, Tirana<br>Phone: +355 69 204 0130<br>Email: orientdental7@gmail.com</p>
-  <div class="social-icons">
-    <a href="#"><i class="fab fa-facebook-f"></i></a>
-    <a href="#"><i class="fab fa-instagram"></i></a>
-    <a href="#"><i class="fab fa-whatsapp"></i></a>
+      <h4 data-i18n="footer.contact.title">Contact</h4>
+      <p data-i18n="footer.contact.text">
+        Rruga Him Kolli, Tirana<br>Phone: +355 69 204 0130<br>Email: orientdental7@gmail.com
+      </p>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-whatsapp"></i></a>
+      </div>
+    </div>
   </div>
-</div>
 
-</div>
-  <div class="copyright">
+  <div class="copyright" data-i18n="footer.copyright">
     © 2025 Orient Dental Clinic. All Rights Reserved.
   </div>
-  </div>
 </footer>
+
 <button id="scrollToTopBtn"><i class="fas fa-chevron-up"></i></button>
+
+<!-- Inline language JS for EN/IT with persistence across pages -->
+<script>
+  (function () {
+    const translations = {
+      en: {
+        "search.placeholder": "Search...",
+
+        "nav.about": "About Us",
+        "nav.reviews": "Reviews",
+        "nav.services": "Services",
+        "nav.pricing": "Pricing",
+        "nav.team": "Team",
+        "nav.contact": "Contact",
+        "nav.appointment": "Book Appointment",
+
+        "patient_reviews": "Patient Reviews",
+
+        "reviews.1.text": "Fantastic service and very welcoming staff. Highly recommend this clinic!",
+        "reviews.2.text": "The doctors were professional and made me feel at ease throughout my treatment.",
+        "reviews.3.text": "Modern clinic with excellent facilities and very attentive staff.",
+        "reviews.4.text": "I had a great experience here. The treatment was painless and quick.",
+        "reviews.5.text": "Clean, professional and very friendly team. Definitely coming back.",
+        "reviews.6.text": "From start to finish, everything was explained clearly and done efficiently.",
+        "reviews.7.text": "Highly trained professionals and top-notch dental technology. Five stars!",
+        "reviews.8.text": "The best dental experience I’ve ever had. Everything was smooth and professional.",
+        "reviews.9.text": "Incredible attention to detail and a very warm welcome. Absolutely recommend it!",
+
+        "open_maps": "Open Maps",
+
+        "our_services": "Our Services",
+
+        "services.implants.title": "Dental Implants",
+        "services.implants.text": "Durable and natural-looking replacement teeth that function like your own.",
+        "services.implants.btn": "Learn More",
+
+        "services.prosthetics.title": "Dental Prosthetics",
+        "services.prosthetics.text": "Custom-made devices to replace missing teeth and restore your smile.",
+        "services.prosthetics.btn": "Learn More",
+
+        "services.cosmetics.title": "Dental Cosmetics",
+        "services.cosmetics.text": "Professional teeth whitening and smile design to enhance your natural beauty.",
+        "services.cosmetics.btn": "Learn More",
+
+        "services.general.title": "General Dentistry",
+        "services.general.text": "Comprehensive dental care for the whole family, including check-ups and cleanings.",
+        "services.general.btn": "Learn More",
+
+        "services.orthodontics.title": "Orthodontics",
+        "services.orthodontics.text": "Comprehensive orthodontic care, including braces and aligners, for a straighter smile.",
+        "services.orthodontics.btn": "Learn More",
+
+        "services.surgery.title": "Oral Surgeries",
+        "services.surgery.text": "Expert surgical procedures for wisdom teeth removal, implants, and more.",
+        "services.surgery.btn": "Learn More",
+
+        "contact_us": "How Can You Find Us?",
+        "contact.location": "<strong>Location:</strong> Rruga Him Kolli, Tirana, Albania",
+        "contact.phone": "<strong>Phone:</strong> +355 69 204 0130",
+        "book": "Book Appointment",
+
+        "questions": "Questions about your treatment?",
+        "email_or_book": "Feel free to email us or book an appointment now.",
+        "questions.btn.message": "Message Us",
+        "questions.btn.book": "Book Now",
+
+        "footer.quicklinks.title": "Quick Links",
+        "footer.quicklinks.services": "Services",
+        "footer.quicklinks.pricing": "Pricing",
+        "footer.quicklinks.team": "Team",
+
+        "footer.disclaimer.title": "Disclaimer",
+        "footer.disclaimer.text": "This website provides general dental information. Information taken from this site is not a substitute for professional dental advice. Always consult your dentist before treatment.",
+
+        "footer.contact.title": "Contact",
+        "footer.contact.text": "Rruga Him Kolli, Tirana<br>Phone: +355 69 204 0130<br>Email: orientdental7@gmail.com",
+
+        "footer.copyright": "© 2025 Orient Dental Clinic. All Rights Reserved."
+      },
+
+      it: {
+        "search.placeholder": "Cerca...",
+
+        "nav.about": "Chi Siamo",
+        "nav.reviews": "Recensioni",
+        "nav.services": "Trattamenti",
+        "nav.pricing": "Prezzi",
+        "nav.team": "Team",
+        "nav.contact": "Contatti",
+        "nav.appointment": "Prenota una Visita",
+
+        "patient_reviews": "Recensioni dei pazienti",
+
+        "reviews.1.text": "Servizio fantastico e personale molto accogliente. Consiglio vivamente questa clinica!",
+        "reviews.2.text": "I dottori sono stati professionali e mi hanno messo a mio agio per tutta la durata del trattamento.",
+        "reviews.3.text": "Clinica moderna, ottime strutture e staff molto attento.",
+        "reviews.4.text": "Esperienza eccellente. Il trattamento è stato rapido e indolore.",
+        "reviews.5.text": "Ambiente pulito, professionale e squadra molto cordiale. Tornerò sicuramente.",
+        "reviews.6.text": "Dall’inizio alla fine tutto è stato spiegato chiaramente ed eseguito in modo efficiente.",
+        "reviews.7.text": "Professionisti altamente qualificati e tecnologia odontoiatrica di alto livello. Cinque stelle!",
+        "reviews.8.text": "La migliore esperienza dal dentista che abbia mai avuto. Tutto perfetto e professionale.",
+        "reviews.9.text": "Cura dei dettagli incredibile e accoglienza calorosa. Assolutamente consigliato!",
+
+        "open_maps": "Apri Maps",
+
+        "our_services": "I nostri trattamenti",
+
+        "services.implants.title": "Impianti dentali",
+        "services.implants.text": "Denti sostitutivi resistenti e dall’aspetto naturale che funzionano come i tuoi.",
+        "services.implants.btn": "Scopri di più",
+
+        "services.prosthetics.title": "Protesi dentarie",
+        "services.prosthetics.text": "Dispositivi su misura per sostituire i denti mancanti e ridare armonia al tuo sorriso.",
+        "services.prosthetics.btn": "Scopri di più",
+
+        "services.cosmetics.title": "Odontoiatria estetica",
+        "services.cosmetics.text": "Sbiancamento professionale e smile design per valorizzare la tua bellezza naturale.",
+        "services.cosmetics.btn": "Scopri di più",
+
+        "services.general.title": "Odontoiatria generale",
+        "services.general.text": "Cura dentale completa per tutta la famiglia, inclusi controlli periodici e igiene orale.",
+        "services.general.btn": "Scopri di più",
+
+        "services.orthodontics.title": "Ortodonzia",
+        "services.orthodontics.text": "Trattamenti ortodontici completi, apparecchi fissi e allineatori per un sorriso più dritto.",
+        "services.orthodontics.btn": "Scopri di più",
+
+        "services.surgery.title": "Chirurgia orale",
+        "services.surgery.text": "Interventi chirurgici specialistici per ottavi, impianti e molto altro.",
+        "services.surgery.btn": "Scopri di più",
+
+        "contact_us": "Come puoi trovarci?",
+        "contact.location": "<strong>Indirizzo:</strong> Rruga Him Kolli, Tirana, Albania",
+        "contact.phone": "<strong>Telefono:</strong> +355 69 204 0130",
+        "book": "Prenota una visita",
+
+        "questions": "Domande sul tuo trattamento?",
+        "email_or_book": "Scrivici via e-mail oppure prenota subito una visita.",
+        "questions.btn.message": "Scrivici",
+        "questions.btn.book": "Prenota ora",
+
+        "footer.quicklinks.title": "Link rapidi",
+        "footer.quicklinks.services": "Trattamenti",
+        "footer.quicklinks.pricing": "Prezzi",
+        "footer.quicklinks.team": "Team",
+
+        "footer.disclaimer.title": "Disclaimer",
+        "footer.disclaimer.text": "Questo sito fornisce informazioni odontoiatriche generali. Le informazioni presenti non sostituiscono in alcun modo il parere del dentista. Prima di intraprendere o modificare qualsiasi cura, consulta sempre il tuo odontoiatra.",
+
+        "footer.contact.title": "Contatti",
+        "footer.contact.text": "Rruga Him Kolli, Tirana<br>Telefono: +355 69 204 0130<br>Email: orientdental7@gmail.com",
+
+        "footer.copyright": "© 2025 Orient Dental Clinic. Tutti i diritti riservati."
+      }
+    };
+
+    function applyTranslations(lang) {
+      const elements = document.querySelectorAll("[data-i18n]");
+      elements.forEach(el => {
+        const key = el.dataset.i18n;
+        const value = translations[lang] && translations[lang][key];
+        if (value) {
+          el.innerHTML = value;
+        }
+      });
+
+      const searchInput = document.getElementById("searchInput");
+      if (searchInput && translations[lang] && translations[lang]["search.placeholder"]) {
+        searchInput.setAttribute("placeholder", translations[lang]["search.placeholder"]);
+      }
+
+      document.documentElement.lang = lang;
+    }
+
+    document.addEventListener("DOMContentLoaded", function () {
+      const select = document.getElementById("language");
+      // Default main language is English
+      const savedLang = localStorage.getItem("siteLanguage") || "en";
+      const initialLang = (savedLang === "en" || savedLang === "it") ? savedLang : "en";
+
+      if (select) {
+        select.value = initialLang;
+      }
+      applyTranslations(initialLang);
+
+      if (select) {
+        select.addEventListener("change", function () {
+          const lang = select.value;
+          // Only EN and IT are fully supported here; others fall back to EN
+          const effectiveLang = (lang === "en" || lang === "it") ? lang : "en";
+          localStorage.setItem("siteLanguage", effectiveLang);
+          applyTranslations(effectiveLang);
+        });
+      }
+    });
+  })();
+</script>
+
 </body>
 </html>
