@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,8 +8,7 @@
   <script defer src="../script.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <link rel="icon" type="image/png" href="../images/logoqr1.png">
-    <style>
-
+  <style>
     /* === Section Styles === */
     .section { padding: 44px 20px; position: relative; }
     .section.beige { background: #fdf7f1; }
@@ -111,7 +110,7 @@
     <a href="#"><i class="fab fa-instagram"></i></a>
   </div>
   <div class="search-container">
-    <input type="text" id="searchInput" placeholder="Search..." />
+    <input type="text" id="searchInput" placeholder="Cerca..." />
   </div>
   <div class="language-select">
     <select id="language">
@@ -127,21 +126,21 @@
   <div class="nav-content">
     <div class="logo">
       <a href="../index.html">
-        <img src="../images/logodent.png" alt="Orient Dental Logo" />
+        <img src="../images/logodent.png" alt="Logo Orient Dental" />
       </a>
     </div>
     <div class="hamburger" onclick="toggleMobileNav()">
       <i class="fas fa-bars"></i>
     </div>
     <ul class="nav-links" id="navLinks">
-      <li><a href="../pages/aboutus.html">About Us</a></li>
-      <li><a href="../pages/testimonials.html">Reviews</a></li>
-      <li><a href="../pages/treatments.html">Services</a></li>
-      <li><a href="../pages/pricing.html">Pricing</a></li>
-      <li><a href="../pages/team.html">Team</a></li>
-      <li><a href="../pages/contacts.html">Contact</a></li>
+      <li><a href="../pages/aboutus.html" data-i18n="nav.about">Chi Siamo</a></li>
+      <li><a href="../pages/testimonials.html" data-i18n="nav.reviews">Recensioni</a></li>
+      <li><a href="../pages/treatments.html" data-i18n="nav.services">Trattamenti</a></li>
+      <li><a href="../pages/pricing.html" data-i18n="nav.pricing">Prezzi</a></li>
+      <li><a href="../pages/team.html" data-i18n="nav.team">Team</a></li>
+      <li><a href="../pages/contacts.html" data-i18n="nav.contact">Contatti</a></li>
     </ul>
-    <a class="appointment-btn" href="../pages/contacts.html#contact-form">Book Appointment</a>
+    <a class="appointment-btn" href="../pages/contacts.html#contact-form" data-i18n="nav.appointment">Prenota una Visita</a>
   </div>
 </nav>
 
@@ -149,13 +148,13 @@
 <section class="section beige">
   <div class="container narrow">
     <h2 class="section-title" data-i18n="surgery.title">
-      Oral Surgery; Restoring Health and Comfort
+      Chirurgia orale – salute e comfort a lungo termine
     </h2>
     <p class="intro-text" data-i18n="surgery.intro">
-      Oral surgery covers a wide range of procedures, from simple tooth extractions to complex surgical treatments, ensuring your oral health and long-term comfort.
+      La chirurgia orale comprende un’ampia gamma di interventi, dalle semplici estrazioni dei denti ai trattamenti chirurgici più complessi, per garantire la salute della bocca e il tuo comfort nel tempo.
     </p>
     <div class="image-center">
-      <img src="../images/oral-surgery.jpg" alt="Oral Surgery" class="service-image" />
+      <img src="../images/oral-surgery.jpg" alt="Chirurgia orale" class="service-image" />
     </div>
   </div>
 </section>
@@ -170,13 +169,13 @@
 <!-- Types of Surgeries -->
 <section class="section">
   <div class="container narrow">
-    <h2 class="section-title" data-i18n="surgery.types_title">Common Oral Surgeries</h2>
+    <h2 class="section-title" data-i18n="surgery.types_title">Interventi di chirurgia orale più comuni</h2>
     <ul class="checklist">
-      <li data-i18n="surgery.types.extractions">Tooth Extractions – including wisdom teeth</li>
-      <li data-i18n="surgery.types.implants">Dental Implants – surgical placement of titanium roots</li>
-      <li data-i18n="surgery.types.gum">Gum Surgery – to treat periodontal disease</li>
-      <li data-i18n="surgery.types.bone">Bone Grafting – rebuilding jawbone for implants</li>
-      <li data-i18n="surgery.types.biopsies">Oral Biopsies – diagnostic tissue sampling</li>
+      <li data-i18n="surgery.types.extractions">Estrazioni dentarie – comprese le rimozioni dei denti del giudizio</li>
+      <li data-i18n="surgery.types.implants">Impianti dentali – inserimento chirurgico di radici in titanio</li>
+      <li data-i18n="surgery.types.gum">Chirurgia gengivale – per il trattamento della malattia parodontale</li>
+      <li data-i18n="surgery.types.bone">Rigenerazione / innesto osseo – ricostruzione dell’osso mascellare per gli impianti</li>
+      <li data-i18n="surgery.types.biopsies">Biopsie orali – prelievo di tessuto a scopo diagnostico</li>
     </ul>
   </div>
 </section>
@@ -191,13 +190,33 @@
 <!-- Procedure Steps -->
 <section class="section beige">
   <div class="container narrow">
-    <h2 class="section-title" data-i18n="surgery.procedure_title">How Oral Surgery Works</h2>
+    <h2 class="section-title" data-i18n="surgery.procedure_title">Come si svolge un intervento di chirurgia orale</h2>
     <div class="procedure-steps">
-      <div class="procedure-step"><div class="step-text" data-i18n="surgery.procedure.step1"><strong>1. Examination & Imaging:</strong> X-rays and scans help plan the surgery safely.</div></div>
-      <div class="procedure-step"><div class="step-text" data-i18n="surgery.procedure.step2"><strong>2. Anesthesia:</strong> Local or general anesthesia is given to ensure comfort.</div></div>
-      <div class="procedure-step"><div class="step-text" data-i18n="surgery.procedure.step3"><strong>3. Surgical Procedure:</strong> The dentist or surgeon performs the treatment with precision.</div></div>
-      <div class="procedure-step"><div class="step-text" data-i18n="surgery.procedure.step4"><strong>4. Recovery Monitoring:</strong> After the procedure, patients are observed until stable.</div></div>
-      <div class="procedure-step"><div class="step-text" data-i18n="surgery.procedure.step5"><strong>5. Aftercare & Healing:</strong> Detailed instructions for healing and follow-ups are provided.</div></div>
+      <div class="procedure-step">
+        <div class="step-text" data-i18n="surgery.procedure.step1">
+          <strong>1. Visita e radiografie:</strong> radiografie e/o TAC ci aiutano a pianificare l’intervento in sicurezza.
+        </div>
+      </div>
+      <div class="procedure-step">
+        <div class="step-text" data-i18n="surgery.procedure.step2">
+          <strong>2. Anestesia:</strong> viene effettuata anestesia locale o generale per garantirti il massimo comfort.
+        </div>
+      </div>
+      <div class="procedure-step">
+        <div class="step-text" data-i18n="surgery.procedure.step3">
+          <strong>3. Intervento chirurgico:</strong> il dentista o il chirurgo esegue la procedura con la massima precisione.
+        </div>
+      </div>
+      <div class="procedure-step">
+        <div class="step-text" data-i18n="surgery.procedure.step4">
+          <strong>4. Controllo post-operatorio:</strong> dopo l’intervento il paziente viene monitorato finché è stabile.
+        </div>
+      </div>
+      <div class="procedure-step">
+        <div class="step-text" data-i18n="surgery.procedure.step5">
+          <strong>5. Controlli e guarigione:</strong> vengono fornite istruzioni dettagliate per la guarigione e gli appuntamenti di controllo.
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -212,13 +231,13 @@
 <!-- Why Trust Us -->
 <section class="section">
   <div class="container narrow">
-    <h2 class="section-title" data-i18n="surgery.sales_title">Why Choose Our Oral Surgery?</h2>
+    <h2 class="section-title" data-i18n="surgery.sales_title">Perché scegliere la nostra chirurgia orale?</h2>
     <ul class="checklist">
-      <li data-i18n="surgery.sales.tip1">Experienced surgeons and specialists</li>
-      <li data-i18n="surgery.sales.tip2">Modern anesthesia and pain management</li>
-      <li data-i18n="surgery.sales.tip3">Safe, sterile surgical environment</li>
-      <li data-i18n="surgery.sales.tip4">Comprehensive aftercare support</li>
-      <li data-i18n="surgery.sales.tip5">Successful track record of patient recovery</li>
+      <li data-i18n="surgery.sales.tip1">Chirurghi e specialisti con grande esperienza</li>
+      <li data-i18n="surgery.sales.tip2">Tecniche moderne di anestesia e gestione del dolore</li>
+      <li data-i18n="surgery.sales.tip3">Ambiente chirurgico sicuro e sterile</li>
+      <li data-i18n="surgery.sales.tip4">Assistenza completa nel post-operatorio</li>
+      <li data-i18n="surgery.sales.tip5">Alto tasso di successo e recupero dei pazienti</li>
     </ul>
   </div>
 </section>
@@ -230,20 +249,22 @@
   </svg>
 </div>
 
-
 <!-- FAQ -->
 <section class="section beige">
   <div class="container narrow">
-    <h2 class="section-title">Frequently Asked Questions</h2>
+    <h2 class="section-title" data-i18n="faq.title">Domande frequenti</h2>
     <div class="faq">
-      <h3>Is oral surgery painful?</h3>
-      <p>With modern anesthesia, most procedures are comfortable and virtually painless.</p>
-      <h3>How long is recovery time?</h3>
-      <p>Most patients recover in a few days, but complex surgeries may require longer healing.</p>
-      <h3>Can I go home the same day?</h3>
-      <p>Yes, most oral surgeries are outpatient procedures with same-day discharge.</p>
-      <h3>What should I eat after surgery?</h3>
-      <p>Soft foods like yogurt, soups, and smoothies are recommended for the first few days.</p>
+      <h3 data-i18n="faq.q1">La chirurgia orale è dolorosa?</h3>
+      <p data-i18n="faq.a1">Grazie alle moderne tecniche di anestesia, la maggior parte degli interventi è confortevole e quasi indolore.</p>
+
+      <h3 data-i18n="faq.q2">Quanto dura il recupero?</h3>
+      <p data-i18n="faq.a2">La maggior parte dei pazienti guarisce in pochi giorni, ma per interventi più complessi può essere necessario un tempo di guarigione più lungo.</p>
+
+      <h3 data-i18n="faq.q3">Posso tornare a casa lo stesso giorno?</h3>
+      <p data-i18n="faq.a3">Sì, la maggior parte degli interventi di chirurgia orale è in regime ambulatoriale con dimissione in giornata.</p>
+
+      <h3 data-i18n="faq.q4">Cosa posso mangiare dopo l’intervento?</h3>
+      <p data-i18n="faq.a4">Per i primi giorni sono consigliati cibi morbidi come yogurt, zuppe e frullati.</p>
     </div>
   </div>
 </section>
@@ -251,24 +272,25 @@
 <!-- Call to Action -->
 <section class="cta-section fade-in">
   <div class="container narrow center">
-    <h2 class="section-title" style="color: #fff; margin-bottom: 10px;">Book Your Free Consultation Today!</h2>
-    <p style="color: #fff; margin-bottom: 14px;">Let us restore your smile with the most advanced dental implant solutions.</p>
-    <a href="../pages/contacts.html" class="btn primary">Reserve Now</a>
+    <h2 class="section-title" style="color: #fff; margin-bottom: 10px;" data-i18n="cta.title">Prenota oggi la tua consulenza gratuita!</h2>
+    <p style="color: #fff; margin-bottom: 14px;" data-i18n="cta.text">Lascia che ti restituiamo il sorriso con le soluzioni di chirurgia orale più avanzate.</p>
+    <a href="../pages/contacts.html" class="btn primary" data-i18n="cta.button">Prenota ora</a>
   </div>
 </section>
 
 <!-- Contact -->
 <section class="section contact fade-in" id="contact">
   <div class="container narrow">
-    <h2 class="section-title">How Can You Find Us?</h2>
-    <p><strong>Location:</strong> Rruga Him Kolli, Tirana, Albania</p>
-    <p><strong>Phone:</strong> +355 69 204 0130</p>
+    <h2 class="section-title" data-i18n="contact.title">Come puoi trovarci?</h2>
+    <p data-i18n="contact.location"><strong>Indirizzo:</strong> Rruga Him Kolli, Tirana, Albania</p>
+    <p data-i18n="contact.phone"><strong>Telefono:</strong> +355 69 204 0130</p>
     <iframe
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2990.7989040537996!2d19.81485331542124!3d41.326120607642846!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x13503172e8cab76f%3A0x704934284304e7f0!2sMeto%20Dent!5e0!3m2!1sen!2s!4v1721670000000!5m2!1sen!2s"
-      width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-  <div class="hero-buttons">
-    <a href="pages/contacts.html#contact-form" class="btn primary" data-i18n="book">Book Appointment</a>
-  </div>
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3037.459722081942!2d19.8090!3d41.3256!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x135031002bdab639%3A0x9553264d253b605c!2sOrient%20Dental%20Clinic!5e0!3m2!1sen!2s!4v1732100000000"
+      width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy">
+    </iframe>
+    <div class="hero-buttons">
+      <a href="pages/contacts.html#contact-form" class="btn primary" data-i18n="book">Prenota una Visita</a>
+    </div>
   </div>
 </section>
 
@@ -282,11 +304,11 @@
 <!-- Questions Section -->
 <section class="section beige fade-in">
   <div class="container narrow">
-    <h2 class="section-title">Questions about your treatment?</h2>
-    <p>Feel free to email us or book an appointment now.</p>
+    <h2 class="section-title" data-i18n="questions.title">Domande sul tuo trattamento?</h2>
+    <p data-i18n="questions.text">Scrivici via e-mail oppure prenota subito una visita.</p>
     <div class="hero-buttons" style="margin-top: 20px;">
-      <a href="mailto:orientdental7@gmail.com" class="btn secondary">Message Us</a>
-      <a href="../pages/contacts.html#contact-form" class="btn primary">Book Now</a>
+      <a href="mailto:orientdental7@gmail.com" class="btn secondary" data-i18n="questions.btn.message">Scrivici</a>
+      <a href="../pages/contacts.html#contact-form" class="btn primary" data-i18n="questions.btn.book">Prenota ora</a>
     </div>
   </div>
 </section>
@@ -295,20 +317,24 @@
 <footer class="footer fade-in">
   <div class="footer-grid">
     <div>
-      <h4>Quick Links</h4>
+      <h4 data-i18n="footer.quicklinks.title">Link rapidi</h4>
       <ul>
-        <li><a href="../pages/treatments.html">Services</a></li>
-        <li><a href="../pages/pricing.html">Pricing</a></li>
-        <li><a href="../pages/team.html">Team</a></li>
+        <li><a href="../pages/treatments.html" data-i18n="footer.quicklinks.services">Trattamenti</a></li>
+        <li><a href="../pages/pricing.html" data-i18n="footer.quicklinks.pricing">Prezzi</a></li>
+        <li><a href="../pages/team.html" data-i18n="footer.quicklinks.team">Team</a></li>
       </ul>
     </div>
     <div>
-      <h4>Disclaimer</h4>
-      <p>This website provides general dental information. Information taken from this site is not a substitute for professional dental advice. Always consult your dentist before treatment.</p>
+      <h4 data-i18n="footer.disclaimer.title">Disclaimer</h4>
+      <p data-i18n="footer.disclaimer.text">
+        Questo sito fornisce informazioni odontoiatriche generali. Le informazioni presenti non sostituiscono in alcun modo il parere del dentista. Prima di intraprendere o modificare qualsiasi cura, consulta sempre il tuo odontoiatra.
+      </p>
     </div>
     <div class="contactfootercontent">
-      <h4>Contact</h4>
-      <p>Rruga Him Kolli, Tirana<br>Phone: +355 69 204 0130<br>Email: orientdental7@gmail.com</p>
+      <h4 data-i18n="footer.contact.title">Contatti</h4>
+      <p data-i18n="footer.contact.text">
+        Rruga Him Kolli, Tirana<br>Telefono: +355 69 204 0130<br>Email: orientdental7@gmail.com
+      </p>
       <div class="social-icons">
         <a href="#"><i class="fab fa-facebook-f"></i></a>
         <a href="#"><i class="fab fa-instagram"></i></a>
@@ -316,11 +342,198 @@
       </div>
     </div>
   </div>
-  <div class="copyright">
-    © 2025 Orient Dental Clinic. All Rights Reserved.
+  <div class="copyright" data-i18n="footer.copyright">
+    © 2025 Orient Dental Clinic. Tutti i diritti riservati.
   </div>
 </footer>
 
 <button id="scrollToTopBtn"><i class="fas fa-chevron-up"></i></button>
+
+<!-- Inline language JS -->
+<script>
+  (function() {
+    const translations = {
+      en: {
+        "search.placeholder": "Search...",
+
+        "nav.about": "About Us",
+        "nav.reviews": "Reviews",
+        "nav.services": "Services",
+        "nav.pricing": "Pricing",
+        "nav.team": "Team",
+        "nav.contact": "Contact",
+        "nav.appointment": "Book Appointment",
+
+        "surgery.title": "Oral Surgery – Restoring Health and Comfort",
+        "surgery.intro": "Oral surgery covers a wide range of procedures, from simple tooth extractions to complex surgical treatments, ensuring your oral health and long-term comfort.",
+
+        "surgery.types_title": "Common Oral Surgeries",
+        "surgery.types.extractions": "Tooth Extractions – including wisdom teeth",
+        "surgery.types.implants": "Dental Implants – surgical placement of titanium roots",
+        "surgery.types.gum": "Gum Surgery – to treat periodontal disease",
+        "surgery.types.bone": "Bone Grafting – rebuilding jawbone for implants",
+        "surgery.types.biopsies": "Oral Biopsies – diagnostic tissue sampling",
+
+        "surgery.procedure_title": "How Oral Surgery Works",
+        "surgery.procedure.step1": "<strong>1. Examination & Imaging:</strong> X-rays and scans help plan the surgery safely.",
+        "surgery.procedure.step2": "<strong>2. Anesthesia:</strong> Local or general anesthesia is given to ensure comfort.",
+        "surgery.procedure.step3": "<strong>3. Surgical Procedure:</strong> The dentist or surgeon performs the treatment with precision.",
+        "surgery.procedure.step4": "<strong>4. Recovery Monitoring:</strong> After the procedure, patients are observed until stable.",
+        "surgery.procedure.step5": "<strong>5. Aftercare & Healing:</strong> Detailed instructions for healing and follow-ups are provided.",
+
+        "surgery.sales_title": "Why Choose Our Oral Surgery?",
+        "surgery.sales.tip1": "Experienced surgeons and specialists",
+        "surgery.sales.tip2": "Modern anesthesia and pain management",
+        "surgery.sales.tip3": "Safe, sterile surgical environment",
+        "surgery.sales.tip4": "Comprehensive aftercare support",
+        "surgery.sales.tip5": "Successful track record of patient recovery",
+
+        "faq.title": "Frequently Asked Questions",
+        "faq.q1": "Is oral surgery painful?",
+        "faq.a1": "With modern anesthesia, most procedures are comfortable and virtually painless.",
+        "faq.q2": "How long is recovery time?",
+        "faq.a2": "Most patients recover in a few days, but complex surgeries may require longer healing.",
+        "faq.q3": "Can I go home the same day?",
+        "faq.a3": "Yes, most oral surgeries are outpatient procedures with same-day discharge.",
+        "faq.q4": "What should I eat after surgery?",
+        "faq.a4": "Soft foods like yogurt, soups, and smoothies are recommended for the first few days.",
+
+        "cta.title": "Book Your Free Consultation Today!",
+        "cta.text": "Let us restore your smile with the most advanced dental implant solutions.",
+        "cta.button": "Reserve Now",
+
+        "contact.title": "How Can You Find Us?",
+        "contact.location": "<strong>Location:</strong> Rruga Him Kolli, Tirana, Albania",
+        "contact.phone": "<strong>Phone:</strong> +355 69 204 0130",
+        "book": "Book Appointment",
+
+        "questions.title": "Questions about your treatment?",
+        "questions.text": "Feel free to email us or book an appointment now.",
+        "questions.btn.message": "Message Us",
+        "questions.btn.book": "Book Now",
+
+        "footer.quicklinks.title": "Quick Links",
+        "footer.quicklinks.services": "Services",
+        "footer.quicklinks.pricing": "Pricing",
+        "footer.quicklinks.team": "Team",
+        "footer.disclaimer.title": "Disclaimer",
+        "footer.disclaimer.text": "This website provides general dental information. Information taken from this site is not a substitute for professional dental advice. Always consult your dentist before treatment.",
+        "footer.contact.title": "Contact",
+        "footer.contact.text": "Rruga Him Kolli, Tirana<br>Phone: +355 69 204 0130<br>Email: orientdental7@gmail.com",
+        "footer.copyright": "© 2025 Orient Dental Clinic. All Rights Reserved."
+      },
+
+      it: {
+        "search.placeholder": "Cerca...",
+
+        "nav.about": "Chi Siamo",
+        "nav.reviews": "Recensioni",
+        "nav.services": "Trattamenti",
+        "nav.pricing": "Prezzi",
+        "nav.team": "Team",
+        "nav.contact": "Contatti",
+        "nav.appointment": "Prenota una Visita",
+
+        "surgery.title": "Chirurgia orale – salute e comfort a lungo termine",
+        "surgery.intro": "La chirurgia orale comprende un’ampia gamma di interventi, dalle semplici estrazioni dei denti ai trattamenti chirurgici più complessi, per garantire la salute della bocca e il tuo comfort nel tempo.",
+
+        "surgery.types_title": "Interventi di chirurgia orale più comuni",
+        "surgery.types.extractions": "Estrazioni dentarie – comprese le rimozioni dei denti del giudizio",
+        "surgery.types.implants": "Impianti dentali – inserimento chirurgico di radici in titanio",
+        "surgery.types.gum": "Chirurgia gengivale – per il trattamento della malattia parodontale",
+        "surgery.types.bone": "Rigenerazione / innesto osseo – ricostruzione dell’osso mascellare per gli impianti",
+        "surgery.types.biopsies": "Biopsie orali – prelievo di tessuto a scopo diagnostico",
+
+        "surgery.procedure_title": "Come si svolge un intervento di chirurgia orale",
+        "surgery.procedure.step1": "<strong>1. Visita e radiografie:</strong> radiografie e/o TAC ci aiutano a pianificare l’intervento in sicurezza.",
+        "surgery.procedure.step2": "<strong>2. Anestesia:</strong> viene effettuata anestesia locale o generale per garantirti il massimo comfort.",
+        "surgery.procedure.step3": "<strong>3. Intervento chirurgico:</strong> il dentista o il chirurgo esegue la procedura con la massima precisione.",
+        "surgery.procedure.step4": "<strong>4. Controllo post-operatorio:</strong> dopo l’intervento il paziente viene monitorato finché è stabile.",
+        "surgery.procedure.step5": "<strong>5. Controlli e guarigione:</strong> vengono fornite istruzioni dettagliate per la guarigione e gli appuntamenti di controllo.",
+
+        "surgery.sales_title": "Perché scegliere la nostra chirurgia orale?",
+        "surgery.sales.tip1": "Chirurghi e specialisti con grande esperienza",
+        "surgery.sales.tip2": "Tecniche moderne di anestesia e gestione del dolore",
+        "surgery.sales.tip3": "Ambiente chirurgico sicuro e sterile",
+        "surgery.sales.tip4": "Assistenza completa nel post-operatorio",
+        "surgery.sales.tip5": "Alto tasso di successo e recupero dei pazienti",
+
+        "faq.title": "Domande frequenti",
+        "faq.q1": "La chirurgia orale è dolorosa?",
+        "faq.a1": "Grazie alle moderne tecniche di anestesia, la maggior parte degli interventi è confortevole e quasi indolore.",
+        "faq.q2": "Quanto dura il recupero?",
+        "faq.a2": "La maggior parte dei pazienti guarisce in pochi giorni, ma per interventi più complessi può essere necessario un tempo di guarigione più lungo.",
+        "faq.q3": "Posso tornare a casa lo stesso giorno?",
+        "faq.a3": "Sì, la maggior parte degli interventi di chirurgia orale è in regime ambulatoriale con dimissione in giornata.",
+        "faq.q4": "Cosa posso mangiare dopo l’intervento?",
+        "faq.a4": "Per i primi giorni sono consigliati cibi morbidi come yogurt, zuppe e frullati.",
+
+        "cta.title": "Prenota oggi la tua consulenza gratuita!",
+        "cta.text": "Lascia che ti restituiamo il sorriso con le soluzioni di chirurgia orale più avanzate.",
+        "cta.button": "Prenota ora",
+
+        "contact.title": "Come puoi trovarci?",
+        "contact.location": "<strong>Indirizzo:</strong> Rruga Him Kolli, Tirana, Albania",
+        "contact.phone": "<strong>Telefono:</strong> +355 69 204 0130",
+        "book": "Prenota una Visita",
+
+        "questions.title": "Domande sul tuo trattamento?",
+        "questions.text": "Scrivici via e-mail oppure prenota subito una visita.",
+        "questions.btn.message": "Scrivici",
+        "questions.btn.book": "Prenota ora",
+
+        "footer.quicklinks.title": "Link rapidi",
+        "footer.quicklinks.services": "Trattamenti",
+        "footer.quicklinks.pricing": "Prezzi",
+        "footer.quicklinks.team": "Team",
+        "footer.disclaimer.title": "Disclaimer",
+        "footer.disclaimer.text": "Questo sito fornisce informazioni odontoiatriche generali. Le informazioni presenti non sostituiscono in alcun modo il parere del dentista. Prima di intraprendere o modificare qualsiasi cura, consulta sempre il tuo odontoiatra.",
+        "footer.contact.title": "Contatti",
+        "footer.contact.text": "Rruga Him Kolli, Tirana<br>Telefono: +355 69 204 0130<br>Email: orientdental7@gmail.com",
+        "footer.copyright": "© 2025 Orient Dental Clinic. Tutti i diritti riservati."
+      }
+    };
+
+    function applyTranslations(lang) {
+      const elements = document.querySelectorAll("[data-i18n]");
+      elements.forEach(el => {
+        const key = el.dataset.i18n;
+        const value = translations[lang] && translations[lang][key];
+        if (value) {
+          el.innerHTML = value;
+        }
+      });
+
+      const searchInput = document.getElementById("searchInput");
+      if (searchInput && translations[lang] && translations[lang]["search.placeholder"]) {
+        searchInput.setAttribute("placeholder", translations[lang]["search.placeholder"]);
+      }
+
+      document.documentElement.lang = lang;
+    }
+
+    document.addEventListener("DOMContentLoaded", function() {
+      const select = document.getElementById("language");
+      const savedLang = localStorage.getItem("siteLanguage") || "it";
+      const initialLang = (savedLang === "en" || savedLang === "it") ? savedLang : "it";
+
+      if (select) {
+        select.value = initialLang;
+      }
+      applyTranslations(initialLang);
+
+      if (select) {
+        select.addEventListener("change", function() {
+          const lang = select.value;
+          // Only EN/IT have translations defined here; others default to EN
+          const effectiveLang = (lang === "it" || lang === "en") ? lang : "en";
+          localStorage.setItem("siteLanguage", effectiveLang);
+          applyTranslations(effectiveLang);
+        });
+      }
+    });
+  })();
+</script>
+
 </body>
 </html>
