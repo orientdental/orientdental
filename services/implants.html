@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,8 +8,7 @@
   <script defer src="../script.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <link rel="icon" type="image/png" href="../images/logoqr1.png">
-    <style>
-
+  <style>
     /* === Section Styles === */
     .section { padding: 44px 20px; position: relative; }
     .section.beige { background: #fdf7f1; }
@@ -41,6 +40,10 @@
       top: 0;
       color: #b28756;
       font-size: 0.9rem;
+    }
+
+    .step-text strong {
+      color: #b28756;
     }
 
     /* === Alternating Steps Layout === */
@@ -111,7 +114,7 @@
     <a href="#"><i class="fab fa-instagram"></i></a>
   </div>
   <div class="search-container">
-    <input type="text" id="searchInput" placeholder="Search..." />
+    <input type="text" id="searchInput" placeholder="Cerca..." />
   </div>
   <div class="language-select">
     <select id="language">
@@ -127,33 +130,35 @@
   <div class="nav-content">
     <div class="logo">
       <a href="../index.html">
-        <img src="../images/logodent.png" alt="Orient Dental Logo" />
+        <img src="../images/logodent.png" alt="Logo Orient Dental" />
       </a>
     </div>
     <div class="hamburger" onclick="toggleMobileNav()">
       <i class="fas fa-bars"></i>
     </div>
     <ul class="nav-links" id="navLinks">
-      <li><a href="../pages/aboutus.html">About Us</a></li>
-      <li><a href="../pages/testimonials.html">Reviews</a></li>
-      <li><a href="../pages/treatments.html">Services</a></li>
-      <li><a href="../pages/pricing.html">Pricing</a></li>
-      <li><a href="../pages/team.html">Team</a></li>
-      <li><a href="../pages/contacts.html">Contact</a></li>
+      <li><a href="../pages/aboutus.html" data-i18n="nav.about">Chi Siamo</a></li>
+      <li><a href="../pages/testimonials.html" data-i18n="nav.reviews">Recensioni</a></li>
+      <li><a href="../pages/treatments.html" data-i18n="nav.services">Trattamenti</a></li>
+      <li><a href="../pages/pricing.html" data-i18n="nav.pricing">Prezzi</a></li>
+      <li><a href="../pages/team.html" data-i18n="nav.team">Team</a></li>
+      <li><a href="../pages/contacts.html" data-i18n="nav.contact">Contatti</a></li>
     </ul>
-    <a class="appointment-btn" href="../pages/contacts.html#contact-form">Book Appointment</a>
+    <a class="appointment-btn" href="../pages/contacts.html#contact-form" data-i18n="nav.appointment">Prenota una Visita</a>
   </div>
 </nav>
 
 <!-- Service Overview -->
 <section class="section beige">
   <div class="container narrow">
-    <h2 class="section-title">Missing a Tooth is not the end, it's the Start of a New Smile!</h2>
-    <p class="intro-text">
-      Dental implants are the ideal solution for replacing missing teeth — providing long-lasting, natural results while protecting your oral health.
+    <h2 class="section-title" data-i18n="implants.hero.title">
+      Perdere un dente non è la fine, ma l’inizio di un nuovo sorriso!
+    </h2>
+    <p class="intro-text" data-i18n="implants.hero.intro">
+      Gli impianti dentali sono la soluzione ideale per sostituire i denti mancanti: garantiscono risultati duraturi e naturali, proteggendo la salute della tua bocca.
     </p>
     <div class="image-center">
-      <img src="../images/dental-implants.png" alt="Dental Implant" class="service-image" />
+      <img src="../images/dental-implants.png" alt="Impianto dentale" class="service-image" />
     </div>  
   </div>
 </section>
@@ -168,12 +173,12 @@
 <!-- Why Implants -->
 <section class="section">
   <div class="container narrow">
-    <h2 class="section-title">Why Choose Dental Implants?</h2>
+    <h2 class="section-title" data-i18n="implants.why.title">Perché scegliere gli impianti dentali?</h2>
     <ul class="checklist">
-      <li>Permanent and long-lasting solution</li>
-      <li>Helps preserve jawbone structure</li>
-      <li>Improved chewing function and aesthetics</li>
-      <li>No damage to neighboring teeth (unlike traditional bridges)</li>
+      <li data-i18n="implants.why.li1">Soluzione fissa e a lungo termine</li>
+      <li data-i18n="implants.why.li2">Aiutano a preservare il volume e la struttura dell’osso mascellare</li>
+      <li data-i18n="implants.why.li3">Masticazione e estetica nettamente migliorate</li>
+      <li data-i18n="implants.why.li4">Nessun danno ai denti vicini (a differenza dei ponti tradizionali)</li>
     </ul>
   </div>
 </section>
@@ -188,34 +193,42 @@
 <!-- Procedure Steps -->
 <section class="section beige">
   <div class="container narrow">
-    <h2 class="section-title">How the Implant Procedure Works</h2>
+    <h2 class="section-title" data-i18n="implants.procedure_title">Come funziona la procedura implantare</h2>
     <div class="procedure-steps">
       <div class="procedure-step">
-        <div class="step-text"><strong>Initial consultation:</strong> Detailed assessment by doctors with 30+ years of experience</div>
+        <div class="step-text" data-i18n="implants.procedure.step1">
+          <strong>Prima visita e consulenza:</strong> valutazione dettagliata da parte di medici con oltre 30 anni di esperienza.
+        </div>
         <div class="step-image">
           <span class="step-number">1</span>
-          <img src="../images/implantimg1.jpeg" alt="Step 1 - Initial evaluation">
+          <img src="../images/implantimg1.jpeg" alt="Fase 1 - Valutazione iniziale">
         </div>
       </div>
       <div class="procedure-step">
-        <div class="step-text"><strong>Implant placement:</strong> Precise, painless, and with maximum comfort</div>
+        <div class="step-text" data-i18n="implants.procedure.step2">
+          <strong>Inserimento dell’impianto:</strong> intervento preciso, indolore e con il massimo comfort.
+        </div>
         <div class="step-image">
           <span class="step-number">2</span>
-          <img src="../images/implantimg2.jpeg" alt="Step 2 - Implant placement">
+          <img src="../images/implantimg2.jpeg" alt="Fase 2 - Inserimento dell’impianto">
         </div>
       </div>
       <div class="procedure-step">
-        <div class="step-text"><strong>Healing & osseointegration:</strong> 3–6 months for the implant to fuse with bone</div>
+        <div class="step-text" data-i18n="implants.procedure.step3">
+          <strong>Guarigione e osteointegrazione:</strong> 3–6 mesi per permettere all’impianto di integrarsi con l’osso.
+        </div>
         <div class="step-image">
           <span class="step-number">3</span>
-          <img src="../images/implantimg3.jpeg" alt="Step 3 - Healing / osseointegration">
+          <img src="../images/implantimg3.jpeg" alt="Fase 3 - Guarigione / osteointegrazione">
         </div>
       </div>
       <div class="procedure-step">
-        <div class="step-text"><strong>Final restoration:</strong> Abutment and permanent crown placement</div>
+        <div class="step-text" data-i18n="implants.procedure.step4">
+          <strong>Restauro finale:</strong> applicazione dell’abutment e della corona definitiva.
+        </div>
         <div class="step-image">
           <span class="step-number">4</span>
-          <img src="../images/implantimg4.jpeg" alt="Step 4 - Abutment & final crown">
+          <img src="../images/implantimg4.jpeg" alt="Fase 4 - Abutment e corona finale">
         </div>
       </div>
     </div>
@@ -232,12 +245,12 @@
 <!-- Why Trust Us -->
 <section class="section">
   <div class="container narrow">
-    <h2 class="section-title">Why Trust Us With Your Smile?</h2>
+    <h2 class="section-title" data-i18n="implants.trust.title">Perché fidarti di noi per il tuo sorriso?</h2>
     <ul class="checklist">
-      <li>30+ years of implantology experience</li>
-      <li>Certified Italian implants</li>
-      <li>Competitive, transparent pricing from the start</li>
-      <li>Modern technology & top-tier dental labs in Tirana</li>
+      <li data-i18n="implants.trust.li1">Oltre 30 anni di esperienza in implantologia</li>
+      <li data-i18n="implants.trust.li2">Impianti certificati di qualità italiana</li>
+      <li data-i18n="implants.trust.li3">Prezzi competitivi e trasparenti fin dall’inizio</li>
+      <li data-i18n="implants.trust.li4">Tecnologia moderna e laboratori odontotecnici di alto livello a Tirana</li>
     </ul>
   </div>
 </section>
@@ -252,18 +265,22 @@
 <!-- FAQ -->
 <section class="section beige">
   <div class="container narrow">
-    <h2 class="section-title">Frequently Asked Questions</h2>
+    <h2 class="section-title" data-i18n="implants.faq.title">Domande frequenti</h2>
     <div class="faq">
-      <h3>Is there an age limit?</h3>
-      <p>No — even patients over 70 can receive implants if their bone structure is healthy.</p>
-      <h3>Is the procedure painful?</h3>
-      <p>No! With modern local anesthesia and our expertise, you will not feel pain during placement.</p>
-      <h3>How long does it take?</h3>
-      <p>The placement of a single implant can be done in under 20 minutes. Healing takes 3–6 months.</p>
-      <h3>Are there contraindications?</h3>
-      <p>Patients with uncontrolled diabetes or severe bone issues should undergo further evaluation first.</p>
-      <h3>How long does an implant last?</h3>
-      <p>With proper care, a dental implant can last 20 years or more.</p>
+      <h3 data-i18n="implants.faq.q1">Esiste un limite di età?</h3>
+      <p data-i18n="implants.faq.a1">No — anche i pazienti oltre i 70 anni possono ricevere impianti, se la struttura ossea è sana.</p>
+
+      <h3 data-i18n="implants.faq.q2">La procedura è dolorosa?</h3>
+      <p data-i18n="implants.faq.a2">No! Con l’anestesia locale moderna e la nostra esperienza, non sentirai dolore durante l’inserimento.</p>
+
+      <h3 data-i18n="implants.faq.q3">Quanto tempo richiede?</h3>
+      <p data-i18n="implants.faq.a3">L’inserimento di un singolo impianto può richiedere meno di 20 minuti. La guarigione dura dai 3 ai 6 mesi.</p>
+
+      <h3 data-i18n="implants.faq.q4">Ci sono controindicazioni?</h3>
+      <p data-i18n="implants.faq.a4">I pazienti con diabete non controllato o gravi problemi ossei devono prima effettuare valutazioni aggiuntive.</p>
+
+      <h3 data-i18n="implants.faq.q5">Quanto dura un impianto?</h3>
+      <p data-i18n="implants.faq.a5">Con una corretta igiene e controlli regolari, un impianto dentale può durare 20 anni o più.</p>
     </div>
   </div>
 </section>
@@ -271,24 +288,24 @@
 <!-- Call to Action -->
 <section class="cta-section fade-in">
   <div class="container narrow center">
-    <h2 class="section-title" style="color: #fff; margin-bottom: 10px;">Book Your Free Consultation Today!</h2>
-    <p style="color: #fff; margin-bottom: 14px;">Let us restore your smile with the most advanced dental implant solutions.</p>
-    <a href="../pages/contacts.html" class="btn primary">Reserve Now</a>
+    <h2 class="section-title" style="color: #fff; margin-bottom: 10px;" data-i18n="cta.title">Prenota oggi la tua consulenza gratuita!</h2>
+    <p style="color: #fff; margin-bottom: 14px;" data-i18n="cta.text">Lascia che ti restituiamo il sorriso con le soluzioni di impianti dentali più avanzate.</p>
+    <a href="../pages/contacts.html" class="btn primary" data-i18n="cta.button">Prenota ora</a>
   </div>
 </section>
 
 <!-- Contact -->
 <section class="section contact fade-in" id="contact">
   <div class="container narrow">
-    <h2 class="section-title">How Can You Find Us?</h2>
-    <p><strong>Location:</strong> Rruga Him Kolli, Tirana, Albania</p>
-    <p><strong>Phone:</strong> +355 69 204 0130</p>
+    <h2 class="section-title" data-i18n="contact.title">Come puoi trovarci?</h2>
+    <p data-i18n="contact.location"><strong>Indirizzo:</strong> Rruga Him Kolli, Tirana, Albania</p>
+    <p data-i18n="contact.phone"><strong>Telefono:</strong> +355 69 204 0130</p>
     <iframe
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2990.7989040537996!2d19.81485331542124!3d41.326120607642846!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x13503172e8cab76f%3A0x704934284304e7f0!2sMeto%20Dent!5e0!3m2!1sen!2s!4v1721670000000!5m2!1sen!2s"
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3037.459722081942!2d19.8090!3d41.3256!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x135031002bdab639%3A0x9553264d253b605c!2sOrient%20Dental%20Clinic!5e0!3m2!1sen!2s!4v1732100000000"
       width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-  <div class="hero-buttons">
-    <a href="pages/contacts.html#contact-form" class="btn primary" data-i18n="book">Book Appointment</a>
-  </div>
+    <div class="hero-buttons">
+      <a href="pages/contacts.html#contact-form" class="btn primary" data-i18n="book">Prenota una Visita</a>
+    </div>
   </div>
 </section>
 
@@ -302,11 +319,11 @@
 <!-- Questions Section -->
 <section class="section beige fade-in">
   <div class="container narrow">
-    <h2 class="section-title">Questions about your treatment?</h2>
-    <p>Feel free to email us or book an appointment now.</p>
+    <h2 class="section-title" data-i18n="questions.title">Domande sul tuo trattamento?</h2>
+    <p data-i18n="questions.text">Scrivici via e-mail oppure prenota subito una visita.</p>
     <div class="hero-buttons" style="margin-top: 20px;">
-      <a href="mailto:orientdental7@gmail.com" class="btn secondary">Message Us</a>
-      <a href="../pages/contacts.html#contact-form" class="btn primary">Book Now</a>
+      <a href="mailto:orientdental7@gmail.com" class="btn secondary" data-i18n="questions.btn.message">Scrivici</a>
+      <a href="../pages/contacts.html#contact-form" class="btn primary" data-i18n="questions.btn.book">Prenota ora</a>
     </div>
   </div>
 </section>
@@ -315,20 +332,24 @@
 <footer class="footer fade-in">
   <div class="footer-grid">
     <div>
-      <h4>Quick Links</h4>
+      <h4 data-i18n="footer.quicklinks.title">Link rapidi</h4>
       <ul>
-        <li><a href="../pages/treatments.html">Services</a></li>
-        <li><a href="../pages/pricing.html">Pricing</a></li>
-        <li><a href="../pages/team.html">Team</a></li>
+        <li><a href="../pages/treatments.html" data-i18n="footer.quicklinks.services">Trattamenti</a></li>
+        <li><a href="../pages/pricing.html" data-i18n="footer.quicklinks.pricing">Prezzi</a></li>
+        <li><a href="../pages/team.html" data-i18n="footer.quicklinks.team">Team</a></li>
       </ul>
     </div>
     <div>
-      <h4>Disclaimer</h4>
-      <p>This website provides general dental information. Information taken from this site is not a substitute for professional dental advice. Always consult your dentist before treatment.</p>
+      <h4 data-i18n="footer.disclaimer.title">Disclaimer</h4>
+      <p data-i18n="footer.disclaimer.text">
+        Questo sito fornisce informazioni odontoiatriche generali. Le informazioni presenti non sostituiscono in alcun modo il parere del dentista. Prima di intraprendere o modificare qualsiasi cura, consulta sempre il tuo odontoiatra.
+      </p>
     </div>
     <div class="contactfootercontent">
-      <h4>Contact</h4>
-      <p>Rruga Him Kolli, Tirana<br>Phone: +355 69 204 0130<br>Email: orientdental7@gmail.com</p>
+      <h4 data-i18n="footer.contact.title">Contatti</h4>
+      <p data-i18n="footer.contact.text">
+        Rruga Him Kolli, Tirana<br>Telefono: +355 69 204 0130<br>Email: orientdental7@gmail.com
+      </p>
       <div class="social-icons">
         <a href="#"><i class="fab fa-facebook-f"></i></a>
         <a href="#"><i class="fab fa-instagram"></i></a>
@@ -336,11 +357,195 @@
       </div>
     </div>
   </div>
-  <div class="copyright">
-    © 2025 Orient Dental Clinic. All Rights Reserved.
+  <div class="copyright" data-i18n="footer.copyright">
+    © 2025 Orient Dental Clinic. Tutti i diritti riservati.
   </div>
 </footer>
 
 <button id="scrollToTopBtn"><i class="fas fa-chevron-up"></i></button>
+
+<!-- Inline language JS -->
+<script>
+  (function() {
+    const translations = {
+      en: {
+        "search.placeholder": "Search...",
+
+        "nav.about": "About Us",
+        "nav.reviews": "Reviews",
+        "nav.services": "Services",
+        "nav.pricing": "Pricing",
+        "nav.team": "Team",
+        "nav.contact": "Contact",
+        "nav.appointment": "Book Appointment",
+
+        "implants.hero.title": "Missing a Tooth is not the end, it's the Start of a New Smile!",
+        "implants.hero.intro": "Dental implants are the ideal solution for replacing missing teeth — providing long-lasting, natural results while protecting your oral health.",
+
+        "implants.why.title": "Why Choose Dental Implants?",
+        "implants.why.li1": "Permanent and long-lasting solution",
+        "implants.why.li2": "Helps preserve jawbone structure",
+        "implants.why.li3": "Improved chewing function and aesthetics",
+        "implants.why.li4": "No damage to neighboring teeth (unlike traditional bridges)",
+
+        "implants.procedure_title": "How the Implant Procedure Works",
+        "implants.procedure.step1": "<strong>Initial consultation:</strong> Detailed assessment by doctors with 30+ years of experience",
+        "implants.procedure.step2": "<strong>Implant placement:</strong> Precise, painless, and with maximum comfort",
+        "implants.procedure.step3": "<strong>Healing & osseointegration:</strong> 3–6 months for the implant to fuse with bone",
+        "implants.procedure.step4": "<strong>Final restoration:</strong> Abutment and permanent crown placement",
+
+        "implants.trust.title": "Why Trust Us With Your Smile?",
+        "implants.trust.li1": "30+ years of implantology experience",
+        "implants.trust.li2": "Certified Italian implants",
+        "implants.trust.li3": "Competitive, transparent pricing from the start",
+        "implants.trust.li4": "Modern technology & top-tier dental labs in Tirana",
+
+        "implants.faq.title": "Frequently Asked Questions",
+        "implants.faq.q1": "Is there an age limit?",
+        "implants.faq.a1": "No — even patients over 70 can receive implants if their bone structure is healthy.",
+        "implants.faq.q2": "Is the procedure painful?",
+        "implants.faq.a2": "No! With modern local anesthesia and our expertise, you will not feel pain during placement.",
+        "implants.faq.q3": "How long does it take?",
+        "implants.faq.a3": "The placement of a single implant can be done in under 20 minutes. Healing takes 3–6 months.",
+        "implants.faq.q4": "Are there contraindications?",
+        "implants.faq.a4": "Patients with uncontrolled diabetes or severe bone issues should undergo further evaluation first.",
+        "implants.faq.q5": "How long does an implant last?",
+        "implants.faq.a5": "With proper care, a dental implant can last 20 years or more.",
+
+        "cta.title": "Book Your Free Consultation Today!",
+        "cta.text": "Let us restore your smile with the most advanced dental implant solutions.",
+        "cta.button": "Reserve Now",
+
+        "contact.title": "How Can You Find Us?",
+        "contact.location": "<strong>Location:</strong> Rruga Him Kolli, Tirana, Albania",
+        "contact.phone": "<strong>Phone:</strong> +355 69 204 0130",
+        "book": "Book Appointment",
+
+        "questions.title": "Questions about your treatment?",
+        "questions.text": "Feel free to email us or book an appointment now.",
+        "questions.btn.message": "Message Us",
+        "questions.btn.book": "Book Now",
+
+        "footer.quicklinks.title": "Quick Links",
+        "footer.quicklinks.services": "Services",
+        "footer.quicklinks.pricing": "Pricing",
+        "footer.quicklinks.team": "Team",
+        "footer.disclaimer.title": "Disclaimer",
+        "footer.disclaimer.text": "This website provides general dental information. Information taken from this site is not a substitute for professional dental advice. Always consult your dentist before treatment.",
+        "footer.contact.title": "Contact",
+        "footer.contact.text": "Rruga Him Kolli, Tirana<br>Phone: +355 69 204 0130<br>Email: orientdental7@gmail.com",
+        "footer.copyright": "© 2025 Orient Dental Clinic. All Rights Reserved."
+      },
+
+      it: {
+        "search.placeholder": "Cerca...",
+
+        "nav.about": "Chi Siamo",
+        "nav.reviews": "Recensioni",
+        "nav.services": "Trattamenti",
+        "nav.pricing": "Prezzi",
+        "nav.team": "Team",
+        "nav.contact": "Contatti",
+        "nav.appointment": "Prenota una Visita",
+
+        "implants.hero.title": "Perdere un dente non è la fine, ma l’inizio di un nuovo sorriso!",
+        "implants.hero.intro": "Gli impianti dentali sono la soluzione ideale per sostituire i denti mancanti: garantiscono risultati duraturi e naturali, proteggendo la salute della tua bocca.",
+
+        "implants.why.title": "Perché scegliere gli impianti dentali?",
+        "implants.why.li1": "Soluzione fissa e a lungo termine",
+        "implants.why.li2": "Aiutano a preservare il volume e la struttura dell’osso mascellare",
+        "implants.why.li3": "Masticazione e estetica nettamente migliorate",
+        "implants.why.li4": "Nessun danno ai denti vicini (a differenza dei ponti tradizionali)",
+
+        "implants.procedure_title": "Come funziona la procedura implantare",
+        "implants.procedure.step1": "<strong>Prima visita e consulenza:</strong> valutazione dettagliata da parte di medici con oltre 30 anni di esperienza.",
+        "implants.procedure.step2": "<strong>Inserimento dell’impianto:</strong> intervento preciso, indolore e con il massimo comfort.",
+        "implants.procedure.step3": "<strong>Guarigione e osteointegrazione:</strong> 3–6 mesi per permettere all’impianto di integrarsi con l’osso.",
+        "implants.procedure.step4": "<strong>Restauro finale:</strong> applicazione dell’abutment e della corona definitiva.",
+
+        "implants.trust.title": "Perché fidarti di noi per il tuo sorriso?",
+        "implants.trust.li1": "Oltre 30 anni di esperienza in implantologia",
+        "implants.trust.li2": "Impianti certificati di qualità italiana",
+        "implants.trust.li3": "Prezzi competitivi e trasparenti fin dall’inizio",
+        "implants.trust.li4": "Tecnologia moderna e laboratori odontotecnici di alto livello a Tirana",
+
+        "implants.faq.title": "Domande frequenti",
+        "implants.faq.q1": "Esiste un limite di età?",
+        "implants.faq.a1": "No — anche i pazienti oltre i 70 anni possono ricevere impianti, se la struttura ossea è sana.",
+        "implants.faq.q2": "La procedura è dolorosa?",
+        "implants.faq.a2": "No! Con l’anestesia locale moderna e la nostra esperienza, non sentirai dolore durante l’inserimento.",
+        "implants.faq.q3": "Quanto tempo richiede?",
+        "implants.faq.a3": "L’inserimento di un singolo impianto può richiedere meno di 20 minuti. La guarigione dura dai 3 ai 6 mesi.",
+        "implants.faq.q4": "Ci sono controindicazioni?",
+        "implants.faq.a4": "I pazienti con diabete non controllato o gravi problemi ossei devono prima effettuare valutazioni aggiuntive.",
+        "implants.faq.q5": "Quanto dura un impianto?",
+        "implants.faq.a5": "Con una corretta igiene e controlli regolari, un impianto dentale può durare 20 anni o più.",
+
+        "cta.title": "Prenota oggi la tua consulenza gratuita!",
+        "cta.text": "Lascia che ti restituiamo il sorriso con le soluzioni di impianti dentali più avanzate.",
+        "cta.button": "Prenota ora",
+
+        "contact.title": "Come puoi trovarci?",
+        "contact.location": "<strong>Indirizzo:</strong> Rruga Him Kolli, Tirana, Albania",
+        "contact.phone": "<strong>Telefono:</strong> +355 69 204 0130",
+        "book": "Prenota una Visita",
+
+        "questions.title": "Domande sul tuo trattamento?",
+        "questions.text": "Scrivici via e-mail oppure prenota subito una visita.",
+        "questions.btn.message": "Scrivici",
+        "questions.btn.book": "Prenota ora",
+
+        "footer.quicklinks.title": "Link rapidi",
+        "footer.quicklinks.services": "Trattamenti",
+        "footer.quicklinks.pricing": "Prezzi",
+        "footer.quicklinks.team": "Team",
+        "footer.disclaimer.title": "Disclaimer",
+        "footer.disclaimer.text": "Questo sito fornisce informazioni odontoiatriche generali. Le informazioni presenti non sostituiscono in alcun modo il parere del dentista. Prima di intraprendere o modificare qualsiasi cura, consulta sempre il tuo odontoiatra.",
+        "footer.contact.title": "Contatti",
+        "footer.contact.text": "Rruga Him Kolli, Tirana<br>Telefono: +355 69 204 0130<br>Email: orientdental7@gmail.com",
+        "footer.copyright": "© 2025 Orient Dental Clinic. Tutti i diritti riservati."
+      }
+    };
+
+    function applyTranslations(lang) {
+      const elements = document.querySelectorAll("[data-i18n]");
+      elements.forEach(el => {
+        const key = el.dataset.i18n;
+        const value = translations[lang] && translations[lang][key];
+        if (value) {
+          el.innerHTML = value;
+        }
+      });
+
+      const searchInput = document.getElementById("searchInput");
+      if (searchInput && translations[lang] && translations[lang]["search.placeholder"]) {
+        searchInput.setAttribute("placeholder", translations[lang]["search.placeholder"]);
+      }
+
+      document.documentElement.lang = lang;
+    }
+
+    document.addEventListener("DOMContentLoaded", function() {
+      const select = document.getElementById("language");
+      const savedLang = localStorage.getItem("siteLanguage") || "it";
+      const initialLang = (savedLang === "en" || savedLang === "it") ? savedLang : "it";
+
+      if (select) {
+        select.value = initialLang;
+      }
+      applyTranslations(initialLang);
+
+      if (select) {
+        select.addEventListener("change", function() {
+          const lang = select.value;
+          const effectiveLang = (lang === "it" || lang === "en") ? lang : "en";
+          localStorage.setItem("siteLanguage", effectiveLang);
+          applyTranslations(effectiveLang);
+        });
+      }
+    });
+  })();
+</script>
+
 </body>
 </html>
