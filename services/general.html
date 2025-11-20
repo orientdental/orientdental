@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,8 +8,7 @@
   <script defer src="../script.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <link rel="icon" type="image/png" href="../images/logoqr1.png">
-    <style>
-
+  <style>
     /* === Section Styles === */
     .section { padding: 44px 20px; position: relative; }
     .section.beige { background: #fdf7f1; }
@@ -111,7 +110,7 @@
     <a href="#"><i class="fab fa-instagram"></i></a>
   </div>
   <div class="search-container">
-    <input type="text" id="searchInput" placeholder="Search..." />
+    <input type="text" id="searchInput" placeholder="Cerca..." />
   </div>
   <div class="language-select">
     <select id="language">
@@ -127,21 +126,21 @@
   <div class="nav-content">
     <div class="logo">
       <a href="../index.html">
-        <img src="../images/logodent.png" alt="Orient Dental Logo" />
+        <img src="../images/logodent.png" alt="Logo Orient Dental" />
       </a>
     </div>
     <div class="hamburger" onclick="toggleMobileNav()">
       <i class="fas fa-bars"></i>
     </div>
     <ul class="nav-links" id="navLinks">
-      <li><a href="../pages/aboutus.html">About Us</a></li>
-      <li><a href="../pages/testimonials.html">Reviews</a></li>
-      <li><a href="../pages/treatments.html">Services</a></li>
-      <li><a href="../pages/pricing.html">Pricing</a></li>
-      <li><a href="../pages/team.html">Team</a></li>
-      <li><a href="../pages/contacts.html">Contact</a></li>
+      <li><a href="../pages/aboutus.html" data-i18n="nav.about">Chi Siamo</a></li>
+      <li><a href="../pages/testimonials.html" data-i18n="nav.reviews">Recensioni</a></li>
+      <li><a href="../pages/treatments.html" data-i18n="nav.services">Trattamenti</a></li>
+      <li><a href="../pages/pricing.html" data-i18n="nav.pricing">Prezzi</a></li>
+      <li><a href="../pages/team.html" data-i18n="nav.team">Team</a></li>
+      <li><a href="../pages/contacts.html" data-i18n="nav.contact">Contatti</a></li>
     </ul>
-    <a class="appointment-btn" href="../pages/contacts.html#contact-form">Book Appointment</a>
+    <a class="appointment-btn" href="../pages/contacts.html#contact-form" data-i18n="nav.appointment">Prenota una Visita</a>
   </div>
 </nav>
 
@@ -149,13 +148,13 @@
 <section class="section beige">
   <div class="container narrow">
     <h2 class="section-title" data-i18n="general.title">
-      Healthy smiles start with prevention, precision, and care, general dentistry makes confidence possible.
+      Al centro di ogni sorriso sano c'è prevenzione, precisione e cura del paziente — l'odontoiatria generale è dove iniziano i sorrisi sicuri.
     </h2>
     <p class="intro-text" data-i18n="general.intro">
-      General dentistry focuses on the prevention, diagnosis, and treatment of common dental problems. It forms the foundation of overall oral health, addressing everything from cavities and gum disease to emergency care.
+      L'odontoiatria generale si concentra sulla prevenzione, diagnosi e trattamento dei problemi dentali comuni. Forma la base della salute orale, trattando tutto dalle carie alle malattie gengivali e cure di emergenza.
     </p>
     <div class="image-center">
-      <img src="../images/composite-fillings.jpg" alt="General Dentistry" class="service-image" />
+      <img src="../images/composite-fillings.jpg" alt="Odontoiatria generale" class="service-image" />
     </div>  
   </div>
 </section>
@@ -170,13 +169,13 @@
 <!-- Why General Dentistry -->
 <section class="section">
   <div class="container narrow">
-    <h2 class="section-title" data-i18n="general.why_title">Common Treatments</h2>
+    <h2 class="section-title" data-i18n="general.why_title">Trattamenti comuni</h2>
     <ul class="checklist">
-      <li data-i18n="general.treatments.fillings">Fillings (Composite or Amalgam) – For treating cavities</li>
-      <li data-i18n="general.treatments.extractions">Tooth Extractions – For severely decayed or damaged teeth</li>
-      <li data-i18n="general.treatments.root_canal">Root Canal Treatment – To save infected teeth</li>
-      <li data-i18n="general.treatments.cleaning">Dental Cleaning (Scaling & Polishing) – To prevent gum disease</li>
-      <li data-i18n="general.treatments.emergency">Emergency Dental Care – For sudden pain, broken teeth, or infections</li>
+      <li data-i18n="general.treatments.fillings">Otturazioni (composito o amalgama) – per trattare le carie</li>
+      <li data-i18n="general.treatments.extractions">Estrazioni dentali – per denti gravemente cariati o danneggiati</li>
+      <li data-i18n="general.treatments.root_canal">Trattamento canalare – per salvare denti infetti</li>
+      <li data-i18n="general.treatments.cleaning">Pulizia dentale (scaling e lucidatura) – per prevenire le malattie gengivali</li>
+      <li data-i18n="general.treatments.emergency">Cura dentale d'urgenza – per dolore improvviso, denti rotti o infezioni</li>
     </ul>
   </div>
 </section>
@@ -191,34 +190,42 @@
 <!-- Procedure Steps -->
 <section class="section beige">
   <div class="container narrow">
-    <h2 class="section-title" data-i18n="general.procedure_title">How the General Dentistry Procedure Works</h2>
+    <h2 class="section-title" data-i18n="general.procedure_title">Come funziona il trattamento di odontoiatria generale</h2>
     <div class="procedure-steps">
       <div class="procedure-step">
-        <div class="step-text" data-i18n="general.procedure.step1"><strong>Consultation & Diagnosis:</strong> Includes oral exam, X-rays, and patient history.</div>
+        <div class="step-text" data-i18n="general.procedure.step1">
+          <strong>Consulto & Diagnosi:</strong> Include esame orale, radiografie e anamnesi.
+        </div>
         <div class="step-image">
           <span class="step-number">1</span>
-          <img src="../images/implantimg1.jpeg" alt="Step 1 - Consultation & Diagnosis">
+          <img src="../images/implantimg1.jpeg" alt="Fase 1 - Consulto & Diagnosi">
         </div>
       </div>
       <div class="procedure-step">
-        <div class="step-text" data-i18n="general.procedure.step2"><strong>Treatment Plan:</strong> Dentist explains options and recommends the best approach.</div>
+        <div class="step-text" data-i18n="general.procedure.step2">
+          <strong>Piano di trattamento:</strong> Il dentista spiega le opzioni e raccomanda il miglior approccio.
+        </div>
         <div class="step-image">
           <span class="step-number">2</span>
-          <img src="../images/treatment-plan.jpg" alt="Step 2 - Treatment Plan">
+          <img src="../images/treatment-plan.jpg" alt="Fase 2 - Piano di trattamento">
         </div>
       </div>
       <div class="procedure-step">
-        <div class="step-text" data-i18n="general.procedure.step3"><strong>Procedure:</strong> Performed with anesthesia if necessary (e.g., filling, extraction).</div>
+        <div class="step-text" data-i18n="general.procedure.step3">
+          <strong>Procedura:</strong> Eseguita con anestesia se necessario (es. otturazione, estrazione).
+        </div>
         <div class="step-image">
           <span class="step-number">3</span>
-          <img src="../images/procedure.jpg" alt="Step 3 - Procedure">
+          <img src="../images/procedure.jpg" alt="Fase 3 - Procedura">
         </div>
       </div>
       <div class="procedure-step">
-        <div class="step-text" data-i18n="general.procedure.step4"><strong>Aftercare & Instructions:</strong> Patient is advised on recovery and hygiene.</div>
+        <div class="step-text" data-i18n="general.procedure.step4">
+          <strong>Cura post-trattamento & istruzioni:</strong> Il paziente riceve consigli per il recupero e l'igiene.
+        </div>
         <div class="step-image">
           <span class="step-number">4</span>
-          <img src="../images/followup.jpg" alt="Step 4 - Aftercare & Instructions">
+          <img src="../images/followup.jpg" alt="Fase 4 - Cura post-trattamento & istruzioni">
         </div>
       </div>
     </div>
@@ -235,13 +242,13 @@
 <!-- Why Trust Us -->
 <section class="section">
   <div class="container narrow">
-    <h2 class="section-title" data-i18n="general.sales_title">Why Trust Our General Dentistry?</h2>
+    <h2 class="section-title" data-i18n="general.sales_title">Perché fidarsi della nostra odontoiatria generale?</h2>
     <ul class="checklist">
-      <li data-i18n="general.sales.tip1">Emphasize pain-free treatments and advanced tools</li>
-      <li data-i18n="general.sales.tip2">Reassure patients about safety, hygiene, and anesthesia</li>
-      <li data-i18n="general.sales.tip3">Highlight early treatment benefits and cost savings</li>
-      <li data-i18n="general.sales.tip4">Offer same-day or emergency care as a unique advantage</li>
-      <li data-i18n="general.sales.tip5">Promote trust in experienced dental professionals</li>
+      <li data-i18n="general.sales.tip1">Trattamenti indolori e strumenti moderni</li>
+      <li data-i18n="general.sales.tip2">Sicurezza, igiene e anestesia garantite</li>
+      <li data-i18n="general.sales.tip3">Vantaggi del trattamento precoce e risparmio sui costi</li>
+      <li data-i18n="general.sales.tip4">Cure urgenti e nello stesso giorno</li>
+      <li data-i18n="general.sales.tip5">Dentisti con ampia esperienza</li>
     </ul>
   </div>
 </section>
@@ -253,46 +260,50 @@
   </svg>
 </div>
 
-
 <!-- FAQ -->
 <section class="section beige">
   <div class="container narrow">
-    <h2 class="section-title">Frequently Asked Questions</h2>
+    <h2 class="section-title" data-i18n="general.faq_title">Domande frequenti</h2>
     <div class="faq">
-      <h3>Is a dental filling painful?</h3>
-      <p>No. Fillings are done under local anesthesia and are usually pain-free. Some sensitivity may occur afterward.</p>
-      <h3>How do I know if I need a root canal?</h3>
-      <p>Common signs include pain when chewing, prolonged sensitivity to hot or cold, and swelling near the tooth.</p>
-      <h3>Is tooth extraction safe?</h3>
-      <p>Yes, when performed by a professional. Most extractions are simple and heal quickly with proper care.</p>
-      <h3>How often should I get a dental cleaning?</h3>
-      <p>Most dentists recommend cleanings every 6 months to prevent plaque buildup and gum disease.</p>
-      <h3>What should I do during a dental emergency?</h3>
-      <p>Call the clinic immediately. If you have swelling, pain, or a broken tooth, seek help right away.</p>
+      <h3 data-i18n="general.faq.q1">L'otturazione è dolorosa?</h3>
+      <p data-i18n="general.faq.a1">No. Le otturazioni vengono fatte in anestesia locale e sono generalmente indolori. Può verificarsi una leggera sensibilità dopo.</p>
+
+      <h3 data-i18n="general.faq.q2">Come faccio a sapere se ho bisogno di un trattamento canalare?</h3>
+      <p data-i18n="general.faq.a2">Segnali comuni includono dolore durante la masticazione, sensibilità prolungata al caldo o al freddo e gonfiore vicino al dente.</p>
+
+      <h3 data-i18n="general.faq.q3">L'estrazione dentale è sicura?</h3>
+      <p data-i18n="general.faq.a3">Sì, se eseguita da un professionista. La maggior parte delle estrazioni guarisce rapidamente con la cura adeguata.</p>
+
+      <h3 data-i18n="general.faq.q4">Ogni quanto devo fare una pulizia dentale?</h3>
+      <p data-i18n="general.faq.a4">La maggior parte dei dentisti consiglia pulizie ogni 6 mesi per prevenire placca e malattie gengivali.</p>
+
+      <h3 data-i18n="general.faq.q5">Cosa devo fare in caso di emergenza dentale?</h3>
+      <p data-i18n="general.faq.a5">Chiama immediatamente la clinica. Se c'è gonfiore, dolore o un dente rotto, il trattamento tempestivo è fondamentale.</p>
+    </div>
   </div>
 </section>
 
 <!-- Call to Action -->
 <section class="cta-section fade-in">
   <div class="container narrow center">
-    <h2 class="section-title" style="color: #fff; margin-bottom: 10px;">Book Your Free Consultation Today!</h2>
-    <p style="color: #fff; margin-bottom: 14px;">Let us restore your smile with the most advanced dental implant solutions.</p>
-    <a href="../pages/contacts.html" class="btn primary">Reserve Now</a>
+    <h2 class="section-title" style="color: #fff; margin-bottom: 10px;" data-i18n="cta.title">Prenota oggi la tua consulenza gratuita!</h2>
+    <p style="color: #fff; margin-bottom: 14px;" data-i18n="cta.text">Lascia che ti restituiamo il sorriso con le soluzioni di impianti dentali più avanzate.</p>
+    <a href="../pages/contacts.html" class="btn primary" data-i18n="cta.button">Prenota ora</a>
   </div>
 </section>
 
 <!-- Contact -->
 <section class="section contact fade-in" id="contact">
   <div class="container narrow">
-    <h2 class="section-title">How Can You Find Us?</h2>
-    <p><strong>Location:</strong> Rruga Him Kolli, Tirana, Albania</p>
-    <p><strong>Phone:</strong> +355 69 204 0130</p>
+    <h2 class="section-title" data-i18n="contact.title">Come puoi trovarci?</h2>
+    <p data-i18n="contact.location"><strong>Indirizzo:</strong> Rruga Him Kolli, Tirana, Albania</p>
+    <p data-i18n="contact.phone"><strong>Telefono:</strong> +355 69 204 0130</p>
     <iframe
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2990.7989040537996!2d19.81485331542124!3d41.326120607642846!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x13503172e8cab76f%3A0x704934284304e7f0!2sMeto%20Dent!5e0!3m2!1sen!2s!4v1721670000000!5m2!1sen!2s"
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3037.459722081942!2d19.8090!3d41.3256!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x135031002bdab639%3A0x9553264d253b605c!2sOrient%20Dental%20Clinic!5e0!3m2!1sen!2s!4v1732100000000"
       width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-  <div class="hero-buttons">
-    <a href="pages/contacts.html#contact-form" class="btn primary" data-i18n="book">Book Appointment</a>
-  </div>
+    <div class="hero-buttons">
+      <a href="pages/contacts.html#contact-form" class="btn primary" data-i18n="book">Prenota una Visita</a>
+    </div>
   </div>
 </section>
 
@@ -306,11 +317,11 @@
 <!-- Questions Section -->
 <section class="section beige fade-in">
   <div class="container narrow">
-    <h2 class="section-title">Questions about your treatment?</h2>
-    <p>Feel free to email us or book an appointment now.</p>
+    <h2 class="section-title" data-i18n="questions.title">Domande sul tuo trattamento?</h2>
+    <p data-i18n="questions.text">Scrivici via e-mail oppure prenota subito una visita.</p>
     <div class="hero-buttons" style="margin-top: 20px;">
-      <a href="mailto:orientdental7@gmail.com" class="btn secondary">Message Us</a>
-      <a href="../pages/contacts.html#contact-form" class="btn primary">Book Now</a>
+      <a href="mailto:orientdental7@gmail.com" class="btn secondary" data-i18n="questions.btn.message">Scrivici</a>
+      <a href="../pages/contacts.html#contact-form" class="btn primary" data-i18n="questions.btn.book">Prenota ora</a>
     </div>
   </div>
 </section>
@@ -319,20 +330,24 @@
 <footer class="footer fade-in">
   <div class="footer-grid">
     <div>
-      <h4>Quick Links</h4>
+      <h4 data-i18n="footer.quicklinks.title">Link rapidi</h4>
       <ul>
-        <li><a href="../pages/treatments.html">Services</a></li>
-        <li><a href="../pages/pricing.html">Pricing</a></li>
-        <li><a href="../pages/team.html">Team</a></li>
+        <li><a href="../pages/treatments.html" data-i18n="footer.quicklinks.services">Trattamenti</a></li>
+        <li><a href="../pages/pricing.html" data-i18n="footer.quicklinks.pricing">Prezzi</a></li>
+        <li><a href="../pages/team.html" data-i18n="footer.quicklinks.team">Team</a></li>
       </ul>
     </div>
     <div>
-      <h4>Disclaimer</h4>
-      <p>This website provides general dental information. Information taken from this site is not a substitute for professional dental advice. Always consult your dentist before treatment.</p>
+      <h4 data-i18n="footer.disclaimer.title">Disclaimer</h4>
+      <p data-i18n="footer.disclaimer.text">
+        Questo sito fornisce informazioni odontoiatriche generali. Le informazioni presenti non sostituiscono in alcun modo il parere del dentista. Prima di intraprendere o modificare qualsiasi cura, consulta sempre il tuo odontoiatra.
+      </p>
     </div>
     <div class="contactfootercontent">
-      <h4>Contact</h4>
-      <p>Rruga Him Kolli, Tirana<br>Phone: +355 69 204 0130<br>Email: orientdental7@gmail.com</p>
+      <h4 data-i18n="footer.contact.title">Contatti</h4>
+      <p data-i18n="footer.contact.text">
+        Rruga Him Kolli, Tirana<br>Telefono: +355 69 204 0130<br>Email: orientdental7@gmail.com
+      </p>
       <div class="social-icons">
         <a href="#"><i class="fab fa-facebook-f"></i></a>
         <a href="#"><i class="fab fa-instagram"></i></a>
@@ -340,97 +355,198 @@
       </div>
     </div>
   </div>
-  <div class="copyright">
-    © 2025 Orient Dental Clinic. All Rights Reserved.
+  <div class="copyright" data-i18n="footer.copyright">
+    © 2025 Orient Dental Clinic. Tutti i diritti riservati.
   </div>
 </footer>
 
 <button id="scrollToTopBtn"><i class="fas fa-chevron-up"></i></button>
+
+<!-- Inline language JS -->
 <script>
-const translations = {
-  general: {
-    al: {
-      title: "Në zemër të çdo buzëqeshjeje të shëndetshme është parandalimi, precizioni dhe kujdesi ndaj pacientit — stomatologjia e përgjithshme është vendi ku fillojnë buzëqeshjet me besim.",
-      intro: "Stomatologjia e përgjithshme fokusohet në parandalimin, diagnostikimin dhe trajtimin e problemeve të zakonshme dentare. Ajo formon bazën e shëndetit oral, duke trajtuar gjithçka nga kavitete deri tek sëmundjet e mishrave dhe kujdesi emergjent.",
-      why_title: "Trajtimet e zakonshme",
-      treatments: {
-        fillings: "Mbushje (kompozit ose amalgam) – për trajtimin e kaviteteve",
-        extractions: "Nxjerrje dhëmbësh – për dhëmbë të kalbur ose të dëmtuar rëndë",
-        root_canal: "Trajtim i kanalit të rrënjës – për të shpëtuar dhëmbët e infektuar",
-        cleaning: "Pastrimi dentar (shkallëzim & lustër) – për të parandaluar sëmundjet e mishrave",
-        emergency: "Kujdes dentar emergjent – për dhimbje të papritura, dhëmbë të thyer ose infeksione"
+  (function() {
+    const translations = {
+      en: {
+        "search.placeholder": "Search...",
+
+        "nav.about": "About Us",
+        "nav.reviews": "Reviews",
+        "nav.services": "Services",
+        "nav.pricing": "Pricing",
+        "nav.team": "Team",
+        "nav.contact": "Contact",
+        "nav.appointment": "Book Appointment",
+
+        "general.title": "Healthy smiles start with prevention, precision, and care, general dentistry makes confidence possible.",
+        "general.intro": "General dentistry focuses on the prevention, diagnosis, and treatment of common dental problems. It forms the foundation of overall oral health, addressing everything from cavities and gum disease to emergency care.",
+
+        "general.why_title": "Common Treatments",
+        "general.treatments.fillings": "Fillings (Composite or Amalgam) – For treating cavities",
+        "general.treatments.extractions": "Tooth Extractions – For severely decayed or damaged teeth",
+        "general.treatments.root_canal": "Root Canal Treatment – To save infected teeth",
+        "general.treatments.cleaning": "Dental Cleaning (Scaling & Polishing) – To prevent gum disease",
+        "general.treatments.emergency": "Emergency Dental Care – For sudden pain, broken teeth, or infections",
+
+        "general.procedure_title": "How the General Dentistry Procedure Works",
+        "general.procedure.step1": "<strong>Consultation & Diagnosis:</strong> Includes oral exam, X-rays, and patient history.",
+        "general.procedure.step2": "<strong>Treatment Plan:</strong> Dentist explains options and recommends the best approach.",
+        "general.procedure.step3": "<strong>Procedure:</strong> Performed with anesthesia if necessary (e.g., filling, extraction).",
+        "general.procedure.step4": "<strong>Aftercare & Instructions:</strong> Patient is advised on recovery and hygiene.",
+
+        "general.sales_title": "Why Trust Our General Dentistry?",
+        "general.sales.tip1": "Emphasize pain-free treatments and advanced tools",
+        "general.sales.tip2": "Reassure patients about safety, hygiene, and anesthesia",
+        "general.sales.tip3": "Highlight early treatment benefits and cost savings",
+        "general.sales.tip4": "Offer same-day or emergency care as a unique advantage",
+        "general.sales.tip5": "Promote trust in experienced dental professionals",
+
+        "general.faq_title": "Frequently Asked Questions",
+        "general.faq.q1": "Is a dental filling painful?",
+        "general.faq.a1": "No. Fillings are done under local anesthesia and are usually pain-free. Some sensitivity may occur afterward.",
+        "general.faq.q2": "How do I know if I need a root canal?",
+        "general.faq.a2": "Common signs include pain when chewing, prolonged sensitivity to hot or cold, and swelling near the tooth.",
+        "general.faq.q3": "Is tooth extraction safe?",
+        "general.faq.a3": "Yes, when performed by a professional. Most extractions are simple and heal quickly with proper care.",
+        "general.faq.q4": "How often should I get a dental cleaning?",
+        "general.faq.a4": "Most dentists recommend cleanings every 6 months to prevent plaque buildup and gum disease.",
+        "general.faq.q5": "What should I do during a dental emergency?",
+        "general.faq.a5": "Call the clinic immediately. If you have swelling, pain, or a broken tooth, seek help right away.",
+
+        "cta.title": "Book Your Free Consultation Today!",
+        "cta.text": "Let us restore your smile with the most advanced dental implant solutions.",
+        "cta.button": "Reserve Now",
+
+        "contact.title": "How Can You Find Us?",
+        "contact.location": "<strong>Location:</strong> Rruga Him Kolli, Tirana, Albania",
+        "contact.phone": "<strong>Phone:</strong> +355 69 204 0130",
+        "book": "Book Appointment",
+
+        "questions.title": "Questions about your treatment?",
+        "questions.text": "Feel free to email us or book an appointment now.",
+        "questions.btn.message": "Message Us",
+        "questions.btn.book": "Book Now",
+
+        "footer.quicklinks.title": "Quick Links",
+        "footer.quicklinks.services": "Services",
+        "footer.quicklinks.pricing": "Pricing",
+        "footer.quicklinks.team": "Team",
+        "footer.disclaimer.title": "Disclaimer",
+        "footer.disclaimer.text": "This website provides general dental information. Information taken from this site is not a substitute for professional dental advice. Always consult your dentist before treatment.",
+        "footer.contact.title": "Contact",
+        "footer.contact.text": "Rruga Him Kolli, Tirana<br>Phone: +355 69 204 0130<br>Email: orientdental7@gmail.com",
+        "footer.copyright": "© 2025 Orient Dental Clinic. All Rights Reserved."
       },
-      procedure_title: "Si funksionon procedura e stomatologjisë së përgjithshme",
-      procedure: {
-        step1: "Konsultim & Diagnostikim: Përfshin ekzaminim oral, radiografi dhe historik të pacientit.",
-        step2: "Plani i trajtimit: Dentisti shpjegon opsionet dhe rekomandon qasjen më të mirë.",
-        step3: "Procedura: Kryhet me anestezi nëse është e nevojshme (p.sh., mbushje, nxjerrje).",
-        step4: "Kujdesi pas trajtimit & udhëzime: Pacienti këshillohet për rikuperimin dhe higjienën."
-      },
-      faq_title: "Pyetje të shpeshta",
-      faq: {
-        q1: "A është e dhimbshme një mbushje dentare?",
-        a1: "Jo. Mbushjet bëhen nën anestezi lokale dhe zakonisht janë pa dhimbje. Mund të ketë ndjeshmëri të lehtë pas trajtimit.",
-        q2: "Si e di nëse më duhet një trajtim kanali?",
-        a2: "Shenjat e zakonshme përfshijnë dhimbje gjatë përtypjes, ndjeshmëri të zgjatur ndaj të nxehtit ose të ftohtit dhe ënjtje pranë dhëmbit.",
-        q3: "A është e sigurt nxjerrja e dhëmbit?",
-        a3: "Po, kur kryhet nga profesionistë. Shumica e nxjerrjeve shërohen shpejt me kujdes të duhur.",
-        q4: "Sa shpesh duhet të bëj pastrim dentar?",
-        a4: "Shumica e dentistëve rekomandojnë pastrim çdo 6 muaj për të parandaluar grumbullimin e pllakës dhe sëmundjen e mishrave.",
-        q5: "Çfarë duhet të bëj gjatë një emergjence dentare?",
-        a5: "Telefononi menjëherë klinikën. Nëse ka ënjtje, dhimbje ose dhëmb të thyer, trajtimi i shpejtë është vendimtar."
-      },
-      sales_title: "Pse të na besoni ne?",
-      sales: {
-        tip1: "Trajtime pa dhimbje dhe mjete moderne",
-        tip2: "Siguri, higjienë dhe anestezi e garantuar",
-        tip3: "Përfitime nga trajtimi i hershëm dhe kursime në kosto",
-        tip4: "Kujdes emergjent dhe në të njëjtën ditë",
-        tip5: "Dentistë me eksperiencë të gjerë"
+
+      it: {
+        "search.placeholder": "Cerca...",
+
+        "nav.about": "Chi Siamo",
+        "nav.reviews": "Recensioni",
+        "nav.services": "Trattamenti",
+        "nav.pricing": "Prezzi",
+        "nav.team": "Team",
+        "nav.contact": "Contatti",
+        "nav.appointment": "Prenota una Visita",
+
+        "general.title": "Al centro di ogni sorriso sano c'è prevenzione, precisione e cura del paziente — l'odontoiatria generale è dove iniziano i sorrisi sicuri.",
+        "general.intro": "L'odontoiatria generale si concentra sulla prevenzione, diagnosi e trattamento dei problemi dentali comuni. Forma la base della salute orale, trattando tutto dalle carie alle malattie gengivali e cure di emergenza.",
+
+        "general.why_title": "Trattamenti comuni",
+        "general.treatments.fillings": "Otturazioni (composito o amalgama) – per trattare le carie",
+        "general.treatments.extractions": "Estrazioni dentali – per denti gravemente cariati o danneggiati",
+        "general.treatments.root_canal": "Trattamento canalare – per salvare denti infetti",
+        "general.treatments.cleaning": "Pulizia dentale (scaling e lucidatura) – per prevenire le malattie gengivali",
+        "general.treatments.emergency": "Cura dentale d'urgenza – per dolore improvviso, denti rotti o infezioni",
+
+        "general.procedure_title": "Come funziona il trattamento di odontoiatria generale",
+        "general.procedure.step1": "<strong>Consulto & Diagnosi:</strong> Include esame orale, radiografie e anamnesi.",
+        "general.procedure.step2": "<strong>Piano di trattamento:</strong> Il dentista spiega le opzioni e raccomanda il miglior approccio.",
+        "general.procedure.step3": "<strong>Procedura:</strong> Eseguita con anestesia se necessario (es. otturazione, estrazione).",
+        "general.procedure.step4": "<strong>Cura post-trattamento & istruzioni:</strong> Il paziente riceve consigli per il recupero e l'igiene.",
+
+        "general.sales_title": "Perché fidarsi della nostra odontoiatria generale?",
+        "general.sales.tip1": "Trattamenti indolori e strumenti moderni",
+        "general.sales.tip2": "Sicurezza, igiene e anestesia garantite",
+        "general.sales.tip3": "Vantaggi del trattamento precoce e risparmio sui costi",
+        "general.sales.tip4": "Cure urgenti e nello stesso giorno",
+        "general.sales.tip5": "Dentisti con ampia esperienza",
+
+        "general.faq_title": "Domande frequenti",
+        "general.faq.q1": "L'otturazione è dolorosa?",
+        "general.faq.a1": "No. Le otturazioni vengono fatte in anestesia locale e sono generalmente indolori. Può verificarsi una leggera sensibilità dopo.",
+        "general.faq.q2": "Come faccio a sapere se ho bisogno di un trattamento canalare?",
+        "general.faq.a2": "Segnali comuni includono dolore durante la masticazione, sensibilità prolungata al caldo o al freddo e gonfiore vicino al dente.",
+        "general.faq.q3": "L'estrazione dentale è sicura?",
+        "general.faq.a3": "Sì, se eseguita da un professionista. La maggior parte delle estrazioni guarisce rapidamente con la cura adeguata.",
+        "general.faq.q4": "Ogni quanto devo fare una pulizia dentale?",
+        "general.faq.a4": "La maggior parte dei dentisti consiglia pulizie ogni 6 mesi per prevenire placca e malattie gengivali.",
+        "general.faq.q5": "Cosa devo fare in caso di emergenza dentale?",
+        "general.faq.a5": "Chiama immediatamente la clinica. Se c'è gonfiore, dolore o un dente rotto, il trattamento tempestivo è fondamentale.",
+
+        "cta.title": "Prenota oggi la tua consulenza gratuita!",
+        "cta.text": "Lascia che ti restituiamo il sorriso con le soluzioni di impianti dentali più avanzate.",
+        "cta.button": "Prenota ora",
+
+        "contact.title": "Come puoi trovarci?",
+        "contact.location": "<strong>Indirizzo:</strong> Rruga Him Kolli, Tirana, Albania",
+        "contact.phone": "<strong>Telefono:</strong> +355 69 204 0130",
+        "book": "Prenota una Visita",
+
+        "questions.title": "Domande sul tuo trattamento?",
+        "questions.text": "Scrivici via e-mail oppure prenota subito una visita.",
+        "questions.btn.message": "Scrivici",
+        "questions.btn.book": "Prenota ora",
+
+        "footer.quicklinks.title": "Link rapidi",
+        "footer.quicklinks.services": "Trattamenti",
+        "footer.quicklinks.pricing": "Prezzi",
+        "footer.quicklinks.team": "Team",
+        "footer.disclaimer.title": "Disclaimer",
+        "footer.disclaimer.text": "Questo sito fornisce informazioni odontoiatriche generali. Le informazioni presenti non sostituiscono in alcun modo il parere del dentista. Prima di intraprendere o modificare qualsiasi cura, consulta sempre il tuo odontoiatra.",
+        "footer.contact.title": "Contatti",
+        "footer.contact.text": "Rruga Him Kolli, Tirana<br>Telefono: +355 69 204 0130<br>Email: orientdental7@gmail.com",
+        "footer.copyright": "© 2025 Orient Dental Clinic. Tutti i diritti riservati."
       }
-    },
-    it: {
-      title: "Al centro di ogni sorriso sano c'è prevenzione, precisione e cura del paziente — l'odontoiatria generale è dove iniziano i sorrisi sicuri.",
-      intro: "L'odontoiatria generale si concentra sulla prevenzione, diagnosi e trattamento dei problemi dentali comuni. Forma la base della salute orale, trattando tutto dalle carie alle malattie gengivali e cure di emergenza.",
-      why_title: "Trattamenti comuni",
-      treatments: {
-        fillings: "Otturazioni (composito o amalgama) – per trattare le carie",
-        extractions: "Estrazioni dentali – per denti gravemente cariati o danneggiati",
-        root_canal: "Trattamento canalare – per salvare denti infetti",
-        cleaning: "Pulizia dentale (scaling e lucidatura) – per prevenire le malattie gengivali",
-        emergency: "Cura dentale d'urgenza – per dolore improvviso, denti rotti o infezioni"
-      },
-      procedure_title: "Come funziona il trattamento di odontoiatria generale",
-      procedure: {
-        step1: "Consulto & Diagnosi: Include esame orale, radiografie e anamnesi.",
-        step2: "Piano di trattamento: Il dentista spiega le opzioni e raccomanda il miglior approccio.",
-        step3: "Procedura: Eseguita con anestesia se necessario (es. otturazione, estrazione).",
-        step4: "Cura post-trattamento & istruzioni: Il paziente riceve consigli per il recupero e l'igiene."
-      },
-      faq_title: "Domande frequenti",
-      faq: {
-        q1: "L'otturazione è dolorosa?",
-        a1: "No. Le otturazioni vengono fatte in anestesia locale e sono generalmente indolori. Può verificarsi una leggera sensibilità dopo.",
-        q2: "Come faccio a sapere se ho bisogno di un trattamento canalare?",
-        a2: "Segnali comuni includono dolore durante la masticazione, sensibilità prolungata al caldo o al freddo e gonfiore vicino al dente.",
-        q3: "L'estrazione dentale è sicura?",
-        a3: "Sì, se eseguita da un professionista. La maggior parte delle estrazioni guarisce rapidamente con la cura adeguata.",
-        q4: "Ogni quanto devo fare una pulizia dentale?",
-        a4: "La maggior parte dei dentisti consiglia pulizie ogni 6 mesi per prevenire placca e malattie gengivali.",
-        q5: "Cosa devo fare in caso di emergenza dentale?",
-        a5: "Chiama immediatamente la clinica. Se c'è gonfiore, dolore o un dente rotto, il trattamento tempestivo è fondamentale."
-      },
-      sales_title: "Perché fidarsi di noi?",
-      sales: {
-        tip1: "Trattamenti indolori e strumenti moderni",
-        tip2: "Sicurezza, igiene e anestesia garantite",
-        tip3: "Vantaggi del trattamento precoce e risparmio sui costi",
-        tip4: "Cure urgenti e nello stesso giorno",
-        tip5: "Dentisti con ampia esperienza"
+    };
+
+    function applyTranslations(lang) {
+      const elements = document.querySelectorAll("[data-i18n]");
+      elements.forEach(el => {
+        const key = el.dataset.i18n;
+        const value = translations[lang] && translations[lang][key];
+        if (value) {
+          el.innerHTML = value;
+        }
+      });
+
+      const searchInput = document.getElementById("searchInput");
+      if (searchInput && translations[lang] && translations[lang]["search.placeholder"]) {
+        searchInput.setAttribute("placeholder", translations[lang]["search.placeholder"]);
       }
+
+      document.documentElement.lang = lang;
     }
-  }
-};
+
+    document.addEventListener("DOMContentLoaded", function() {
+      const select = document.getElementById("language");
+      const savedLang = localStorage.getItem("siteLanguage") || "it";
+      const initialLang = (savedLang === "en" || savedLang === "it") ? savedLang : "it";
+
+      if (select) {
+        select.value = initialLang;
+      }
+      applyTranslations(initialLang);
+
+      if (select) {
+        select.addEventListener("change", function() {
+          const lang = select.value;
+          const effectiveLang = (lang === "it" || lang === "en") ? lang : "en";
+          localStorage.setItem("siteLanguage", effectiveLang);
+          applyTranslations(effectiveLang);
+        });
+      }
+    });
+  })();
 </script>
 
 </body>
