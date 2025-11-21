@@ -450,6 +450,7 @@ a {
   flex-direction: column;
   justify-content: flex-start;
   min-height: 260px;
+  margin:5px
 }
 
 .review-profile {
@@ -919,7 +920,7 @@ a {
 }
 
 .team-member {
-  flex: 0 0 250px;
+  flex: 0 0 470px;
   background: #fff;
   margin: 0 10px;
   border-radius: 10px;
@@ -949,16 +950,18 @@ a {
 
 .carousel-btn {
   position: absolute;
-  top: 45%;
+  top: 50%;
   transform: translateY(-50%);
-  background-color: #b28756;
-  color: white;
+  background: none;
+  color: #b28756;
   border: none;
-  border-radius: 50%;
-  padding: 10px 14px;
+  font-size: 48px; /* Bigger size */
+  font-weight: bold;
   cursor: pointer;
-  font-size: 20px;
-  z-index: 1;
+  z-index: 2;
+  padding: 0;
+  line-height: 1;
+  user-select: none;
   transition: background 0.3s ease;
 }
 
@@ -1036,7 +1039,7 @@ a {
   justify-content: center;
 }
 .service-image {
-  max-width: 100%;
+  max-width: 68%;
   border-radius: 12px;
   box-shadow: 0 4px 20px rgba(0,0,0,0.08);
   margin: 20px 0;
@@ -1193,6 +1196,49 @@ a {
   pointer-events:none;
 }
 
+.whatsapp-float {
+  position: fixed;
+  left: 20px;
+  bottom: 20px;
+  z-index: 9999;
+}
+
+.whatsapp-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #25D366, #128C7E);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+  color: white;
+  text-decoration: none;
+  transition: transform .12s ease, box-shadow .12s ease;
+}
+
+.whatsapp-btn:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 30px rgba(0,0,0,0.28);
+}
+
+.whatsapp-btn svg {
+  width: 28px;
+  height: 28px;
+}
+
+@media (max-width: 420px) {
+  .whatsapp-btn {
+    width: 56px;
+    height: 56px;
+  }
+  .whatsapp-btn svg {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+
 
 @media screen and (max-width: 900px) {
   .desktop-only {
@@ -1296,12 +1342,12 @@ a {
     align-self: flex-end;
   }
   .team-member {
-    flex: 0 0 80%;
+    flex: 0 0 90%;
     margin: 0 5px;
   }
   /*Reviews*/
   .review-card {
-    flex: 0 0 100%;
+    flex: 0 0 90%;
   }
 
   .reviews-section {
@@ -1321,4 +1367,10 @@ a {
   .proc-step img {
     height: 160px;
   }
+  .service-image {
+  max-width: 95%;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  margin: 20px 0;
+}
 }
