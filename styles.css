@@ -450,7 +450,7 @@ a {
   flex-direction: column;
   justify-content: flex-start;
   min-height: 260px;
-  margin:5px
+  margin:5px;
 }
 
 .review-profile {
