@@ -12,10 +12,10 @@ document.addEventListener('DOMContentLoaded', () => {
   closeMenu?.addEventListener('click', toggleMobileNav);
 
   document.addEventListener('click', (event) => {
-    const isClickInsideNav = navLinks.contains(event.target);
-    const isClickOnHamburger = hamburger.contains(event.target);
+    const isClickInsideNav = navLinks?.contains(event.target);
+    const isClickOnHamburger = hamburger?.contains(event.target);
     if (!isClickInsideNav && !isClickOnHamburger) {
-      navLinks.classList.remove('active');
+      navLinks?.classList.remove('active');
     }
   });
 
@@ -79,8 +79,8 @@ document.addEventListener('DOMContentLoaded', () => {
   // === Scroll to Top Button ===
   const scrollBtn = document.getElementById('scrollToTopBtn');
   window.addEventListener('scroll', () => {
-    if (window.scrollY > 100) scrollBtn.classList.add('show');
-    else scrollBtn.classList.remove('show');
+    if (window.scrollY > 100) scrollBtn?.classList.add('show');
+    else scrollBtn?.classList.remove('show');
   });
   scrollBtn?.addEventListener('click', () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -104,6 +104,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   function updateReviewCarousel() {
+    if (!reviewTrack) return;
     const cardWidth = getReviewCardWidth();
     reviewTrack.style.transform = `translateX(-${reviewIndex * cardWidth}px)`;
   }
@@ -129,11 +130,11 @@ document.addEventListener('DOMContentLoaded', () => {
   reviewNext?.addEventListener('click', nextReviewSlide);
   reviewPrev?.addEventListener('click', prevReviewSlide);
 
-  setInterval(nextReviewSlide, 3000);
+  if (reviewCards.length > 0) {
+    setInterval(nextReviewSlide, 3000);
+  }
 
-  window.addEventListener('resize', () => {
-    updateReviewCarousel();
-  });
+  window.addEventListener('resize', updateReviewCarousel);
 
   // === Team Carousel ===
   const teamTrack = document.querySelector('.carousel-track');
@@ -184,3 +185,22 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 });
+
+// === WhatsApp Floating Button ===
+(function () {
+  const btn = document.getElementById("whatsapp-button");
+  if (!btn) return;
+
+  const phone = btn.dataset.phone;
+  const message = encodeURIComponent(btn.dataset.message);
+
+  function buildUrl() {
+    return `https://wa.me/${phone}?text=${message}`;
+  }
+
+  btn.href = buildUrl();
+
+  btn.addEventListener("click", function () {
+    btn.href = buildUrl();
+  });
+})();
